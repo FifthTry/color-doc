@@ -10,23 +10,36 @@
 -- color-display:
 color: $fpm.color
 
--- ftd.row box-container: 
-ftd.color bg-color: $fpm.color.main.background.base
-width: fill
-height: 100
-margin-bottom: 20
-background-color: $bg-color
-
-
 
 
 
 -- ftd.column color-display:
 fpm.color-data color:
+width: fill
 
 --- box-container:
 bg-color: $color.main.background.base
 
+--- container: ftd.main
+
+--- box-container:
+bg-color: $color.main.background.step-1
+
+--- container: ftd.main
+
+--- box-container:
+bg-color: $color.main.background.step-2
 
 
+
+
+
+
+
+-- ftd.row box-container: 
+ftd.color bg-color:
+width: fill
+height: 100
+margin-bottom: 20
+background-color: $bg-color
 
