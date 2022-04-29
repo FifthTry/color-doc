@@ -318,7 +318,7 @@ ftd.color bg-color:
 --- tp.h1: $color-name
 
 --- ftd.row:
-width: fill
+width: 600
 height: 100
 margin-bottom: 20
 background-color: $bg-color
