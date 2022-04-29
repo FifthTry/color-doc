@@ -1,5 +1,5 @@
 -- import: fpm
--- import: ft
+-- import: tp
 
 
 
@@ -315,7 +315,7 @@ bg-color: $color.main.custom.ten
 caption color-name:
 ftd.color bg-color:
 
---- ft.h1: $color-name
+--- tp.h1: $color-name
 
 --- ftd.row:
 width: fill
