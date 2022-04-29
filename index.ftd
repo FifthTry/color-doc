@@ -1,4 +1,5 @@
 -- import: fpm
+-- import: tp
 
 
 
@@ -13,296 +14,296 @@ color: $fpm.color
 fpm.color-data color:
 width: fill
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.background.base`
-bg-color: $fpm.color.main.background.base
+bg-color: $color.main.background.base
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.background.step-1`
-bg-color: $fpm.color.main.background.step-1
+bg-color: $color.main.background.step-1
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.background.step-2`
-bg-color: $fpm.color.main.background.step-2
+bg-color: $color.main.background.step-2
 
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.border`
-bg-color: $fpm.color.main.border
+bg-color: $color.main.border
 
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.border-strong`
-bg-color: $fpm.color.main.border-strong
+bg-color: $color.main.border-strong
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.text`
-bg-color: $fpm.color.main.text
+bg-color: $color.main.text
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.text-strong`
-bg-color: $fpm.color.main.text-strong
+bg-color: $color.main.text-strong
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.shadow`
-bg-color: $fpm.color.main.shadow
+bg-color: $color.main.shadow
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.scrim`
-bg-color: $fpm.color.main.scrim
+bg-color: $color.main.scrim
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.base`
-bg-color: $fpm.color.main.cta-primary.base
+bg-color: $color.main.cta-primary.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.hover`
-bg-color: $fpm.color.main.cta-primary.hover
+bg-color: $color.main.cta-primary.hover
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.pressed`
-bg-color: $fpm.color.main.cta-primary.pressed
+bg-color: $color.main.cta-primary.pressed
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.focused`
-bg-color: $fpm.color.main.cta-primary.focused
+bg-color: $color.main.cta-primary.focused
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.border`
-bg-color: $fpm.color.main.cta-primary.border
+bg-color: $color.main.cta-primary.border
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-primary.text`
-bg-color: $fpm.color.main.cta-primary.text
+bg-color: $color.main.cta-primary.text
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.base`
-bg-color: $fpm.color.main.cta-secondary.base
+bg-color: $color.main.cta-secondary.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.hover`
-bg-color: $fpm.color.main.cta-secondary.hover
+bg-color: $color.main.cta-secondary.hover
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.pressed`
-bg-color: $fpm.color.main.cta-secondary.pressed
+bg-color: $color.main.cta-secondary.pressed
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.focused`
-bg-color: $fpm.color.main.cta-secondary.focused
+bg-color: $color.main.cta-secondary.focused
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.border`
-bg-color: $fpm.color.main.cta-secondary.border
+bg-color: $color.main.cta-secondary.border
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-secondary.text`
-bg-color: $fpm.color.main.cta-secondary.text
+bg-color: $color.main.cta-secondary.text
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.base`
-bg-color: $fpm.color.main.cta-tertiary.base
+bg-color: $color.main.cta-tertiary.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.hover`
-bg-color: $fpm.color.main.cta-tertiary.hover
+bg-color: $color.main.cta-tertiary.hover
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.pressed`
-bg-color: $fpm.color.main.cta-tertiary.pressed
+bg-color: $color.main.cta-tertiary.pressed
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.focused`
-bg-color: $fpm.color.main.cta-tertiary.focused
+bg-color: $color.main.cta-tertiary.focused
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.border`
-bg-color: $fpm.color.main.cta-tertiary.border
+bg-color: $color.main.cta-tertiary.border
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.cta-tertiary.text`
-bg-color: $fpm.color.main.cta-tertiary.text
+bg-color: $color.main.cta-tertiary.text
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.accent.primary`
-bg-color: $fpm.color.main.accent.primary
+bg-color: $color.main.accent.primary
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.accent.secondary`
-bg-color: $fpm.color.main.accent.secondary
+bg-color: $color.main.accent.secondary
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.accent.tertiary`
-bg-color: $fpm.color.main.accent.tertiary
+bg-color: $color.main.accent.tertiary
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.error.base`
-bg-color: $fpm.color.main.error.base
+bg-color: $color.main.error.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.error.text`
-bg-color: $fpm.color.main.error.text
+bg-color: $color.main.error.text
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.error.border`
-bg-color: $fpm.color.main.error.border
+bg-color: $color.main.error.border
 
 
 
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.success.base`
-bg-color: $fpm.color.main.success.base
+bg-color: $color.main.success.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.success.text`
-bg-color: $fpm.color.main.success.text
+bg-color: $color.main.success.text
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.success.border`
-bg-color: $fpm.color.main.success.border
+bg-color: $color.main.success.border
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.info.base`
-bg-color: $fpm.color.main.info.base
+bg-color: $color.main.info.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.info.text`
-bg-color: $fpm.color.main.info.text
+bg-color: $color.main.info.text
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.info.border`
-bg-color: $fpm.color.main.info.border
+bg-color: $color.main.info.border
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.warning.base`
-bg-color: $fpm.color.main.warning.base
+bg-color: $color.main.warning.base
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.warning.text`
-bg-color: $fpm.color.main.warning.text
+bg-color: $color.main.warning.text
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.warning.border`
-bg-color: $fpm.color.main.warning.border
+bg-color: $color.main.warning.border
 
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.one`
-bg-color: $fpm.color.main.custom.one
+bg-color: $color.main.custom.one
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.two`
-bg-color: $fpm.color.main.custom.two
+bg-color: $color.main.custom.two
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.three`
-bg-color: $fpm.color.main.custom.three
+bg-color: $color.main.custom.three
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.four`
-bg-color: $fpm.color.main.custom.four
+bg-color: $color.main.custom.four
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.five`
-bg-color: $fpm.color.main.custom.five
+bg-color: $color.main.custom.five
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.six`
-bg-color: $fpm.color.main.custom.six
+bg-color: $color.main.custom.six
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.seven`
-bg-color: $fpm.color.main.custom.seven
+bg-color: $color.main.custom.seven
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.eight`
-bg-color: $fpm.color.main.custom.eight
+bg-color: $color.main.custom.eight
 
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.nine`
-bg-color: $fpm.color.main.custom.nine
+bg-color: $color.main.custom.nine
 
--- colors:
+--- colors:
 color-name: `fpm.color.main.custom.ten`
-bg-color: $fpm.color.main.custom.ten
+bg-color: $color.main.custom.ten
 
 
 
@@ -314,9 +315,9 @@ bg-color: $fpm.color.main.custom.ten
 caption color-name:
 ftd.color bg-color:
 
---- ft.h1: $color-name
+--- tp.h1: $color-name
 
---- ftd.row : 
+--- ftd.row:
 width: fill
 height: 100
 margin-bottom: 20

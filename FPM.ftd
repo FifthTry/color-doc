@@ -3,6 +3,5 @@
 -- fpm.package: fifthtry.github.io/color-doc
 zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 
--- fpm.dependency: fifthtry.github.io/doc-site as ft
+-- fpm.dependency: fifthtry.github.io/typography as tp
 
--- fpm.auto-import: ft
