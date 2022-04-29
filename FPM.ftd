@@ -5,4 +5,3 @@ zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ft
 
--- fpm.auto-import: ft
