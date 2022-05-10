@@ -1,14 +1,16 @@
 -- import: fpm
 -- import: tp
 
+-- import: fifthtry.github.io/color-doc/color-ui as cu
 
+-- cu.homepage:
 
 -- ftd.column:
 background-color: $fpm.color.main.background.base
 width: fill
 padding: $fpm.space.space-7
 
--- ftd.text: Color Scheme
+/-- ftd.text: Color Scheme
 role: $fpm.type.heading-large
 color: $fpm.color.main.text-strong
 padding-bottom: $fpm.space.space-5
