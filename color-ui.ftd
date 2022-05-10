@@ -1,0 +1,145 @@
+-- import: fpm
+
+
+
+--- header:
+
+--- primary-body:
+
+--- buttons-first-row:
+
+--- buttons-second-row:
+
+
+
+
+
+
+
+
+
+-- ftd.column header:
+optional caption page-heading: Set phasers on stun
+padding-top: $fpm.space.space-8
+width: fill
+padding-left: $fpm.space.space-9
+
+--- ftd.text: $page-heading
+role: $fpm.type.heading-hero
+color: $fpm.color.main.text-strong
+padding-bottom: $fpm.space.space-5
+border-bottom: 1
+border-color: $fpm.color.main.border-strong
+
+
+
+
+
+
+
+
+
+-- ftd.column primary-body:
+optional body primary-body-text: Exceeding reaction chamber thermal limit. We have begun power-supply calibration. Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems. Antimatter containment positive. 
+padding-top: $fpm.space.space-5	
+padding-left: $fpm.space.space-9
+width: 460
+
+--- ftd.text: $primary-body-text
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+padding-bottom: $fpm.space.space-2
+border-bottom: 1
+border-color: $fpm.color.main.border
+
+
+
+	
+
+
+
+
+
+-- ftd.row buttons-first-row:
+optional caption button1: BUTTON
+optional caption button2: BUTTON
+optional caption button3: BUTTON
+padding-top: $fpm.space.space-5
+width: fill
+padding-left: $fpm.space.space-9
+
+--- ftd.text: $button1
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-primary.base
+background-color if $MOUSE-IN: $fpm.color.main.cta-primary.hover
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+color if $MOUSE-IN: $fpm.color.main.text-strong
+role: $fpm.type.label-small
+margin-right: $fpm.space.space-3
+
+--- ftd.text: $button2
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-secondary.base
+background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.hover
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+role: $fpm.type.label-small
+margin-right: $fpm.space.space-3
+
+--- ftd.text: $button3
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-tertiary.base
+background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.hover
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+color if $MOUSE-IN: $fpm.color.main.text
+role: $fpm.type.label-small
+
+
+
+
+
+
+
+
+
+-- ftd.row buttons-second-row:
+optional caption button4: BUTTON
+optional caption button5: BUTTON
+optional caption button6: BUTTON
+padding-top: $fpm.space.space-2
+width: fill
+padding-left: $fpm.space.space-9
+
+--- ftd.text: $button4
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-primary.disabled
+background-color if $MOUSE-IN: $fpm.color.main.cta-primary.disabled
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+role: $fpm.type.label-small
+margin-right: $fpm.space.space-3
+
+--- ftd.text: $button5
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-secondary.disabled
+background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.disabled
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+role: $fpm.type.label-small
+margin-right: $fpm.space.space-3
+
+--- ftd.text: $button6
+padding-vertical: 8
+padding-horizontal: 16
+background-color: $fpm.color.main.cta-tertiary.disabled
+background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.disabled
+border-radius: 8
+color: $fpm.color.main.cta-primary.text
+role: $fpm.type.label-small

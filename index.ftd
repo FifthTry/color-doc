@@ -2,25 +2,45 @@
 -- import: tp
 
 
+<<<<<<< Updated upstream
+=======
+-- color-display:
+color: $fpm.color
+>>>>>>> Stashed changes
 
--- ftd.column:
-background-color: $fpm.color.main.background.base
+-- ftd.column color-display:
+fpm.color-data color:
+background-color: $color.main.background.base
 width: fill
-padding: $fpm.space.space-7
 
+<<<<<<< Updated upstream
 -- ftd.text: Color Scheme
 role: $fpm.type.heading-large
 color: $fpm.color.main.text-strong
 padding-bottom: $fpm.space.space-5
+=======
+--- cu.header:
+>>>>>>> Stashed changes
+
+--- cu.primary-body:
+
+--- cu.buttons-first-row:
+
+--- cu.buttons-second-row:
+
+--- ftd.column:
+background-color: $color.main.background.base
+width: fill
+padding: $fpm.space.space-7
 
 
--- color-display:
-color: $fpm.color
+--- color-display-data:
+color: $color
 
 
 
 
--- ftd.column color-display:
+-- ftd.column color-display-data:
 fpm.color-data color:
 width: fill
 
