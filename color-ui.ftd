@@ -1,24 +1,8 @@
 -- import: fpm
 
 
--- homepage:
-
--- ftd.column homepage:
-optional ftd.color bg-color: $fpm.color.main.background.base
-background-color: $bg-color
-width: fill
-open: true
-append-at: content-container
 
 --- header:
-
---- ftd.column:
-id: content-container
-width: fill 
-align: center
-optional ftd.color bg-color: $fpm.color.main.background.base
-background-color: $bg-color
-height: 500
 
 --- primary-body:
 
