@@ -1,9 +1,16 @@
 -- import: fpm
 -- import: tp
+-- import: fifthtry.github.io/color-doc/color-ui as cu
+
+
 
 
 -- color-display:
 color: $fpm.color
+
+
+
+
 
 -- ftd.column color-display:
 fpm.color-data color:
@@ -23,9 +30,11 @@ background-color: $color.main.background.base
 width: fill
 padding: $fpm.space.space-7
 
-
 --- color-display-data:
 color: $color
+
+
+
 
 
 
