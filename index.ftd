@@ -4,6 +4,8 @@
 
 
 
+-- import: fifthtry.github.io/color-doc/color-ui as cu
+
 
 -- color-display:
 color: $fpm.color
@@ -11,10 +13,49 @@ color: $fpm.color
 
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+>>>>>>> Stashed changes
 
 -- ftd.column color-display:
 fpm.color-data color:
-background-color: $color.main.background.base
+
+--- ftd.row:
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.base
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-1
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-2
+
+--- container: ftd.main
+
+--- all-color-display:
+color: $color
+
+
+
+
+
+
+
+
+
+-- ftd.column card-display:
+fpm.color-data color:
+ftd.color bg-color: $color.main.background.base
+background-color: $bg-color
 width: fill
 
 --- cu.header:
@@ -25,7 +66,30 @@ width: fill
 
 --- cu.buttons-second-row:
 
---- ftd.column:
+--- cu.USS-body:
+
+--- cu.toasts:
+
+--- cu.normal-buttons:
+
+--- cu.hover-buttons:
+
+--- cu.pressed-buttons:
+
+--- cu.focused-buttons:
+
+--- cu.shadow-box:
+
+
+
+
+
+
+
+
+
+-- ftd.column all-color-display:
+fpm.color-data color:
 background-color: $color.main.background.base
 width: fill
 padding: $fpm.space.space-7
@@ -39,6 +103,10 @@ color: $color
 
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 -- ftd.column color-display-data:
 fpm.color-data color:
 width: fill
