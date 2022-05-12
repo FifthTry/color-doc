@@ -32,7 +32,7 @@
 
 
 -- ftd.column header:
-caption page-heading: Set phasers on stun
+string page-heading: Set phasers on stun
 padding-top: $fpm.space.space-8
 width: fill
 fpm.color-data color: 
@@ -126,9 +126,9 @@ role: $fpm.type.label-small
 
 
 -- ftd.row buttons-second-row:
-caption button4: BUTTON
-caption button5: BUTTON
-caption button6: BUTTON
+string button4: BUTTON
+string button5: BUTTON
+string button6: BUTTON
 fpm.color-data color:
 padding-top: $fpm.space.space-2
 width: fill
@@ -288,7 +288,7 @@ color: $color.main.info.text
 
 
 -- ftd.row normal-buttons:
-caption button-type: normal
+string button-type: normal
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
@@ -342,7 +342,7 @@ border-radius: 4
 
 
 -- ftd.row hover-buttons:
-caption button-type: hover
+string button-type: hover
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
@@ -395,7 +395,7 @@ border-radius: 4
 
 
 -- ftd.row pressed-buttons:
-caption button-type: pressed
+string button-type: pressed
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
@@ -448,7 +448,7 @@ border-radius: 4
 
 
 -- ftd.row focused-buttons:
-caption button-type: focused
+string button-type: focused
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
