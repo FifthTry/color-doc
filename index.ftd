@@ -11,17 +11,6 @@
 color: $fpm.color
 
 
-
-
-<<<<<<< Updated upstream
-=======
-
-
-
-
-
->>>>>>> Stashed changes
-
 -- ftd.column color-display:
 fpm.color-data color:
 
@@ -59,26 +48,37 @@ background-color: $bg-color
 width: fill
 
 --- cu.header:
+color: $color
 
 --- cu.primary-body:
+color: $color
 
 --- cu.buttons-first-row:
+color: $color
 
 --- cu.buttons-second-row:
+color: $color
 
---- cu.USS-body:
+--- cu.body-with-hover:
+color: $color
 
 --- cu.toasts:
+color: $color
 
 --- cu.normal-buttons:
+color: $color
 
 --- cu.hover-buttons:
+color: $color
 
 --- cu.pressed-buttons:
+color: $color
 
 --- cu.focused-buttons:
+color: $color
 
 --- cu.shadow-box:
+color: $color
 
 
 
@@ -103,10 +103,7 @@ color: $color
 
 
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 -- ftd.column color-display-data:
 fpm.color-data color:
 width: fill

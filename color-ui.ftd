@@ -2,26 +2,37 @@
 
 
 --- header:
+color: $fpm.color
 
 --- primary-body:
+color: $fpm.color
 
 --- buttons-first-row:
+color: $fpm.color
 
 --- buttons-second-row:
+color: $fpm.color
 
---- USS-body:
+--- body-with-hover:
+color: $fpm.color
 
 --- toasts:
+color: $fpm.color
 
 --- normal-buttons:
+color: $fpm.color
 
 --- hover-buttons:
+color: $fpm.color
 
 --- pressed-buttons:
+color: $fpm.color
 
 --- focused-buttons:
+color: $fpm.color
 
 --- shadow-box:
+color: $fpm.color
 
 
 
@@ -35,14 +46,15 @@
 caption page-heading: Set phasers on stun
 padding-top: $fpm.space.space-8
 width: fill
+fpm.color-data color: 
 padding-horizontal: $fpm.space.space-8
 
 --- ftd.text: $page-heading
 role: $fpm.type.heading-hero
-color: $fpm.color.main.text-strong
+color: $color.main.text-strong
 padding-bottom: $fpm.space.space-5
 border-bottom: 1
-border-color: $fpm.color.main.border-strong
+border-color: $color.main.border-strong
 white-space: nowrap
 
 
@@ -54,17 +66,18 @@ white-space: nowrap
 
 
 -- ftd.column primary-body:
-body primary-body-text: Exceeding reaction chamber thermal limit. We have begun power-supply calibration. Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems. Antimatter containment positive. 
+body primary-body-text: Exceeding reaction chamber thermal limit. We have begun power-supply calibration. Force fields have been established on all turbo lifts and crawlways. Computer, run a level-two diagnostic on warp-drive systems. Antimatter containment positive.
+fpm.color-data color:  
 padding-top: $fpm.space.space-5	
 padding-left: $fpm.space.space-9
 width: 456
 
 --- ftd.text: $primary-body-text
 role: $fpm.type.copy-relaxed
-color: $fpm.color.main.text
+color: $color.main.text
 padding-bottom: $fpm.space.space-2
 border-bottom: 1
-border-color: $fpm.color.main.border
+border-color: $color.main.border
 
 
 
@@ -75,9 +88,10 @@ border-color: $fpm.color.main.border
 
 
 -- ftd.row buttons-first-row:
-caption button1: BUTTON
-caption button2: BUTTON
-caption button3: BUTTON
+string button1: BUTTON
+string button2: BUTTON
+string button3: BUTTON
+fpm.color-data color: 
 padding-top: $fpm.space.space-5
 width: fill
 padding-left: $fpm.space.space-9
@@ -85,32 +99,33 @@ padding-left: $fpm.space.space-9
 --- ftd.text: $button1
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.hover
+background-color: $color.main.cta-primary.base
+background-color if $MOUSE-IN: $color.main.cta-primary.hover
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.cta-primary.text
+color if $MOUSE-IN: $color.main.text-strong
 role: $fpm.type.label-small
 margin-right: $fpm.space.space-3
 
 --- ftd.text: $button2
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.hover
+background-color: $color.main.cta-secondary.base
+background-color if $MOUSE-IN: $color.main.cta-secondary.hover
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
+color if $MOUSE-IN: $color.main.text
 role: $fpm.type.label-small
 margin-right: $fpm.space.space-3
 
 --- ftd.text: $button3
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.hover
+background-color: $color.main.cta-tertiary.base
+background-color if $MOUSE-IN: $color.main.cta-tertiary.hover
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
-color if $MOUSE-IN: $fpm.color.main.text
+color: $color.main.cta-primary.text
+color if $MOUSE-IN: $color.main.text
 role: $fpm.type.label-small
 
 
@@ -125,6 +140,7 @@ role: $fpm.type.label-small
 caption button4: BUTTON
 caption button5: BUTTON
 caption button6: BUTTON
+fpm.color-data color:
 padding-top: $fpm.space.space-2
 width: fill
 padding-left: $fpm.space.space-9
@@ -132,30 +148,30 @@ padding-left: $fpm.space.space-9
 --- ftd.text: $button4
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.disabled
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.disabled
+background-color: $color.main.cta-primary.disabled
+background-color if $MOUSE-IN: $color.main.cta-primary.disabled
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 role: $fpm.type.label-small
 margin-right: $fpm.space.space-3
 
 --- ftd.text: $button5
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.disabled
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.disabled
+background-color: $color.main.cta-secondary.disabled
+background-color if $MOUSE-IN: $color.main.cta-secondary.disabled
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 role: $fpm.type.label-small
 margin-right: $fpm.space.space-3
 
 --- ftd.text: $button6
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.disabled
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.disabled
+background-color: $color.main.cta-tertiary.disabled
+background-color if $MOUSE-IN: $color.main.cta-tertiary.disabled
 border-radius: 4
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 role: $fpm.type.label-small
 
 
@@ -167,47 +183,48 @@ role: $fpm.type.label-small
 
 
 
--- ftd.column USS-body:
-body shenandoah: USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the Dominion.
-body yellowstone: USS Yellowstone - Prototype for an advanced runabout designed in large part by Ensign Harry Kim.
-body layte-gulf: USS Leyte Gulf - Commanded by Captain Aaron Juraj.
-body enterprise: USS Enterprise  - Vessel's self-destruction carried out while in orbit of the Genesis Planet.
-body reliant: USS Reliant - Ship on which Pavel Chekov serves as first officer. 
+-- ftd.column body-with-hover:
+string shenandoah: USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the Dominion.
+string yellowstone: USS Yellowstone - Prototype for an advanced runabout designed in large part by Ensign Harry Kim.
+string layte-gulf: USS Leyte Gulf - Commanded by Captain Aaron Juraj.
+string enterprise: USS Enterprise  - Vessel's self-destruction carried out while in orbit of the Genesis Planet.
+string reliant: USS Reliant - Ship on which Pavel Chekov serves as first officer. 
+fpm.color-data color:
 padding-left: $fpm.space.space-9
 padding-vertical: $fpm.space.space-6
 width: 312
 
 --- ftd.column:
 border-left: 1
-border-color: $fpm.color.main.border
+border-color: $color.main.border
 padding-left: $fpm.space.space-4
 spacing: 12
 
 --- ftd.text: $shenandoah
 role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.text
+color if $MOUSE-IN: $color.main.text-strong
 
 --- ftd.text: $yellowstone
 role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.text
+color if $MOUSE-IN: $color.main.text-strong
 
 --- ftd.text: $layte-gulf
 role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.text
+color if $MOUSE-IN: $color.main.text-strong
 
 --- ftd.text: $enterprise
 role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.text
+color if $MOUSE-IN: $color.main.text-strong
 
 
 --- ftd.text: $reliant
 role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+color: $color.main.text
+color if $MOUSE-IN: $color.main.text-strong
 
 
 
@@ -222,7 +239,8 @@ color if $MOUSE-IN: $fpm.color.main.text-strong
 string error-toast: Beep Beep! I am an error !
 string success-toast: Mission complete.
 string warning-toast: Warning: Borg ship Incoming! 
-string info-toast: All hands on deck! Captain on bridge. 
+string info-toast: All hands on deck! Captain on bridge.
+fpm.color-data color: 
 padding-left: $fpm.space.space-9
 
 --- ftd.column:
@@ -231,46 +249,46 @@ spacing: 12
 --- ftd.text: $error-toast
 width: 412
 role: $fpm.type.label-big
-background-color: $fpm.color.main.error.base
+background-color: $color.main.error.base
 padding-vertical: $fpm.space.space-4
 padding-left: $fpm.space.space-4
 border-radius: 4
 border-left: 5
-border-color: $fpm.color.main.error.text
-color: $fpm.color.main.error.text
+border-color: $color.main.error.text
+color: $color.main.error.text
 
 --- ftd.text: $success-toast
 width: 412
 role: $fpm.type.label-big
-background-color: $fpm.color.main.success.base
+background-color: $color.main.success.base
 padding-vertical: $fpm.space.space-4
 padding-left: $fpm.space.space-4
 border-radius: 4
 border-left: 5
-border-color: $fpm.color.main.success.text
-color: $fpm.color.main.success.text
+border-color: $color.main.success.text
+color: $color.main.success.text
 
 --- ftd.text: $warning-toast
 width: 412
 role: $fpm.type.label-big
-background-color: $fpm.color.main.warning.base
+background-color: $color.main.warning.base
 padding-vertical: $fpm.space.space-4
 padding-left: $fpm.space.space-4
 border-radius: 4
 border-left: 5
-border-color: $fpm.color.main.warning.text
-color: $fpm.color.main.warning.text
+border-color: $color.main.warning.text
+color: $color.main.warning.text
 
 --- ftd.text: $info-toast
 width: 412
 role: $fpm.type.label-big
-background-color: $fpm.color.main.info.base
+background-color: $color.main.info.base
 padding-vertical: $fpm.space.space-4
 padding-left: $fpm.space.space-4
 border-radius: 4
 border-left: 5
-border-color: $fpm.color.main.info.text
-color: $fpm.color.main.info.text
+border-color: $color.main.info.text
+color: $color.main.info.text
 
 
 
@@ -285,12 +303,13 @@ caption button-type: normal
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
+fpm.color-data color:
 padding-top: $fpm.space.space-11
 padding-left: $fpm.space.space-11
 
 --- ftd.text: $button-type
 role: $fpm.type.label-small
-color: $fpm.color.main.text
+color: $color.main.text
 padding-top: $fpm.space.space-1
 
 --- ftd.row:
@@ -299,29 +318,29 @@ spacing: 12
 
 --- ftd.text: $primary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.base
+background-color: $color.main.cta-primary.base
+background-color if $MOUSE-IN: $color.main.cta-primary.base
 border-radius: 4
 
 --- ftd.text: $secondary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-secondary.text
+color: $color.main.cta-secondary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.base
+background-color: $color.main.cta-secondary.base
+background-color if $MOUSE-IN: $color.main.cta-secondary.base
 border-radius: 4
 
 --- ftd.text: $tertiary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.text
+color: $color.main.cta-tertiary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.base
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.base
+background-color: $color.main.cta-tertiary.base
+background-color if $MOUSE-IN: $color.main.cta-tertiary.base
 border-radius: 4
 
 
@@ -338,12 +357,13 @@ caption button-type: hover
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
+fpm.color-data color:
 padding-top: $fpm.space.space-3
 padding-left: $fpm.space.space-11
 
 --- ftd.text: $button-type
 role: $fpm.type.label-small
-color: $fpm.color.main.text
+color: $color.main.text
 padding-top: $fpm.space.space-1
 
 --- ftd.row:
@@ -352,29 +372,29 @@ spacing: 12
 
 --- ftd.text: $primary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.hover
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.hover
+background-color: $color.main.cta-primary.hover
+background-color if $MOUSE-IN: $color.main.cta-primary.hover
 border-radius: 4
 
 --- ftd.text: $secondary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-secondary.text
+color: $color.main.cta-secondary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.hover
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.hover
+background-color: $color.main.cta-secondary.hover
+background-color if $MOUSE-IN: $color.main.cta-secondary.hover
 border-radius: 4
 
 --- ftd.text: $tertiary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.text
+color: $color.main.cta-tertiary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.hover
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.hover
+background-color: $color.main.cta-tertiary.hover
+background-color if $MOUSE-IN: $color.main.cta-tertiary.hover
 border-radius: 4
 
 
@@ -390,12 +410,13 @@ caption button-type: pressed
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
+fpm.color-data color:
 padding-top: $fpm.space.space-3
 padding-left: $fpm.space.space-11
 
 --- ftd.text: $button-type
 role: $fpm.type.label-small
-color: $fpm.color.main.text
+color: $color.main.text
 padding-top: $fpm.space.space-1
 
 --- ftd.row:
@@ -404,29 +425,29 @@ spacing: 12
 
 --- ftd.text: $primary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.pressed
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.pressed
+background-color: $color.main.cta-primary.pressed
+background-color if $MOUSE-IN: $color.main.cta-primary.pressed
 border-radius: 4
 
 --- ftd.text: $secondary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-secondary.text
+color: $color.main.cta-secondary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.pressed
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.pressed
+background-color: $color.main.cta-secondary.pressed
+background-color if $MOUSE-IN: $color.main.cta-secondary.pressed
 border-radius: 4
 
 --- ftd.text: $tertiary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.text
+color: $color.main.cta-tertiary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.pressed
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.pressed
+background-color: $color.main.cta-tertiary.pressed
+background-color if $MOUSE-IN: $color.main.cta-tertiary.pressed
 border-radius: 4
 
 
@@ -442,13 +463,14 @@ caption button-type: focused
 string primary-button: BUTTON
 string secondary-button: BUTTON
 string tertiary-button: BUTTON
+fpm.color-data color:
 padding-top: $fpm.space.space-3
 padding-left: $fpm.space.space-11
 padding-bottom: $fpm.space.space-11
 
 --- ftd.text: $button-type
 role: $fpm.type.label-small
-color: $fpm.color.main.text
+color: $color.main.text
 padding-top: $fpm.space.space-1
 
 --- ftd.row:
@@ -457,29 +479,29 @@ spacing: 12
 
 --- ftd.text: $primary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-primary.text
+color: $color.main.cta-primary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-primary.focused
-background-color if $MOUSE-IN: $fpm.color.main.cta-primary.focused
+background-color: $color.main.cta-primary.focused
+background-color if $MOUSE-IN: $color.main.cta-primary.focused
 border-radius: 4
 
 --- ftd.text: $secondary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-secondary.text
+color: $color.main.cta-secondary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-secondary.focused
-background-color if $MOUSE-IN: $fpm.color.main.cta-secondary.focused
+background-color: $color.main.cta-secondary.focused
+background-color if $MOUSE-IN: $color.main.cta-secondary.focused
 border-radius: 4
 
 --- ftd.text: $tertiary-button
 role: $fpm.type.label-small
-color: $fpm.color.main.cta-tertiary.text
+color: $color.main.cta-tertiary.text
 padding-vertical: 8
 padding-horizontal: 16
-background-color: $fpm.color.main.cta-tertiary.focused
-background-color if $MOUSE-IN: $fpm.color.main.cta-tertiary.focused
+background-color: $color.main.cta-tertiary.focused
+background-color if $MOUSE-IN: $color.main.cta-tertiary.focused
 border-radius: 4
 
 
@@ -494,6 +516,7 @@ border-radius: 4
 width: 356
 height: 234
 border-bottom: 4
+fpm.color-data color:
 border-color: $fpm.color.main.success.border
 shadow-offset-x: 0
 shadow-offset-y: 4
@@ -506,3 +529,4 @@ margin-bottom: $fpm.space.space-7
 
 --- ftd.column:
 background-color: $fpm.color.main.background.base
+
