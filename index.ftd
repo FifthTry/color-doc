@@ -4,34 +4,99 @@
 
 
 
+-- import: fifthtry.github.io/color-doc/color-ui as cu
+
 
 -- color-display:
 color: $fpm.color
 
 
-
-
-
 -- ftd.column color-display:
 fpm.color-data color:
-background-color: $color.main.background.base
+
+--- ftd.row:
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.base
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-1
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-2
+
+--- container: ftd.main
+
+--- all-color-display:
+color: $color
+
+
+
+
+
+
+
+
+
+-- ftd.column card-display:
+fpm.color-data color:
+ftd.color bg-color: $color.main.background.base
+background-color: $bg-color
 width: fill
 
 --- cu.header:
+color: $color
 
 --- cu.primary-body:
+color: $color
 
 --- cu.buttons-first-row:
+color: $color
 
 --- cu.buttons-second-row:
+color: $color
 
---- ftd.column:
+--- cu.body-with-hover:
+color: $color
+
+--- cu.toasts:
+color: $color
+
+--- cu.normal-buttons:
+color: $color
+
+--- cu.hover-buttons:
+color: $color
+
+--- cu.pressed-buttons:
+color: $color
+
+--- cu.focused-buttons:
+color: $color
+
+--- cu.shadow-box:
+color: $color
+
+
+
+
+
+
+
+
+
+-- ftd.column all-color-display:
+fpm.color-data color:
 background-color: $color.main.background.base
 width: fill
 padding: $fpm.space.space-7
 
 --- color-display-data:
 color: $color
+
 
 
 
