@@ -2,37 +2,26 @@
 
 
 --- header:
-color: $fpm.color
 
 --- primary-body:
-color: $fpm.color
 
 --- buttons-first-row:
-color: $fpm.color
 
 --- buttons-second-row:
-color: $fpm.color
 
 --- body-with-hover:
-color: $fpm.color
 
 --- toasts:
-color: $fpm.color
 
 --- normal-buttons:
-color: $fpm.color
 
 --- hover-buttons:
-color: $fpm.color
 
 --- pressed-buttons:
-color: $fpm.color
 
 --- focused-buttons:
-color: $fpm.color
 
 --- shadow-box:
-color: $fpm.color
 
 
 
