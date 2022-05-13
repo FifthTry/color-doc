@@ -466,11 +466,13 @@ bg-color: $color.main.custom.ten
 -- ftd.row colors:
 caption color-name:
 ftd.color bg-color:
+width: fill
 
---- tp.h1: $color-name
+--- tp.h2: $color-name
 
 --- ftd.row:
-width: fill
+width: 600
+width if :$is-mobile : fill
 height: 100
 margin-bottom: 20
 background-color: $bg-color
