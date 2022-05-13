@@ -3,18 +3,32 @@
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
 
+-- boolean is-mobile: false
 
--- import: fifthtry.github.io/color-doc/color-ui as cu
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
 
 
 -- color-display:
 color: $fpm.color
 
 
+
+
+
+
+
+
 -- ftd.column color-display:
 fpm.color-data color:
 
 --- ftd.row:
+if: not $is-mobile
 
 --- card-display:
 color: $color
@@ -31,7 +45,30 @@ bg-color: $color.main.background.step-2
 --- container: ftd.main
 
 --- all-color-display:
+if: not $is-mobile
 color: $color
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.base
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-1
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-2
+
+--- all-color-display:
+color: $color
+
+--- container: ftd.main
 
 
 
@@ -120,12 +157,9 @@ bg-color: $color.main.background.step-1
 
 
 
-
 --- colors:
 color-name: `fpm.color.main.background.step-2`
 bg-color: $color.main.background.step-2
-
-
 
 
 
@@ -135,11 +169,10 @@ bg-color: $color.main.border
 
 
 
-
-
 --- colors:
 color-name: `fpm.color.main.border-strong`
 bg-color: $color.main.border-strong
+
 
 
 --- colors:
@@ -154,7 +187,6 @@ bg-color: $color.main.text-strong
 
 
 
-
 --- colors:
 color-name: `fpm.color.main.shadow`
 bg-color: $color.main.shadow
@@ -166,9 +198,11 @@ color-name: `fpm.color.main.scrim`
 bg-color: $color.main.scrim
 
 
+
 --- colors:
 color-name: `fpm.color.main.cta-primary.base`
 bg-color: $color.main.cta-primary.base
+
 
 
 --- colors:
@@ -194,16 +228,17 @@ color-name: `fpm.color.main.cta-primary.border`
 bg-color: $color.main.cta-primary.border
 
 
+
 --- colors:
 color-name: `fpm.color.main.cta-primary.text`
 bg-color: $color.main.cta-primary.text
 
 
 
-
 --- colors:
 color-name: `fpm.color.main.cta-secondary.base`
 bg-color: $color.main.cta-secondary.base
+
 
 
 --- colors:
@@ -229,16 +264,17 @@ color-name: `fpm.color.main.cta-secondary.border`
 bg-color: $color.main.cta-secondary.border
 
 
+
 --- colors:
 color-name: `fpm.color.main.cta-secondary.text`
 bg-color: $color.main.cta-secondary.text
 
 
 
-
 --- colors:
 color-name: `fpm.color.main.cta-tertiary.base`
 bg-color: $color.main.cta-tertiary.base
+
 
 
 --- colors:
@@ -264,16 +300,17 @@ color-name: `fpm.color.main.cta-tertiary.border`
 bg-color: $color.main.cta-tertiary.border
 
 
+
 --- colors:
 color-name: `fpm.color.main.cta-tertiary.text`
 bg-color: $color.main.cta-tertiary.text
 
 
 
-
 --- colors:
 color-name: `fpm.color.main.accent.primary`
 bg-color: $color.main.accent.primary
+
 
 
 --- colors:
@@ -286,9 +323,12 @@ bg-color: $color.main.accent.secondary
 color-name: `fpm.color.main.accent.tertiary`
 bg-color: $color.main.accent.tertiary
 
+
+
 --- colors:
 color-name: `fpm.color.main.error.base`
 bg-color: $color.main.error.base
+
 
 
 --- colors:
@@ -303,12 +343,10 @@ bg-color: $color.main.error.border
 
 
 
-
-
-
 --- colors:
 color-name: `fpm.color.main.success.base`
 bg-color: $color.main.success.base
+
 
 
 --- colors:
@@ -328,6 +366,7 @@ color-name: `fpm.color.main.info.base`
 bg-color: $color.main.info.base
 
 
+
 --- colors:
 color-name: `fpm.color.main.info.text`
 bg-color: $color.main.info.text
@@ -339,9 +378,11 @@ color-name: `fpm.color.main.info.border`
 bg-color: $color.main.info.border
 
 
+
 --- colors:
 color-name: `fpm.color.main.warning.base`
 bg-color: $color.main.warning.base
+
 
 
 --- colors:
@@ -361,39 +402,54 @@ color-name: `fpm.color.main.custom.one`
 bg-color: $color.main.custom.one
 
 
+
 --- colors:
 color-name: `fpm.color.main.custom.two`
 bg-color: $color.main.custom.two
+
+
 
 --- colors:
 color-name: `fpm.color.main.custom.three`
 bg-color: $color.main.custom.three
 
 
+
 --- colors:
 color-name: `fpm.color.main.custom.four`
 bg-color: $color.main.custom.four
+
+
 
 --- colors:
 color-name: `fpm.color.main.custom.five`
 bg-color: $color.main.custom.five
 
+
+
 --- colors:
 color-name: `fpm.color.main.custom.six`
 bg-color: $color.main.custom.six
 
+
+
 --- colors:
 color-name: `fpm.color.main.custom.seven`
 bg-color: $color.main.custom.seven
+
+
 
 --- colors:
 color-name: `fpm.color.main.custom.eight`
 bg-color: $color.main.custom.eight
 
 
+
 --- colors:
 color-name: `fpm.color.main.custom.nine`
 bg-color: $color.main.custom.nine
+
+
 
 --- colors:
 color-name: `fpm.color.main.custom.ten`
@@ -405,14 +461,19 @@ bg-color: $color.main.custom.ten
 
 
 
+
+
 -- ftd.row colors:
 caption color-name:
 ftd.color bg-color:
+width: fill
 
---- tp.h1: $color-name
+--- tp.h2: $color-name
 
 --- ftd.row:
 width: 600
+width if :$is-mobile : fill
 height: 100
 margin-bottom: 20
 background-color: $bg-color
+
