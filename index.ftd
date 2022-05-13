@@ -6,15 +6,33 @@
 
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+
 
 -- color-display:
 color: $fpm.color
 
 
+
+
+
+
+
+
 -- ftd.column color-display:
 fpm.color-data color:
+id: main-container
 
 --- ftd.row:
+if: not $is-mobile
 
 --- card-display:
 color: $color
@@ -31,8 +49,31 @@ bg-color: $color.main.background.step-2
 --- container: ftd.main
 
 --- all-color-display:
+if: not $is-mobile
 color: $color
 
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+padding-horizontal: 20
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.base
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-1
+
+--- card-display:
+color: $color
+bg-color: $color.main.background.step-2
+
+--- all-color-display:
+color: $color
+
+--- container: ftd.main
 
 
 
