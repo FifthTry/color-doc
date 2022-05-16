@@ -44,7 +44,6 @@ color: $color.main.text-strong
 padding-bottom: $fpm.space.space-5
 border-bottom: 1
 border-color: $color.main.border-strong
-white-space: nowrap
 
 
 
