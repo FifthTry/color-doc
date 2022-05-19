@@ -27,99 +27,8 @@ color: $fpm.color
 -- ftd.column color-display:
 fpm.color-data color:
 
---- ftd.row:
-if: not $is-mobile
-
---- card-display:
-color: $color
-bg-color: $color.main.background.base
-
---- card-display:
-color: $color
-bg-color: $color.main.background.step-1
-
---- card-display:
-color: $color
-bg-color: $color.main.background.step-2
-
---- container: ftd.main
-
---- all-color-display:
-if: not $is-mobile
-color: $color
-
---- container: ftd.main
-
---- ftd.column:
-if: $is-mobile
-
---- card-display:
-color: $color
-bg-color: $color.main.background.base
-
---- card-display:
-color: $color
-bg-color: $color.main.background.step-1
-
---- card-display:
-color: $color
-bg-color: $color.main.background.step-2
-
 --- all-color-display:
 color: $color
-
---- container: ftd.main
-
-
-
-
-
-
-
-
-
--- ftd.column card-display:
-fpm.color-data color:
-ftd.color bg-color: $color.main.background.base
-background-color: $bg-color
-width: fill
-
---- cu.header:
-color: $color
-
---- cu.primary-body:
-color: $color
-
---- cu.buttons-first-row:
-color: $color
-
---- cu.buttons-second-row:
-color: $color
-
---- cu.body-with-hover:
-color: $color
-
---- cu.toasts:
-color: $color
-
---- cu.normal-buttons:
-color: $color
-
---- cu.hover-buttons:
-color: $color
-
---- cu.pressed-buttons:
-color: $color
-
---- cu.focused-buttons:
-color: $color
-
---- cu.shadow-box:
-color: $color
-
-
-
-
 
 
 
@@ -129,7 +38,10 @@ color: $color
 fpm.color-data color:
 background-color: $color.main.background.base
 width: fill
-padding: $fpm.space.space-7
+padding-horizontal: $fpm.space.space-6
+
+--- cu.color-ui:
+color: $color
 
 --- color-display-data:
 color: $color
@@ -468,7 +380,7 @@ caption color-name:
 ftd.color bg-color:
 width: fill
 
---- tp.h2: $color-name
+--- tp.h3: $color-name
 
 --- ftd.row:
 width: 600
