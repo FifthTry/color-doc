@@ -472,7 +472,7 @@ width: fill
 
 --- ftd.row:
 width: 600
-width if :$is-mobile : fill
+width if $is-mobile : fill
 height: 100
 margin-bottom: 20
 background-color: $bg-color
