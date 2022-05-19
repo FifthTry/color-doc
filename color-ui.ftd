@@ -2,15 +2,31 @@
 
 -- boolean is-mobile: false
 
+
 -- is-mobile: true
 if: $ftd.device == mobile
 
 -- ftd.row color-ui:
 fpm.color-data color:
+optional boolean minimize: false
+width: fill
+
+
+--- ftd.row:
+width: fill
+id: card-container
+
+--- ftd.row:
+if: $minimize
+scale: 0.6
+move-left: 100
+move-up: 250
 width: fill
 
 --- ftd.row:
 if: not $is-mobile
+
+
 
 --- header:
 color: $color
@@ -33,9 +49,42 @@ bg-color: $fpm.color.main.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
+--- container: card-container
 
+--- ftd.row:
+if: not $minimize
+scale: 1
+width: fill
+
+--- ftd.row:
+if: not $is-mobile
+
+
+
+--- header:
+color: $color
+width: percent 33
+bg-color: $fpm.color.main.background.base
+page-heading: Set phasers on stun
+primary-body-text: $primary-body-text
+
+--- header:
+color: $color
+width: percent 34
+bg-color: $fpm.color.main.background.step-1
+page-heading: Set phasers on stun
+primary-body-text: $primary-body-text
+
+--- header:
+color: $color
+width: percent 33
+bg-color: $fpm.color.main.background.step-2
+page-heading: Set phasers on stun
+primary-body-text: $primary-body-text
 
 --- container: ftd.main
+
+
 
 --- ftd.column:
 if: $is-mobile
