@@ -21,7 +21,29 @@
   },
   "ftd#device": {
     "value": "desktop",
-    "dependencies": {}
+    "dependencies": {
+      "$value$": [
+        {
+          "condition": "mobile",
+          "dependency_type": "Variable",
+          "parameters": {
+            "fifthtry.github.io/color-doc/color-ui/#is-mobile": {
+              "default": {
+                "important": false,
+                "reference": null,
+                "value": false
+              },
+              "value": {
+                "important": false,
+                "reference": null,
+                "value": true
+              }
+            }
+          },
+          "remaining": null
+        }
+      ]
+    }
   },
   "ftd#follow-system-dark-mode": {
     "value": true,
