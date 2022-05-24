@@ -572,8 +572,9 @@ shadow-offset-y: 4
 shadow-size: 1
 shadow-blur: 2
 shadow-color: $fpm.color.main.success.border
+background-color: $fpm.color.main.background.base
 
 --- ftd.column:
-background-color: $fpm.color.main.background.base	
+	
 
 
