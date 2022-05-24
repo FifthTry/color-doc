@@ -30,21 +30,21 @@ if: not $is-mobile
 
 --- header:
 color: $color
-width: percent 33
+width: fill
 bg-color: $fpm.color.main.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 --- header:
 color: $color
-width: percent 34
+width: fill
 bg-color: $fpm.color.main.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 --- header:
 color: $color
-width: percent 33
+width: fill
 bg-color: $fpm.color.main.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
@@ -63,21 +63,21 @@ if: not $is-mobile
 
 --- header:
 color: $color
-width: percent 33
+width: fill
 bg-color: $fpm.color.main.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 --- header:
 color: $color
-width: percent 34
+width: fill
 bg-color: $fpm.color.main.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 --- header:
 color: $color
-width: percent 33
+width: fill
 bg-color: $fpm.color.main.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
