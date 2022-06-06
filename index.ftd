@@ -403,7 +403,7 @@ width: fill
 --- tp.h2: $color-name
 
 --- ftd.column:
-width: 600
+width: fill
 width if $is-mobile : fill
 height: 100
 margin-bottom: 20
