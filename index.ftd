@@ -75,6 +75,7 @@ color: $color
 -- ftd.column color-display-data:
 fpm.color-data color:
 width: fill
+padding-left: $fpm.space.space-6
 
 --- colors:
 color-name: `fpm.color.main.background.base`
@@ -394,15 +395,15 @@ bg-color: $color.main.custom.ten
 
 
 
--- ftd.row colors:
+-- ftd.column colors:
 caption color-name:
 ftd.color bg-color:
 width: fill
 
 --- tp.h2: $color-name
 
---- ftd.row:
-width: 600
+--- ftd.column:
+width: fill
 width if $is-mobile : fill
 height: 100
 margin-bottom: 20
