@@ -4,5 +4,13 @@
 zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 base: https://raw.githubusercontent.com/fifthtry/color-doc/main
 
--- fpm.dependency: fifthtry.github.io/typography as tp
+-- fpm.dependency: fifthtry.github.io/package-doc as pd
+
+-- fpm.auto-import: pd
+-- fpm.auto-import: fpm
+-- fpm.auto-import: pd/typography as tf
+-- fpm.auto-import: pd/code-block as cb
+-- fpm.auto-import: pd/forest-theme as ft
+-- fpm.auto-import: fifthtry.github.io/color-doc/FPM/config
+
 

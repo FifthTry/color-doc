@@ -1,6 +1,7 @@
 -- import: fpm
--- import: tp
 -- import: fifthtry.github.io/color-doc/color-ui as cu
+-- import: fifthtry.github.io/package-doc/doc as pd
+
 
 
 -- boolean is-mobile: false
@@ -9,8 +10,36 @@
 if: $ftd.device == mobile
 
 
+-- ftd.column:
+width: fill
+padding-horizontal: 50
+padding-vertical: 20
+padding-horizontal if $is-mobile: 20
+background-color: $fpm.color.main.background.base
 
 
+-- pd.package: Color Doc
+name: fifthtry.github.io/color-doc
+
+Color Doc is a color schemes which can be used to change color scheme of web 
+packages via using `FTD` lang.
+
+To use `color-doc` color scheme on your web package, add below into `FPM.ftd` file:
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/color-doc as colors
+
+
+-- tf.markdown:
+
+Import `colors` into `FPM/config.ftd` file.
+
+-- cb.code:
+lang: ftd
+
+\-- import: colors
 
 
 
@@ -47,7 +76,6 @@ background-color: $color.main.background.base
 width: fill
 
 --- ftd.row:
-width: fill
 
 --- cu.color-ui:
 color: $color
@@ -56,7 +84,6 @@ minimize: $minimize
 --- container: ftd.main
 
 --- ftd.row:
-
 
 --- color-display-data:
 color: $color
@@ -400,7 +427,7 @@ caption color-name:
 ftd.color bg-color:
 width: fill
 
---- tp.h2: $color-name
+--- tf.h2: $color-name
 
 --- ftd.column:
 width: fill
