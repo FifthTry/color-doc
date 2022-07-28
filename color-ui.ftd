@@ -10,6 +10,7 @@ if: $ftd.device == mobile
 fpm.color-data color:
 optional boolean minimize: false
 width: fill
+margin-top: $fpm.space.space-8
 
 
 --- ftd.row:
@@ -19,11 +20,12 @@ id: card-container
 --- ftd.row:
 if: $minimize
 scale: 0.8
-move-left: 120
+move-left: 95
 move-up: 100
 width: fill
 
 --- ftd.row:
+width: fill
 if: not $is-mobile
 
 
@@ -53,10 +55,12 @@ primary-body-text: $primary-body-text
 
 --- ftd.row:
 if: not $minimize
-scale: 1
+scale: 0.8
 width: fill
+move-left: 0
 
 --- ftd.row:
+width: fill
 if: not $is-mobile
 
 
@@ -87,6 +91,7 @@ primary-body-text: $primary-body-text
 
 
 --- ftd.column:
+width: fill
 if: $is-mobile
 
 --- header:
@@ -134,24 +139,6 @@ body title-body:
 
 USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the
 Dominion.
-
--- title-name:
-
-USS Yellowstone - Prototype for an advanced runabout designed 
-in large part by Ensign Harry Kim.
-
--- title-name:
-
-USS Leyte Gulf - Commanded by Captain Aaron Juraj.
-
--- title-name:
-
-USS Enterprise  - Vessel's self-destruction carried out while in orbit of the 
-Genesis Planet.
-
--- title-name:
-
-USS Reliant - Ship on which Pavel Chekov serves as first officer.
 
 
 
@@ -273,92 +260,35 @@ fpm.color-data color:
 ftd.color bg-color: $color.main.background.base
 background-color: $bg-color
 width: $width
-padding-vertical: $fpm.space.space-9
-padding-horizontal: $fpm.space.space-9
-spacing: 24
-
+padding-vertical: $fpm.space.space-4
+padding-horizontal: $fpm.space.space-4
+spacing: 14
 
 
 --- ftd.text: $page-heading
-role: $fpm.type.heading-hero
+role: $fpm.type.heading-small
 color: $color.main.text-strong
 padding-bottom: $fpm.space.space-5
 border-bottom: 1
 border-color: $color.main.border-strong
-
---- ftd.text: 
-text: $primary-body-text
-role: $fpm.type.copy-relaxed
-color: $color.main.text
-padding-bottom: $fpm.space.space-2
-border-bottom: 1
-border-color: $color.main.border
-
-
-
-
-
-
-
-
-
---- ftd.column:
-spacing: 12
-id: button-container
-
---- ftd.row:
-spacing: 12
-
---- buttons:
-button-background: $color.main.cta-primary.base
-button-text: Button
-
---- buttons:
-button-text: Button
-button-background: $color.main.cta-secondary.base
-
---- buttons:
-button-text: Button
-button-background: $color.main.cta-tertiary.base
-
---- container: button-container
-
---- ftd.row:
-spacing: 12
-
---- buttons:
-button-background: $color.main.cta-primary.disabled
-button-text: Button
-
---- buttons:
-button-text: Button
-button-background: $color.main.cta-secondary.disabled
-
---- buttons:
-button-text: Button
-button-background: $color.main.cta-tertiary.disabled
-
-
---- container: ftd.main
-
-
-
-
-
-
-
-
-
---- ftd.column:
-width: fill
-
 
 --- body-with-hover:
 title-name: $obj.title-body
 $loop$: $title-name as $obj
 
 
---- container: ftd.main
+--- normal-buttons:
+background-primary-cta-text: $obj.background-primary-cta-text
+background-secondary-cta-text: $obj.background-secondary-cta-text
+background-tertiary-cta-text: $obj.background-tertiary-cta-text
+primary-cta-text: $obj.primary-cta-text
+secondary-cta-text: $obj.secondary-cta-text
+tertiary-cta-text: $obj.tertiary-cta-text
+title: $obj.title
+$loop$: $cta-list as $obj
+
+
+
 
 
 
@@ -385,27 +315,6 @@ $loop$: $toast as $obj
 --- ftd.column:
 width: fill
 padding-vertical: $fpm.space.space-2
-
-
-
-
-
-
-
-
-
---- normal-buttons:
-background-primary-cta-text: $obj.background-primary-cta-text
-background-secondary-cta-text: $obj.background-secondary-cta-text
-background-tertiary-cta-text: $obj.background-tertiary-cta-text
-primary-cta-text: $obj.primary-cta-text
-secondary-cta-text: $obj.secondary-cta-text
-tertiary-cta-text: $obj.tertiary-cta-text
-title: $obj.title
-$loop$: $cta-list as $obj
-
-
-
 
 
 
@@ -451,7 +360,7 @@ width: fill
 border-left: 1
 border-color: $fpm.color.main.border
 border-color if $MOUSE-IN: $fpm.color.main.accent.primary
-border-left if $MOUSE-IN: 4
+border-left: 4
 padding-left: $fpm.space.space-4
 padding-vertical: $fpm.space.space-2
 
@@ -511,17 +420,17 @@ string tertiary-cta-text:
 ftd.color background-primary-cta-text: 
 ftd.color background-secondary-cta-text: 
 ftd.color background-tertiary-cta-text: 
-padding-vertical: $fpm.space.space-2
+padding-vertical: $fpm.space.space-0
 spacing: 8
 
 
 --- ftd.text: $title
 padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
+padding-horizontal: $fpm.space.space-0
 role: $fpm.type.label-small
 color: $fpm.color.main.text
-padding-right: $fpm.space.space-6
-width: 115
+padding-right: $fpm.space.space-2
+width: 90
 
 --- container: ftd.main
 
@@ -533,7 +442,7 @@ spacing: 8
 text: $primary-cta-text
 role: $fpm.type.label-small
 padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
+padding-horizontal: $fpm.space.space-3
 border-radius: 4
 background-color: $background-primary-cta-text
 
@@ -563,7 +472,7 @@ background-color: $background-tertiary-cta-text
 
 -- ftd.column shadow-box:
 width: fill
-padding-vertical: $fpm.space.space-14
+padding-vertical: $fpm.space.space-12
 border-bottom: 4
 fpm.color-data color:
 border-color: $fpm.color.main.success.border
