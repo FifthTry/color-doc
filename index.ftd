@@ -121,6 +121,10 @@ color-name: `fpm.color.main.background.step-2`
 bg-color: $color.main.background.step-2
 
 
+--- colors:
+color-name: `fpm.color.main.background.overlay`
+bg-color: $color.main.background.overlay
+
 
 --- colors:
 color-name: `fpm.color.main.border`
