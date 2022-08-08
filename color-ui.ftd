@@ -360,7 +360,7 @@ width: fill
 border-left: 1
 border-color: $fpm.color.main.border
 border-color if $MOUSE-IN: $fpm.color.main.accent.primary
-border-left: 4
+;border-left: 4
 padding-left: $fpm.space.space-4
 padding-vertical: $fpm.space.space-2
 
