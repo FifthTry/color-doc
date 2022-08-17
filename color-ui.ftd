@@ -357,7 +357,6 @@ body title-name:
 width: fill
 
 --- ftd.column:
-border-left: 1
 border-color: $fpm.color.main.border
 border-color if $MOUSE-IN: $fpm.color.main.accent.primary
 border-left: 4
