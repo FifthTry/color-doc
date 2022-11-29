@@ -49,8 +49,46 @@ subtitle-five: .code
 
 
 
+-- primary-component: CTA PRIMARY
+subtitle: Below are cta primary color definitions we use. 
+bgcolor-one: $fpm.color.main.cta-primary.hover
+bgcolor-two: $fpm.color.main.cta-primary.base
+bgcolor-three: $fpm.color.main.cta-primary.pressed
+bgcolor-four: $fpm.color.main.cta-primary.disabled
+bgcolor-five: $fpm.color.main.cta-primary.focused
+bgcolor-six: $fpm.color.main.cta-primary.border
+bgcolor-seven: $fpm.color.main.cta-primary.text
+subtitle-one: HOVER
+subtitle-two: BASE
+subtitle-three: PRESSED
+subtitle-four: disabled
+subtitle-five: focused
+subtitle-six: border
+subtitle-seven: text
 
 
+-- custom-component: CTA PRIMARY
+subtitle:  Below are custom color definitions we use.  
+bgcolor-one: $fpm.color.main.custom.one
+bgcolor-two: $fpm.color.main.custom.two
+bgcolor-three: $fpm.color.main.custom.three
+bgcolor-four: $fpm.color.main.custom.four
+bgcolor-five: $fpm.color.main.custom.five
+bgcolor-six: $fpm.color.main.custom.six
+bgcolor-seven: $fpm.color.main.custom.seven
+bgcolor-eight: $fpm.color.main.custom.eight
+bgcolor-nine: $fpm.color.main.custom.nine
+bgcolor-ten: $fpm.color.main.custom.ten
+subtitle-one: hover
+subtitle-two: BASE
+subtitle-three: pressed
+subtitle-four: disabled
+subtitle-five: focused
+subtitle-six: border
+subtitle-seven: text
+subtitle-eight: text
+subtitle-nine: text
+subtitle-ten: text
 
 
 -- ftd.column standalone:
@@ -308,8 +346,8 @@ if: $bgcolor-three is not null
 --- show-box: \$fpm.color.main.text
 if: $open-three
 subtitle: text
-dark: $bgcolor-three.dark
-light: $bgcolor-three.light
+dark:  #2cc9b5
+light:  #2cc9b5
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
@@ -323,8 +361,8 @@ if: $bgcolor-four is not null
 --- show-box: \$fpm.color.main.text-strong
 if: $open-four
 subtitle: text strong
-dark: $bgcolor-four.dark
-light: $bgcolor-four.light
+dark: rgba(44, 201, 181, 0.1)
+light: rgba(44, 201, 181, 0.1)
 backgroundcolor: $bgcolor-four
 
 --- container: ftd.main
@@ -338,8 +376,8 @@ if: $bgcolor-five is not null
 --- show-box: \$fpm.color.main.shadow
 if: $open-five
 subtitle: shadow
-dark: $bgcolor-five.dark
-light: $bgcolor-five.light
+dark: #2cbfac
+light: #2cbfac
 backgroundcolor: $bgcolor-five
 
 
@@ -354,8 +392,8 @@ if: $bgcolor-six is not null
 --- show-box: \$fpm.color.main.scrim
 if: $open-six
 subtitle: scrim
-dark: $bgcolor-six.dark
-light: $bgcolor-six.light
+dark:  #2b8074
+light:  #2b8074
 backgroundcolor: $bgcolor-six
 
 
@@ -635,7 +673,7 @@ backgroundcolor: $bgcolor-five
 
 
 
--- ftd.column color-data-one:
+-- ftd.column custom-component:
 width: fill
 spacing: 64
 boolean open-one: true
@@ -727,7 +765,7 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
-background-color if $bgcolor-two is not null: $bgcolor-two
+background-color : $bgcolor-two
 $on-click$: $open-two= true
 $on-click$: $open-one= false
 $on-click$: $open-three= false
@@ -758,7 +796,7 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
-background-color if $bgcolor-three is not null: $bgcolor-three
+background-color : $bgcolor-three
 $on-click$: $open-three= true
 $on-click$: $open-two= false
 $on-click$: $open-one= false
@@ -821,7 +859,7 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
-background-color if $bgcolor-five is not null: $bgcolor-five
+background-color : $bgcolor-five
 $on-click$: $open-five= true
 $on-click$: $open-two= false
 $on-click$: $open-three= false
@@ -852,7 +890,7 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
-background-color if $bgcolor-six is not null: $bgcolor-six
+background-color : $bgcolor-six
 $on-click$: $open-six= true
 $on-click$: $open-two= false
 $on-click$: $open-three= false
@@ -1042,9 +1080,10 @@ if: $bgcolor-three is not null
 
 --- show-box: fpm.color.main.background.step-2.light
 if: $open-three
-name: step-2
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
 subtitle: background step-2
-
+backgroundcolor: $bgcolor-three
 
 --- container: ftd.main
 
@@ -1074,8 +1113,8 @@ if: $bgcolor-five is not null
 if: $open-five
 name: step-1
 subtitle: background step-1
-dark: #2cbfac
-light: #2cbfac
+dark: $bgcolor-five.dark
+light: $bgcolor-five.light
 backgroundcolor: $bgcolor-five
 
 
@@ -1091,8 +1130,425 @@ if: $bgcolor-six is not null
 if: $open-six
 name: step-1
 subtitle: background step-1
-dark: #2cbfac
-light: #2cbfac
+dark: $bgcolor-six.dark
+light: $bgcolor-six.light
+backgroundcolor: $bgcolor-six
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-seven
+
+--- ftd.column:
+if: $bgcolor-seven is not null
+
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-seven
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-seven.dark
+light: $bgcolor-seven.light
+backgroundcolor: $bgcolor-seven
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-eight
+
+--- ftd.column:
+if: $bgcolor-eight is not null
+
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-eight
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-eight.dark
+light: $bgcolor-eight.light
+backgroundcolor: $bgcolor-eight
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-nine
+
+--- ftd.column:
+if: $bgcolor-nine is not null
+
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-nine
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-nine.dark
+light: $bgcolor-nine.light
+backgroundcolor: $bgcolor-nine
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-ten
+
+--- ftd.column:
+if: $bgcolor-ten is not null
+
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-ten
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-ten.dark
+light: $bgcolor-ten.light
+backgroundcolor: $bgcolor-ten
+
+
+
+
+
+
+
+-- ftd.column primary-component:
+width: fill
+spacing: 64
+boolean open-one: true
+boolean open-two: false
+boolean open-three: false
+boolean open-four: false
+boolean open-five: false
+boolean open-six: false
+boolean open-seven: false
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six: 
+optional ftd.color bgcolor-seven: 
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+caption title:
+string subtitle:
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 16
+
+
+--- ftd.row:
+if: $bgcolor-one is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-one
+$on-click$: $open-one= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+$on-click$: $open-seven= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-one
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-two is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color : $bgcolor-two
+$on-click$: $open-two= true
+$on-click$: $open-one= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+$on-click$: $open-seven= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-two
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-three is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color : $bgcolor-three
+$on-click$: $open-three= true
+$on-click$: $open-two= false
+$on-click$: $open-one= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+$on-click$: $open-seven= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-three
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-four is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-four
+$on-click$: $open-four= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-one= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+$on-click$: $open-seven= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-four
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-five is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color : $bgcolor-five
+$on-click$: $open-five= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-one= false
+$on-click$: $open-six= false
+$on-click$: $open-seven= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-five
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-six is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color : $bgcolor-six
+$on-click$: $open-six= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-one= false
+$on-click$: $open-seven= false
+
+--- ftd.column:
+align: center
+width: fill
+--- ftd.text: $subtitle-six
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-seven is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-seven
+$on-click$: $open-seven= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+$on-click$: $open-one= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-seven
+color: $fpm.color.main.text-strong
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-one
+
+--- ftd.column:
+if: $bgcolor-one is not null
+
+--- show-box: fpm.color.main.background.step-1.light
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-one.dark
+light: $bgcolor-one.light
+backgroundcolor: $bgcolor-one
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-two
+
+--- ftd.column:
+if: $bgcolor-two is not null
+
+--- show-box: fpm.color.main.background.base.light
+if: $open-two
+name: base
+subtitle: background base
+dark: $bgcolor-two.dark
+light: $bgcolor-two.light
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-three
+
+--- ftd.column:
+if: $bgcolor-three is not null
+
+--- show-box: fpm.color.main.background.step-2.light
+if: $open-three
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
+subtitle: background step-2
+backgroundcolor: $bgcolor-three
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-four
+
+--- ftd.column:
+if: $bgcolor-four is not null
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-four
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-four.dark
+light: $bgcolor-four.light
+backgroundcolor: $bgcolor-four
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-five
+
+--- ftd.column:
+if: $bgcolor-five is not null
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-five
+name: step-1
+subtitle: background step-1
+dark: $bgcolor-five.dark
+light: $bgcolor-five.light
+backgroundcolor: $bgcolor-five
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-six
+
+--- ftd.column:
+if: $bgcolor-six is not null
+
+--- show-box: fpm.color.main.background.step-1.light
+if: $open-six
+name: step-1
+subtitle: background step-1
+dark:  #2b8074
+light: $bgcolor-six.light
 backgroundcolor: $bgcolor-six
 
 
@@ -1112,60 +1568,6 @@ subtitle: background step-1
 dark: #feffff
 light: #feffff
 backgroundcolor: $bgcolor-seven
-
-
---- container: ftd.main
-
---- ftd.column:
-if: $open-eight
-
---- ftd.column:
-if: $bgcolor-eight is not null
-
-
---- show-box: fpm.color.main.background.step-1.light
-if: $open-eight
-name: step-1
-subtitle: background step-1
-dark: #feffff
-light: #feffff
-backgroundcolor: $bgcolor-eight
-
-
---- container: ftd.main
-
---- ftd.column:
-if: $open-nine
-
---- ftd.column:
-if: $bgcolor-nine is not null
-
-
---- show-box: fpm.color.main.background.step-1.light
-if: $open-nine
-name: step-1
-subtitle: background step-1
-dark: #feffff
-light: #feffff
-backgroundcolor: $bgcolor-nine
-
-
---- container: ftd.main
-
---- ftd.column:
-if: $open-ten
-
---- ftd.column:
-if: $bgcolor-ten is not null
-
-
---- show-box: fpm.color.main.background.step-1.light
-if: $open-ten
-name: step-1
-subtitle: background step-1
-dark: #feffff
-light: #feffff
-backgroundcolor: $bgcolor-ten
 
 
 
@@ -1576,34 +1978,36 @@ white-space: nowrap
 --- ftd.row:
 width:fill
 wrap: true
-spacing: 8
 id: hh
 
 --- ftd.row:
 width: fill
-spacing: 8
-margin-bottom: 8
+spacing: 4
+margin-bottom: 4
 --- ftd.text: we use
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
-
+white-space: nowrap
 
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
+white-space: nowrap
 
 
 --- container: hh
 
 --- ftd.row:
 width: fill
-spacing: 8
+spacing: 4
 --- ftd.text: for 
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
+white-space: nowrap
 
 
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
+white-space: nowrap
