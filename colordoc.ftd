@@ -1914,9 +1914,9 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-primary.base
+--- show-box: fpm.color.main.cta-secondary.base
 name: base
-subtitle: cta-primary base
+subtitle: cta-secondary base
 dark: $bgcolor-one.dark
 light: $bgcolor-one.light
 backgroundcolor: $bgcolor-one
@@ -1930,10 +1930,10 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-primary.hover
+--- show-box: fpm.color.main.cta-secondary.hover
 if: $open-two
 name: hover
-subtitle: cta-primary hover
+subtitle: cta-secondary hover
 dark: $bgcolor-two.dark
 light: $bgcolor-two.light
 backgroundcolor: $bgcolor-two
@@ -1946,12 +1946,12 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-primary.pressed
+--- show-box: fpm.color.main.cta-secondary.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
 light: $bgcolor-three.light
-subtitle: cta-primary pressed
+subtitle: cta-secondary pressed
 backgroundcolor: $bgcolor-three
 
 --- container: ftd.main
@@ -1962,10 +1962,10 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-primary.disabled
+--- show-box: fpm.color.main.cta-secondary.disabled
 if: $open-four
 name: disabled
-subtitle: cta-primary disabled
+subtitle: cta-secondary disabled
 dark: $bgcolor-four.dark
 light: $bgcolor-four.light
 backgroundcolor: $bgcolor-four
@@ -1978,10 +1978,10 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-primary.focused
+--- show-box: fpm.color.main.cta-secondary.focused
 if: $open-five
 name: focused
-subtitle: cta-primary focused
+subtitle: cta-secondary focused
 dark: $bgcolor-five.dark
 light: $bgcolor-five.light
 backgroundcolor: $bgcolor-five
@@ -1995,10 +1995,10 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-primary.border
+--- show-box: fpm.color.main.cta-secondary.border
 if: $open-six
 name: border
-subtitle: cta-primary border
+subtitle: cta-secondary border
 dark:  #2b8074
 light: $bgcolor-six.light
 backgroundcolor: $bgcolor-six
@@ -2013,10 +2013,10 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-primary.text
+--- show-box: fpm.color.main.cta-secondary.text
 if: $open-seven
 name: text
-subtitle: cta-primar text
+subtitle: cta-secondary text
 dark: #feffff
 light: #feffff
 backgroundcolor: $bgcolor-seven
@@ -2275,9 +2275,9 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-primary.base
+--- show-box: fpm.color.main.cta-tertairy.base
 name: base
-subtitle: cta-primary base
+subtitle: cta-tertairy base
 dark: $bgcolor-one.dark
 light: $bgcolor-one.light
 backgroundcolor: $bgcolor-one
@@ -2291,10 +2291,10 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-primary.hover
+--- show-box: fpm.color.main.cta-tertairy.hover
 if: $open-two
 name: hover
-subtitle: cta-primary hover
+subtitle: cta-tertairy hover
 dark: $bgcolor-two.dark
 light: $bgcolor-two.light
 backgroundcolor: $bgcolor-two
@@ -2307,12 +2307,12 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-primary.pressed
+--- show-box: fpm.color.main.cta-tertairy.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
 light: $bgcolor-three.light
-subtitle: cta-primary pressed
+subtitle: cta-tertairy pressed
 backgroundcolor: $bgcolor-three
 
 --- container: ftd.main
@@ -2323,10 +2323,10 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-primary.disabled
+--- show-box: fpm.color.main.cta-tertairy.disabled
 if: $open-four
 name: disabled
-subtitle: cta-primary disabled
+subtitle: cta-tertairy disabled
 dark: $bgcolor-four.dark
 light: $bgcolor-four.light
 backgroundcolor: $bgcolor-four
@@ -2339,10 +2339,10 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-primary.focused
+--- show-box: fpm.color.main.cta-tertairy.focused
 if: $open-five
 name: focused
-subtitle: cta-primary focused
+subtitle: cta-tertairy focused
 dark: $bgcolor-five.dark
 light: $bgcolor-five.light
 backgroundcolor: $bgcolor-five
@@ -2356,10 +2356,10 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-primary.border
+--- show-box: fpm.color.main.cta-tertairy.border
 if: $open-six
 name: border
-subtitle: cta-primary border
+subtitle: cta-tertairy border
 dark:  #2b8074
 light: $bgcolor-six.light
 backgroundcolor: $bgcolor-six
@@ -2374,10 +2374,10 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-primary.text
+--- show-box: fpm.color.main.cta-tertairy.text
 if: $open-seven
 name: text
-subtitle: cta-primar text
+subtitle: cta-tertairy text
 dark: #feffff
 light: #feffff
 backgroundcolor: $bgcolor-seven
