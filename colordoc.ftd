@@ -49,7 +49,7 @@ subtitle-three: .step-2
 subtitle-four: .overlay
 subtitle-five: .code
 
--- primary-component: CTA Primary colors
+-- primary-component: CTA Primary Colors
 subtitle: Below are cta primary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-primary.base
 bgcolor-two: $fpm.color.main.cta-primary.hover
@@ -2296,7 +2296,7 @@ if: $bgcolor-five is not null
 
 --- show-box: \$fpm.color.main.background.code
 if: $open-five
-subtitle: code
+subtitle: background code
 dark: $bgcolor-five.dark
 light: $bgcolor-five.light
 backgroundcolor: $bgcolor-five
