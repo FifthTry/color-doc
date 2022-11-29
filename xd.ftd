@@ -1,0 +1,155 @@
+-- import: fpm
+-- import: fifthtry.github.io/color-doc/color-ui as cu
+
+-- ftd.column:
+width: fill
+padding-horizontal: 20
+padding-vertical: 20
+padding-horizontal if $cu.is-mobile: 20
+background-color: $fpm.color.main.background.base
+
+
+-- string $dark: #585656
+
+
+
+-- string $lightone: #585656
+
+
+
+
+-- ftd.color $backgroundcolor: 
+dark: $dark
+light: $lightone
+
+
+
+
+
+
+
+-- cu.color-ui:
+color: $fpm.color
+minimize: true
+
+-- hhh:
+
+-- ftd.text: $backgroundcolor.dark
+;color: $fpm.color.main.text-strong
+color: $backgroundcolor
+
+-- ftd.text: $backgroundcolor.light
+;color: $fpm.color.main.text-strong
+color: $backgroundcolor
+
+
+
+
+
+-- optional string $title: 
+$always-include$: true
+
+
+-- ftd.column hhh:
+width: fill
+ftd.color $bgcolor: $backgroundcolor
+boolean active: true
+spacing: 64
+
+
+
+--- ftd.text: Background
+color: $fpm.color.main.text-strong
+
+--- ftd.text: text
+color: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 64
+
+
+--- ftd.column:
+padding-vertical: 72
+padding-horizontal: 72
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $fpm.color.main.background.base
+$on-mouse-enter$: $dark= $fpm.color.main.background.base.dark
+$on-mouse-enter$: $active= true
+$on-mouse-enter$: $lightone= $fpm.color.main.background.base.light
+$on-mouse-enter$: $backgroundcolor.dark= $dark
+$on-mouse-enter$: $backgroundcolor.light= $lightone
+
+--- container: jjjj
+
+--- ftd.column:
+padding-vertical: 72
+padding-horizontal: 72
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $fpm.color.main.background.step-1
+$on-mouse-enter$: $dark= $fpm.color.main.background.step-1.dark
+$on-mouse-enter$: $active= true
+$on-mouse-enter$: $lightone= $fpm.color.main.background.step-1.light
+$on-mouse-enter$: $backgroundcolor.dark= $dark
+$on-mouse-enter$: $backgroundcolor.light= $lightone
+
+
+--- container: jjjj
+
+--- ftd.column:
+padding-vertical: 72
+padding-horizontal: 72
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $fpm.color.main.background.step-2
+$on-mouse-enter$: $dark= $fpm.color.main.background.step-2.dark
+$on-mouse-enter$: $active= true
+$on-mouse-enter$: $lightone= $fpm.color.main.background.step-2.light
+$on-mouse-enter$: $backgroundcolor.dark= $dark
+$on-mouse-enter$: $backgroundcolor.light= $lightone
+
+
+
+--- container: ftd.main
+
+
+
+--- ftd.row:
+if: $active
+border-color: $fpm.color.main.border
+border-width: 1
+width: fill
+padding-vertical: 24
+padding-horizontal: 24
+id: kkk
+
+--- ftd.row:
+padding-vertical: 48
+padding-horizontal: 48
+
+
+--- ftd.text: \$fpm.color.main.background.base
+color: $fpm.color.main.text
+anchor: parent
+top: -36
+left: 89
+
+--- container: kkk
+
+--- ftd.row:
+width: 400
+height: 200
+background-color: $backgroundcolor
+
+
+
+--- ftd.text: $dark
+
+
+--- ftd.text: $lightone
