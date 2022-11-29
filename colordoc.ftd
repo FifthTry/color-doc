@@ -256,12 +256,11 @@ margin-bottom: 32
 width: fill
 
 --- ftd.row:
-;width: fill
+width: fill
 id: jjjj
 spacing: 16
 padding-left: 36
 margin-bottom: 44
-
 
 
 
@@ -539,7 +538,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column success-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -598,6 +596,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -870,7 +871,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column info-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -929,6 +929,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -1200,7 +1203,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column warning-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -1244,6 +1246,9 @@ role: $fpm.type.copy-large
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -1515,7 +1520,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column error-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -1574,6 +1578,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -1845,7 +1852,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column accent-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -1904,6 +1910,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -2176,7 +2185,6 @@ backgroundcolor: $bgcolor-six
 
 -- ftd.column background-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -2232,6 +2240,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -2473,7 +2484,6 @@ backgroundcolor: $bgcolor-five
 
 -- ftd.column custom-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -2544,6 +2554,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -3045,7 +3058,6 @@ backgroundcolor: $bgcolor-ten
 
 -- ftd.column primary-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -3106,6 +3118,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -3433,7 +3448,6 @@ backgroundcolor: $bgcolor-seven
 
 -- ftd.column secondary-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -3494,6 +3508,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -3823,7 +3840,6 @@ backgroundcolor: $bgcolor-seven
 
 -- ftd.column tertiary-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -3884,6 +3900,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -4226,7 +4245,6 @@ backgroundcolor: $bgcolor-seven
 
 -- ftd.column danger-component:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -4287,6 +4305,9 @@ margin-bottom: 32
 width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
 
 
 --- ftd.row:
@@ -4619,7 +4640,6 @@ backgroundcolor: $bgcolor-seven
 
 -- ftd.column color-data-two:
 width: fill
-spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -4657,7 +4677,6 @@ color: $fpm.color.main.text-strong
 --- ftd.row:
 width: fill
 id: jjjj
-spacing: 32
 
 
 --- ftd.column:
