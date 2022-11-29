@@ -2401,7 +2401,7 @@ if: $open-three
 subtitle: accent tertairy
 dark:  $bgcolor-three.dark
 light:  $bgcolor-three.dark
-backgroundcolor: $bgcolor-two
+backgroundcolor: $bgcolor-three
 
 --- container: ftd.main
 
