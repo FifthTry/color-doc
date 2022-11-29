@@ -1,5 +1,8 @@
 -- import: fpm
 -- import: fifthtry.github.io/color-doc/color-ui as cu
+
+-- import: fifthtry.github.io/color-doc/colordoc as cd
+
 -- import: fifthtry.github.io/package-doc/doc as pd
 
 
@@ -29,6 +32,7 @@ To use `color-doc` color scheme on your web package, add below into `FPM.ftd` fi
 -- cb.code:
 lang: ftd
 
+
 \-- fpm.dependency: fifthtry.github.io/color-doc as colors
 
 
@@ -40,6 +44,7 @@ Import `colors` into `FPM/config.ftd` file.
 lang: ftd
 
 \-- import: colors
+
 
 -- color-display:
 color: $fpm.color
@@ -59,36 +64,17 @@ width: fill
 color: $color
 minimize: $minimize
 
-
-
-
-
-
-
-
-
 -- ftd.column all-color-display:
 fpm.color-data color:
 optional boolean minimize: 
 background-color: $color.main.background.base
 width: fill
 
---- ftd.row:
-width: fill
 
---- cu.color-ui:
-color: $color
+
+--- cd.colordoc:
+color:$color
 minimize: $minimize
-
---- container: ftd.main
-
---- ftd.row:
-width: fill
-
---- color-display-data:
-color: $color
-
-
 
 
 

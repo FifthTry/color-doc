@@ -5,38 +5,26 @@
 
 
 
+-- boolean is-mobile: false
 
 
-
-
-
-
--- colordoc:
-
-
-
-
-
-
-
+-- is-mobile: true
+if: $ftd.device == mobile
 
 
 
 -- ftd.column colordoc:
+fpm.color-data color:
+optional boolean minimize: 
 width: fill
-padding-horizontal: 20
-padding-vertical: 20
-padding-horizontal if $cu.is-mobile: 20
+padding-horizontal if not $is-mobile: 20
+padding-vertical if not $is-mobile: 20
 background-color: $fpm.color.main.background.base
 
 --- cu.color-ui:
 color: $fpm.color
-minimize: true
+minimize: $minimize
 
---- ftd.column:
-width: fill
-padding-horizontal: 64
-padding-vertical: 20
 
 --- standalone: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
@@ -272,14 +260,15 @@ width: fill
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -293,6 +282,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -311,8 +302,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -322,6 +314,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -339,8 +333,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -351,6 +346,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -365,8 +362,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -379,6 +377,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -394,8 +394,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -408,6 +409,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -423,8 +426,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -437,6 +441,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -624,14 +630,15 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -644,6 +651,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -661,8 +670,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -672,6 +682,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -689,8 +701,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -701,6 +714,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -715,8 +730,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -729,6 +745,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -744,8 +762,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -758,6 +777,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -772,8 +793,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -786,6 +808,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
+margin-bottom: 12
+margin-right: 12
 
 
 --- ftd.column:
@@ -975,16 +999,16 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
-
+wrap: true
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -997,7 +1021,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1015,8 +1040,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1026,7 +1052,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1044,8 +1071,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1056,6 +1084,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1070,8 +1100,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1084,7 +1115,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1100,8 +1132,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1114,7 +1147,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1129,8 +1163,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1143,7 +1178,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1331,16 +1367,16 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
-
+wrap: true
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1353,7 +1389,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1371,8 +1408,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1382,7 +1420,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1400,8 +1439,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1412,6 +1452,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1426,8 +1468,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1440,7 +1483,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1456,8 +1500,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1470,7 +1515,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1485,8 +1531,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1499,7 +1546,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1687,16 +1735,16 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
-
+wrap: true
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1709,7 +1757,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1727,8 +1776,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1738,7 +1788,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1756,8 +1807,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -1768,7 +1820,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 --- ftd.column:
 align: center
 width: fill
@@ -1782,8 +1835,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1796,7 +1850,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1812,8 +1867,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1826,7 +1882,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -1841,8 +1898,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -1855,7 +1913,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2043,16 +2102,16 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
-
+wrap: true
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2065,7 +2124,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2083,8 +2143,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2094,7 +2155,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2112,8 +2174,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2124,6 +2187,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2138,8 +2203,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2152,7 +2218,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2168,8 +2235,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2182,7 +2250,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2197,8 +2266,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2211,7 +2281,8 @@ $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
-
+margin-bottom: 12
+margin-right: 12
 
 --- ftd.column:
 align: center
@@ -2397,16 +2468,17 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2418,7 +2490,8 @@ $on-mouse-enter$: $open-two= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -2437,8 +2510,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2448,7 +2522,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2466,8 +2541,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2477,7 +2553,8 @@ $on-mouse-enter$: $open-two= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2492,8 +2569,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2505,7 +2583,8 @@ $on-mouse-enter$: $open-two= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
-
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -2522,8 +2601,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2535,7 +2615,8 @@ $on-mouse-enter$: $open-two= false
 $on-mouse-enter$: $open-three= false
 $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
-
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -2726,16 +2807,17 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2752,6 +2834,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2769,8 +2853,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2785,6 +2870,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2801,8 +2888,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -2817,6 +2905,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2831,8 +2921,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2849,6 +2940,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2864,8 +2957,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2882,6 +2976,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2896,8 +2992,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2914,6 +3011,8 @@ $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2928,8 +3027,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-seven is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2946,6 +3046,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2961,8 +3063,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-eight is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -2979,6 +3082,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -2993,8 +3098,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-nine is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3011,6 +3117,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-seven= false
 $on-mouse-enter$: $open-ten= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3026,8 +3134,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-ten is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3044,6 +3153,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-eight= false
 $on-mouse-enter$: $open-nine= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3061,6 +3172,8 @@ width: fill
 if: $open-one
 padding-left: 36
 margin-bottom: 7
+width: fill
+wrap: true
 
 
 
@@ -3330,16 +3443,17 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3353,7 +3467,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3371,8 +3486,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -3384,7 +3500,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3401,8 +3518,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -3414,6 +3532,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3428,8 +3548,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3443,6 +3564,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3458,8 +3581,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3473,6 +3597,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3487,8 +3613,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3502,6 +3629,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3517,8 +3646,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-seven is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3532,7 +3662,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-one= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3748,16 +3879,16 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
-
+wrap: true
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3771,7 +3902,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3789,8 +3921,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -3802,7 +3935,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3819,8 +3953,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -3832,6 +3967,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3846,8 +3983,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3861,6 +3999,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3876,8 +4016,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3891,6 +4032,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3905,8 +4048,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3920,6 +4064,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -3935,8 +4081,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-seven is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -3950,6 +4097,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-one= false
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -4168,16 +4317,17 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap: true
 
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4191,7 +4341,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4209,8 +4360,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -4222,7 +4374,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4239,8 +4392,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -4252,7 +4406,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 --- ftd.column:
 align: center
 width: fill
@@ -4266,8 +4421,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4281,6 +4437,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4296,8 +4454,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4311,6 +4470,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4325,8 +4486,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4340,6 +4502,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4355,8 +4519,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-seven is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4370,7 +4535,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-one= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4601,16 +4767,17 @@ margin-bottom: 32
 --- ftd.row:
 width: fill
 id: first-row
-spacing: 16
 padding-left: 36
 margin-bottom: 44
+wrap:true
 
 
 
 --- ftd.row:
 if: $bgcolor-one is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4624,6 +4791,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 
 --- ftd.column:
@@ -4642,8 +4811,9 @@ width: fill
 if: $bgcolor-two is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -4655,7 +4825,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4672,8 +4843,9 @@ width: fill
 if: $bgcolor-three is not null
 padding-vertical: 12
 padding-horizontal: 12
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 8
@@ -4685,6 +4857,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4699,8 +4873,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-four is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4714,6 +4889,8 @@ $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4729,8 +4906,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-five is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4744,6 +4922,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4758,8 +4938,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-six is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4773,6 +4954,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-one= false
 $on-mouse-enter$: $open-seven= false
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -4788,8 +4971,9 @@ width: fill
 
 --- ftd.row:
 if: $bgcolor-seven is not null
-width: 112
+min-width: 112
 height: 114
+max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
@@ -4803,7 +4987,8 @@ $on-mouse-enter$: $open-four= false
 $on-mouse-enter$: $open-five= false
 $on-mouse-enter$: $open-six= false
 $on-mouse-enter$: $open-one= false
-
+margin-right: 12
+margin-bottom: 12
 
 --- ftd.column:
 align: center
@@ -5309,12 +5494,42 @@ optional string light:
 optional string name:
 optional string subtitle:
 optional ftd.color backgroundcolor:
+width: fill
+
+--- show-box-desktop: $title
+if: not $is-mobile
+dark: $dark
+light: $light
+name: $name
+subtitle: $subtitle
+backgroundcolor: $backgroundcolor
+
+--- container: ftd.main
+
+--- show-box-mobile: $title
+if: $is-mobile
+dark: $dark
+light: $light
+name: $name
+subtitle: $subtitle
+backgroundcolor: $backgroundcolor
+
+
+
+-- ftd.column show-box-desktop:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
 border-color: $fpm.color.main.text-strong
 border-width: 1
 border-radius: 8
 padding-vertical: 24
 padding-horizontal: 24
 width: 650
+width if $is-mobile: 180
 height: 142
 
 --- ftd.row:
@@ -5342,8 +5557,8 @@ spacing: 24
 --- ftd.row:
 padding-vertical: 12
 padding-horizontal: 12
-width: 92
-height: 92
+min-width: 92
+min-height: 92
 background-color: $backgroundcolor
 border-color: $fpm.color.main.border-strong
 border-width: 1
@@ -5369,7 +5584,7 @@ role: $fpm.type.label-big
 color: $fpm.color.main.text
 role: $fpm.type.label-big
 width: fill
-white-space: nowrap
+
 
 --- container: llll
 
@@ -5386,7 +5601,7 @@ role: $fpm.type.label-big
 color: $fpm.color.main.text
 role: $fpm.type.label-big
 width: fill
-white-space: nowrap
+
 
 --- container: second-container
 
@@ -5403,12 +5618,12 @@ margin-bottom: 4
 --- ftd.text: we use
 color: $fpm.color.main.text
 role: $fpm.type.label-big
-white-space: nowrap
+
 
 --- ftd.text: $title
 color: $fpm.color.main.text
 role: $fpm.type.label-big
-white-space: nowrap
+
 
 
 --- container: hh
@@ -5419,11 +5634,140 @@ spacing: 4
 --- ftd.text: for 
 color: $fpm.color.main.text
 role: $fpm.type.label-big
-white-space: nowrap
+
 
 
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text
 role: $fpm.type.label-big
-white-space: nowrap
+
+
+
+
+-- ftd.column show-box-mobile:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
+border-color: $fpm.color.main.text-strong
+border-width: 1
+border-radius: 8
+padding-vertical: 24
+padding-horizontal: 24
+width: fill
+height: 220
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+role: $fpm.type.label-big
+anchor: parent
+top: -38
+left: 0
+background-color: $fpm.color.main.background.base
+padding-horizontal: 8
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+id: second-container
+spacing: 24
+
+--- ftd.column:
+
+
+--- ftd.row:
+padding-vertical: 12
+padding-horizontal: 12
+min-width: 92
+min-height: 92
+background-color: $backgroundcolor
+border-color: $fpm.color.main.border-strong
+border-width: 1
+border-radius: 8
+
+
+--- container:second-container
+
+--- ftd.column:
+spacing: 24
+id: llll
+
+--- ftd.row:
+width: 120
+spacing: 8
+align: right
+
+--- ftd.text: dark:
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+--- ftd.text: $dark
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+width: fill
+
+
+--- container: llll
+
+--- ftd.row:
+width: 120
+spacing: 8
+align: right
+
+--- ftd.text: light:
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+--- ftd.text: $light
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+width: fill
+
+
+--- container: ftd.main
+
+--- ftd.row:
+width:fill
+wrap: true
+id: hh
+margin-top: 24
+
+--- ftd.column:
+width: fill
+spacing: 4
+margin-bottom: 4
+
+--- ftd.text: we use
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+
+
+--- container: hh
+
+--- ftd.row:
+width: fill
+spacing: 4
+--- ftd.text: for 
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
+
+
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text
+role: $fpm.type.label-big
+
