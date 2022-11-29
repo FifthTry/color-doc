@@ -6,6 +6,11 @@
 -- is-mobile: true
 if: $ftd.device == mobile
 
+
+-- color-ui:
+color: $fpm.color
+minimize: true
+
 -- ftd.row color-ui:
 fpm.color-data color:
 optional boolean minimize: false
