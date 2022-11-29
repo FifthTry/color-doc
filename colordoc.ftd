@@ -227,6 +227,8 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
+margin-top: 28
+margin-bottom: 28
 
 
 --- ftd.text: $title
@@ -559,6 +561,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -566,12 +575,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -874,6 +892,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -881,12 +906,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -1503,6 +1537,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -1510,12 +1551,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -1817,6 +1867,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -1824,12 +1881,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -2128,6 +2194,13 @@ optional string subtitle-four:
 optional string subtitle-five: 
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -2135,11 +2208,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 
 --- container: ftd.main
@@ -2423,6 +2506,13 @@ optional string subtitle-nine:
 optional string subtitle-ten: 
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -2430,12 +2520,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 
 --- container: ftd.main
@@ -2970,6 +3069,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -2977,11 +3083,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -3341,6 +3457,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -3348,11 +3471,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -3714,6 +3847,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -3721,11 +3861,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
@@ -4100,6 +4250,13 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 margin-top: 28
 margin-bottom: 28
 
@@ -4107,11 +4264,21 @@ margin-bottom: 28
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
