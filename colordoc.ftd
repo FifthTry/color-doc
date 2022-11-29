@@ -51,20 +51,20 @@ subtitle-five: .code
 
 -- primary-component: CTA PRIMARY
 subtitle: Below are cta primary color definitions we use. 
-bgcolor-one: $fpm.color.main.cta-primary.hover
-bgcolor-two: $fpm.color.main.cta-primary.base
+bgcolor-one: $fpm.color.main.cta-primary.base
+bgcolor-two: $fpm.color.main.cta-primary.hover
 bgcolor-three: $fpm.color.main.cta-primary.pressed
 bgcolor-four: $fpm.color.main.cta-primary.disabled
 bgcolor-five: $fpm.color.main.cta-primary.focused
 bgcolor-six: $fpm.color.main.cta-primary.border
 bgcolor-seven: $fpm.color.main.cta-primary.text
-subtitle-one: HOVER
-subtitle-two: BASE
-subtitle-three: PRESSED
-subtitle-four: disabled
-subtitle-five: focused
-subtitle-six: border
-subtitle-seven: text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
 
 
 -- custom-component: CTA PRIMARY
@@ -79,16 +79,16 @@ bgcolor-seven: $fpm.color.main.custom.seven
 bgcolor-eight: $fpm.color.main.custom.eight
 bgcolor-nine: $fpm.color.main.custom.nine
 bgcolor-ten: $fpm.color.main.custom.ten
-subtitle-one: hover
-subtitle-two: BASE
-subtitle-three: pressed
-subtitle-four: disabled
-subtitle-five: focused
-subtitle-six: border
-subtitle-seven: text
-subtitle-eight: text
-subtitle-nine: text
-subtitle-ten: text
+subtitle-one: .one
+subtitle-two: .two
+subtitle-three: .three
+subtitle-four: .four
+subtitle-five: .five
+subtitle-six: .six
+subtitle-seven: .seven
+subtitle-eight: .eight
+subtitle-nine: .nine
+subtitle-ten: .ten
 
 
 -- ftd.column standalone:
@@ -1419,6 +1419,7 @@ $on-click$: $open-seven= false
 --- ftd.column:
 align: center
 width: fill
+
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
@@ -1463,9 +1464,9 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.background.step-1.light
-name: step-1
-subtitle: background step-1
+--- show-box: fpm.color.main.cta-primary.base
+name: base
+subtitle: cta-primary base
 dark: $bgcolor-one.dark
 light: $bgcolor-one.light
 backgroundcolor: $bgcolor-one
@@ -1479,10 +1480,10 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.background.base.light
+--- show-box: fpm.color.main.cta-primary.hover
 if: $open-two
-name: base
-subtitle: background base
+name: hover
+subtitle: cta-primary hover
 dark: $bgcolor-two.dark
 light: $bgcolor-two.light
 backgroundcolor: $bgcolor-two
@@ -1495,11 +1496,12 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.background.step-2.light
+--- show-box: fpm.color.main.cta-primary.pressed
 if: $open-three
+name: pressed
 dark: $bgcolor-three.dark
 light: $bgcolor-three.light
-subtitle: background step-2
+subtitle: cta-primary pressed
 backgroundcolor: $bgcolor-three
 
 --- container: ftd.main
@@ -1510,10 +1512,10 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.cta-primary.disabled
 if: $open-four
-name: step-1
-subtitle: background step-1
+name: disabled
+subtitle: cta-primary disabled
 dark: $bgcolor-four.dark
 light: $bgcolor-four.light
 backgroundcolor: $bgcolor-four
@@ -1526,10 +1528,10 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.cta-primary.focused
 if: $open-five
-name: step-1
-subtitle: background step-1
+name: focused
+subtitle: cta-primary focused
 dark: $bgcolor-five.dark
 light: $bgcolor-five.light
 backgroundcolor: $bgcolor-five
@@ -1543,10 +1545,10 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.cta-primary.border
 if: $open-six
-name: step-1
-subtitle: background step-1
+name: border
+subtitle: cta-primary border
 dark:  #2b8074
 light: $bgcolor-six.light
 backgroundcolor: $bgcolor-six
@@ -1561,10 +1563,10 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.cta-primary.text
 if: $open-seven
-name: step-1
-subtitle: background step-1
+name: text
+subtitle: cta-primar text
 dark: #feffff
 light: #feffff
 backgroundcolor: $bgcolor-seven
@@ -1794,9 +1796,9 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.background.step-1.light
-name: step-1
-subtitle: background step-1
+--- show-box: fpm.color.main.custom.one
+name: one
+subtitle: custom one
 dark: $bgcolor-one.dark
 light: $bgcolor-one.light
 backgroundcolor: $bgcolor-one
@@ -1810,10 +1812,10 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.background.base.light
+--- show-box: fpm.color.main.custom.two
 if: $open-two
 name: base
-subtitle: background base
+subtitle: custom two
 dark: $bgcolor-two.dark
 light: $bgcolor-two.light
 backgroundcolor: $bgcolor-two
@@ -1826,10 +1828,10 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.background.step-2.light
+--- show-box: fpm.color.main.custom.three
 if: $open-three
-name: step-2
-subtitle: background step-2
+name: three
+subtitle: custom three
 
 
 --- container: ftd.main
@@ -1840,10 +1842,10 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.custom.four
 if: $open-four
-name: step-1
-subtitle: background step-1
+name: four
+subtitle: custom four
 backgroundcolor: $bgcolor-four
 
 --- container: ftd.main
@@ -1854,10 +1856,10 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.custom.five
 if: $open-five
-name: step-1
-subtitle: background step-1
+name: five
+subtitle: custom five
 dark: #2cbfac
 light: #2cbfac
 backgroundcolor: $bgcolor-five
@@ -1871,10 +1873,10 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.custom.six
 if: $open-six
-name: step-1
-subtitle: background step-1
+name: six
+subtitle: custom six
 dark: #2cbfac
 light: #2cbfac
 backgroundcolor: $bgcolor-six
@@ -1889,10 +1891,10 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.background.step-1.light
+--- show-box: fpm.color.main.custom.seven
 if: $open-seven
-name: step-1
-subtitle: background step-1
+name: seven
+subtitle: custom seven
 dark: #feffff
 light: #feffff
 backgroundcolor: $bgcolor-seven
