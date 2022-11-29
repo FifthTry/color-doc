@@ -408,6 +408,7 @@ color: $fpm.color.main.background.step-1
 role: $fpm.type.label-big
 text-align: center
 width: fill
+
 --- container: jjjj
 
 --- ftd.row:
@@ -581,7 +582,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -938,7 +939,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -1294,7 +1295,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -1650,7 +1651,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -2006,7 +2007,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -2359,7 +2360,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -2688,7 +2689,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -3293,7 +3294,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -3711,7 +3712,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -4131,7 +4132,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
@@ -4564,7 +4565,7 @@ border-bottom: 4
 padding-bottom: 36
 padding-top: 24
 border-color: $fpm.color.main.border-strong
-margin-top: 28
+margin-top: 75
 margin-bottom: 28
 
 
