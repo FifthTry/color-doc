@@ -202,7 +202,6 @@ subtitle-ten: .ten
 
 -- ftd.column standalone:
 width: fill
-max-width: 1168
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false

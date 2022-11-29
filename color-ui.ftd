@@ -25,7 +25,7 @@ id: card-container
 --- ftd.row:
 if: $minimize
 scale: 0.8
-move-left: 95
+move-left: 150
 move-up: 100
 width: fill
 

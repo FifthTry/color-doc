@@ -46,7 +46,7 @@ lang: ftd
 \-- import: colors
 
 
--- color-display:
+-- color-display-one:
 color: $fpm.color
 minimize: true
 
