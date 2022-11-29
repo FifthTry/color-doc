@@ -159,12 +159,12 @@ subtitle-three: .border
 
 -- warning-component: Warning Colors
 subtitle: Below are warning color definitions we use.
-bgcolor-one: $fpm.color.main.warning.text
-bgcolor-two: $fpm.color.main.warning.border
-bgcolor-three: $fpm.color.main.warning.base
-subtitle-one: .border
-subtitle-two: .border strong
-subtitle-three: .text
+bgcolor-one: $fpm.color.main.warning.base
+bgcolor-two: $fpm.color.main.warning.text
+bgcolor-three: $fpm.color.main.warning.border
+subtitle-one: .base
+subtitle-two: .text
+subtitle-three: .border
 
 
 -- custom-component: Custom Colors
@@ -756,8 +756,8 @@ if: $bgcolor-three is not null
 --- show-box: \$fpm.color.main.info.border
 if: $open-three
 subtitle: info border
-dark:  #2cc9b5
-light:  #2cc9b5
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
@@ -1065,8 +1065,8 @@ if: $bgcolor-three is not null
 --- show-box: \$fpm.color.main.success.border
 if: $open-three
 subtitle: success border
-dark:  #2cc9b5
-light:  #2cc9b5
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
@@ -1374,8 +1374,8 @@ if: $bgcolor-three is not null
 --- show-box: \$fpm.color.main.warning.border
 if: $open-three
 subtitle: warning border
-dark:  #2cc9b5
-light:  #2cc9b5
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
@@ -1682,8 +1682,8 @@ if: $bgcolor-three is not null
 --- show-box: \$fpm.color.main.error.border
 if: $open-three
 subtitle: error border
-dark:  #2cc9b5
-light:  #2cc9b5
+dark: $bgcolor-three.dark
+light: $bgcolor-three.light
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
