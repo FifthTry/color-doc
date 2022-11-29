@@ -67,7 +67,7 @@ subtitle-six: .border
 subtitle-seven: .text
 
 
--- primary-component: CTA SECONDARY
+-- secondary-component: CTA SECONDARY
 subtitle: Below are cta secondary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-secondary.hover
 bgcolor-two: $fpm.color.main.cta-secondary.base
@@ -86,7 +86,7 @@ subtitle-seven: text
 
 
 
--- primary-component: CTA TERTIARY
+-- tertiary-component: CTA TERTIARY
 subtitle: Below are cta tertiary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-tertiary.hover
 bgcolor-two: $fpm.color.main.cta-tertiary.base
@@ -103,7 +103,7 @@ subtitle-five: focused
 subtitle-six: border
 subtitle-seven: text
 
--- primary-component: CTA DANGER
+-- danger-component: CTA DANGER
 subtitle: Below are cta danger color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-danger.hover
 bgcolor-two: $fpm.color.main.cta-danger.base
@@ -120,7 +120,7 @@ subtitle-five: focused
 subtitle-six: border
 subtitle-seven: text
 
--- standalone: STANDALONE
+-- success-component: STANDALONE
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.success.text
 bgcolor-two: $fpm.color.main.success.border
@@ -130,7 +130,7 @@ subtitle-two: .border strong
 subtitle-three: .text
 
 
--- standalone: STANDALONE
+-- error-component: STANDALONE
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.error.text
 bgcolor-two: $fpm.color.main.error.border
@@ -139,16 +139,16 @@ subtitle-one: .border
 subtitle-two: .border strong
 subtitle-three: .text
 
--- standalone: STANDALONE
+-- accent-component: STANDALONE
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.accent.primary
 bgcolor-two: $fpm.color.main.accent.secondary
 bgcolor-three: $fpm.color.main.accent.tertiary
-subtitle-one: .border
-subtitle-two: .border strong
-subtitle-three: .text
+subtitle-one: .primary
+subtitle-two: .secondary
+subtitle-three: .tertiary
 
--- standalone: STANDALONE
+-- warning-component: STANDALONE
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.warning.text
 bgcolor-two: $fpm.color.main.warning.border
@@ -439,6 +439,1232 @@ if: $open-three
 subtitle: text
 dark:  #2cc9b5
 light:  #2cc9b5
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-four
+
+--- ftd.column:
+if: $bgcolor-four is not null
+
+--- show-box: \$fpm.color.main.text-strong
+if: $open-four
+subtitle: text strong
+dark: rgba(44, 201, 181, 0.1)
+light: rgba(44, 201, 181, 0.1)
+backgroundcolor: $bgcolor-four
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-five
+
+--- ftd.column:
+if: $bgcolor-five is not null
+
+--- show-box: \$fpm.color.main.shadow
+if: $open-five
+subtitle: shadow
+dark: #2cbfac
+light: #2cbfac
+backgroundcolor: $bgcolor-five
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-six
+
+--- ftd.column:
+if: $bgcolor-six is not null
+
+--- show-box: \$fpm.color.main.scrim
+if: $open-six
+subtitle: scrim
+dark:  #2b8074
+light:  #2b8074
+backgroundcolor: $bgcolor-six
+
+
+
+
+-- ftd.column success-component:
+width: fill
+spacing: 32
+boolean open-one: true
+boolean open-two: false
+boolean open-three: false
+boolean open-four: false
+boolean open-five: false
+boolean open-six: false
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six:  
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+caption title:
+string subtitle:
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+role: $fpm.type.heading-large
+
+
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 16
+
+
+--- ftd.row:
+if: $bgcolor-one is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-one
+$on-click$: $open-one= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-one
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-two is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-two is not null: $bgcolor-two
+$on-click$: $open-two= true
+$on-click$: $open-one= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-two
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-three is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-three is not null: $bgcolor-three
+$on-click$: $open-three= true
+$on-click$: $open-two= false
+$on-click$: $open-one= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-three
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-four is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-four
+$on-click$: $open-four= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-one= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-four
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-five is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-five is not null: $bgcolor-five
+$on-click$: $open-five= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-one= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-five
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-six is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-six is not null: $bgcolor-six
+$on-click$: $open-six= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-one= false
+
+
+--- ftd.column:
+align: center
+width: fill
+--- ftd.text: $subtitle-six
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-one
+
+--- ftd.column:
+if: $bgcolor-one is not null
+
+--- show-box: \$fpm.color.main.border
+name: step-1
+subtitle: border
+dark: $bgcolor-one.dark
+light: $bgcolor-one.light
+backgroundcolor: $bgcolor-one
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-two
+
+--- ftd.column:
+if: $bgcolor-two is not null
+
+--- show-box: \$fpm.color.main.border-strong
+if: $open-two
+subtitle: border strong
+dark: $bgcolor-two.dark
+light: $bgcolor-two.light
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-three
+
+--- ftd.column:
+if: $bgcolor-three is not null
+
+--- show-box: \$fpm.color.main.text
+if: $open-three
+subtitle: text
+dark:  #2cc9b5
+light:  #2cc9b5
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-four
+
+--- ftd.column:
+if: $bgcolor-four is not null
+
+--- show-box: \$fpm.color.main.text-strong
+if: $open-four
+subtitle: text strong
+dark: rgba(44, 201, 181, 0.1)
+light: rgba(44, 201, 181, 0.1)
+backgroundcolor: $bgcolor-four
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-five
+
+--- ftd.column:
+if: $bgcolor-five is not null
+
+--- show-box: \$fpm.color.main.shadow
+if: $open-five
+subtitle: shadow
+dark: #2cbfac
+light: #2cbfac
+backgroundcolor: $bgcolor-five
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-six
+
+--- ftd.column:
+if: $bgcolor-six is not null
+
+--- show-box: \$fpm.color.main.scrim
+if: $open-six
+subtitle: scrim
+dark:  #2b8074
+light:  #2b8074
+backgroundcolor: $bgcolor-six
+
+
+-- ftd.column warning-component:
+width: fill
+spacing: 32
+boolean open-one: true
+boolean open-two: false
+boolean open-three: false
+boolean open-four: false
+boolean open-five: false
+boolean open-six: false
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six:  
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+caption title:
+string subtitle:
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+role: $fpm.type.heading-large
+
+
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 16
+
+
+--- ftd.row:
+if: $bgcolor-one is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-one
+$on-click$: $open-one= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-one
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-two is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-two is not null: $bgcolor-two
+$on-click$: $open-two= true
+$on-click$: $open-one= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-two
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-three is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-three is not null: $bgcolor-three
+$on-click$: $open-three= true
+$on-click$: $open-two= false
+$on-click$: $open-one= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-three
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-four is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-four
+$on-click$: $open-four= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-one= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-four
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-five is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-five is not null: $bgcolor-five
+$on-click$: $open-five= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-one= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-five
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-six is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-six is not null: $bgcolor-six
+$on-click$: $open-six= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-one= false
+
+
+--- ftd.column:
+align: center
+width: fill
+--- ftd.text: $subtitle-six
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-one
+
+--- ftd.column:
+if: $bgcolor-one is not null
+
+--- show-box: \$fpm.color.main.border
+name: step-1
+subtitle: border
+dark: $bgcolor-one.dark
+light: $bgcolor-one.light
+backgroundcolor: $bgcolor-one
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-two
+
+--- ftd.column:
+if: $bgcolor-two is not null
+
+--- show-box: \$fpm.color.main.border-strong
+if: $open-two
+subtitle: border strong
+dark: $bgcolor-two.dark
+light: $bgcolor-two.light
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-three
+
+--- ftd.column:
+if: $bgcolor-three is not null
+
+--- show-box: \$fpm.color.main.text
+if: $open-three
+subtitle: text
+dark:  #2cc9b5
+light:  #2cc9b5
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-four
+
+--- ftd.column:
+if: $bgcolor-four is not null
+
+--- show-box: \$fpm.color.main.text-strong
+if: $open-four
+subtitle: text strong
+dark: rgba(44, 201, 181, 0.1)
+light: rgba(44, 201, 181, 0.1)
+backgroundcolor: $bgcolor-four
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-five
+
+--- ftd.column:
+if: $bgcolor-five is not null
+
+--- show-box: \$fpm.color.main.shadow
+if: $open-five
+subtitle: shadow
+dark: #2cbfac
+light: #2cbfac
+backgroundcolor: $bgcolor-five
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-six
+
+--- ftd.column:
+if: $bgcolor-six is not null
+
+--- show-box: \$fpm.color.main.scrim
+if: $open-six
+subtitle: scrim
+dark:  #2b8074
+light:  #2b8074
+backgroundcolor: $bgcolor-six
+
+
+-- ftd.column error-component:
+width: fill
+spacing: 32
+boolean open-one: true
+boolean open-two: false
+boolean open-three: false
+boolean open-four: false
+boolean open-five: false
+boolean open-six: false
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six:  
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+caption title:
+string subtitle:
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+role: $fpm.type.heading-large
+
+
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 16
+
+
+--- ftd.row:
+if: $bgcolor-one is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-one
+$on-click$: $open-one= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-one
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-two is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-two is not null: $bgcolor-two
+$on-click$: $open-two= true
+$on-click$: $open-one= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-two
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-three is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-three is not null: $bgcolor-three
+$on-click$: $open-three= true
+$on-click$: $open-two= false
+$on-click$: $open-one= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-three
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-four is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-four
+$on-click$: $open-four= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-one= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-four
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-five is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-five is not null: $bgcolor-five
+$on-click$: $open-five= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-one= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-five
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-six is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-six is not null: $bgcolor-six
+$on-click$: $open-six= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-one= false
+
+
+--- ftd.column:
+align: center
+width: fill
+--- ftd.text: $subtitle-six
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-one
+
+--- ftd.column:
+if: $bgcolor-one is not null
+
+--- show-box: \$fpm.color.main.border
+name: step-1
+subtitle: border
+dark: $bgcolor-one.dark
+light: $bgcolor-one.light
+backgroundcolor: $bgcolor-one
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-two
+
+--- ftd.column:
+if: $bgcolor-two is not null
+
+--- show-box: \$fpm.color.main.border-strong
+if: $open-two
+subtitle: border strong
+dark: $bgcolor-two.dark
+light: $bgcolor-two.light
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-three
+
+--- ftd.column:
+if: $bgcolor-three is not null
+
+--- show-box: \$fpm.color.main.text
+if: $open-three
+subtitle: text
+dark:  #2cc9b5
+light:  #2cc9b5
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-four
+
+--- ftd.column:
+if: $bgcolor-four is not null
+
+--- show-box: \$fpm.color.main.text-strong
+if: $open-four
+subtitle: text strong
+dark: rgba(44, 201, 181, 0.1)
+light: rgba(44, 201, 181, 0.1)
+backgroundcolor: $bgcolor-four
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-five
+
+--- ftd.column:
+if: $bgcolor-five is not null
+
+--- show-box: \$fpm.color.main.shadow
+if: $open-five
+subtitle: shadow
+dark: #2cbfac
+light: #2cbfac
+backgroundcolor: $bgcolor-five
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-six
+
+--- ftd.column:
+if: $bgcolor-six is not null
+
+--- show-box: \$fpm.color.main.scrim
+if: $open-six
+subtitle: scrim
+dark:  #2b8074
+light:  #2b8074
+backgroundcolor: $bgcolor-six
+
+
+-- ftd.column accent-component:
+width: fill
+spacing: 32
+boolean open-one: true
+boolean open-two: false
+boolean open-three: false
+boolean open-four: false
+boolean open-five: false
+boolean open-six: false
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six:  
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+caption title:
+string subtitle:
+
+
+--- ftd.text: $title
+color: $fpm.color.main.text-strong
+role: $fpm.type.heading-large
+
+
+
+--- ftd.text: $subtitle
+color: $fpm.color.main.text-strong
+role: $fpm.type.copy-relaxed
+
+--- container: ftd.main
+
+
+--- ftd.row:
+width: fill
+id: jjjj
+spacing: 16
+
+
+--- ftd.row:
+if: $bgcolor-one is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-one
+$on-click$: $open-one= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-one
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-two is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-two is not null: $bgcolor-two
+$on-click$: $open-two= true
+$on-click$: $open-one= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-two
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-three is not null
+padding-vertical: 12
+padding-horizontal: 12
+width: 112
+height: 114
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-three is not null: $bgcolor-three
+$on-click$: $open-three= true
+$on-click$: $open-two= false
+$on-click$: $open-one= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-three
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-four is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $bgcolor-four
+$on-click$: $open-four= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-one= false
+$on-click$: $open-five= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-four
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-five is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-five is not null: $bgcolor-five
+$on-click$: $open-five= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-one= false
+$on-click$: $open-six= false
+
+
+--- ftd.column:
+align: center
+width: fill
+
+--- ftd.text: $subtitle-five
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+--- container: jjjj
+
+--- ftd.row:
+if: $bgcolor-six is not null
+width: 112
+height: 114
+padding-vertical: 12
+padding-horizontal: 12
+border-color: $fpm.color.main.border
+border-width: 1
+background-color if $bgcolor-six is not null: $bgcolor-six
+$on-click$: $open-six= true
+$on-click$: $open-two= false
+$on-click$: $open-three= false
+$on-click$: $open-four= false
+$on-click$: $open-five= false
+$on-click$: $open-one= false
+
+
+--- ftd.column:
+align: center
+width: fill
+--- ftd.text: $subtitle-six
+color: $fpm.color.main.background.step-1
+role: $fpm.type.fine-print
+text-align: center
+width: fill
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-one
+
+--- ftd.column:
+if: $bgcolor-one is not null
+
+--- show-box: \$fpm.color.main.accent.primary
+name: step-1
+subtitle: accent primary
+dark: $bgcolor-one.dark
+light: $bgcolor-one.light
+backgroundcolor: $bgcolor-one
+
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-two
+
+--- ftd.column:
+if: $bgcolor-two is not null
+
+--- show-box: \$fpm.color.main.accent.secondary
+if: $open-two
+subtitle: accent secondary
+dark: $bgcolor-two.dark
+light: $bgcolor-two.light
+backgroundcolor: $bgcolor-two
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $open-three
+
+--- ftd.column:
+if: $bgcolor-three is not null
+
+--- show-box: \$fpm.color.main.accent.tertairy
+if: $open-three
+subtitle: accent tertairy
+dark:  $bgcolor-three.dark
+light:  $bgcolor-three.dark
 backgroundcolor: $bgcolor-two
 
 --- container: ftd.main
@@ -2023,7 +3249,7 @@ backgroundcolor: $bgcolor-seven
 
 
 
--- ftd.column tertairy-component:
+-- ftd.column tertiary-component:
 width: fill
 spacing: 64
 boolean open-one: true
