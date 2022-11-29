@@ -272,7 +272,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
-border-color if $open-one: $fpm.color.main.text-strong
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -291,7 +291,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-color if $open-one: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -306,6 +306,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -323,6 +324,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -337,6 +339,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -355,6 +358,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -368,6 +372,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -386,6 +391,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -400,6 +406,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
@@ -418,6 +425,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -432,6 +440,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
@@ -448,8 +457,10 @@ margin-bottom: 12
 --- ftd.column:
 align: center
 width: fill
+
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -642,6 +653,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -660,6 +672,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -674,6 +687,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -691,6 +705,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -705,6 +720,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -723,6 +739,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1012,6 +1029,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -1030,6 +1048,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1044,6 +1063,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -1061,6 +1081,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1075,6 +1096,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -1093,10 +1115,13 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
+
 --- container: first-row
+
 
 --- ftd.row:
 if: $bgcolor-four is not null
@@ -1380,6 +1405,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -1398,6 +1424,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1412,6 +1439,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -1429,6 +1457,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1443,6 +1472,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -1461,6 +1491,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1748,6 +1779,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.warning.base
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -1766,6 +1798,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
+color if $open-one: $fpm.color.main.warning.base
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1780,6 +1813,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.warning.base
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -1797,6 +1831,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.warning.base
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -1811,6 +1846,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.warning.base
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -1828,6 +1864,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.warning.base
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2115,6 +2152,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -2133,6 +2171,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2147,6 +2186,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -2164,6 +2204,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2178,6 +2219,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -2196,10 +2238,13 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
+
 --- container: first-row
+
 
 --- ftd.row:
 if: $bgcolor-four is not null
@@ -2209,6 +2254,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -2227,6 +2273,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2241,6 +2288,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
@@ -2259,6 +2307,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2272,6 +2321,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
@@ -2287,8 +2337,10 @@ margin-right: 12
 --- ftd.column:
 align: center
 width: fill
+
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2482,6 +2534,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -2500,6 +2553,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2514,6 +2568,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
@@ -2531,6 +2586,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2545,6 +2601,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
@@ -2562,6 +2619,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2575,6 +2633,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -2593,6 +2652,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2607,6 +2667,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
@@ -2625,6 +2686,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2821,6 +2883,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -2843,6 +2906,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2857,6 +2921,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-two
@@ -2879,6 +2944,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2892,6 +2958,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-three
@@ -2914,10 +2981,12 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: first-row
+
 
 --- ftd.row:
 if: $bgcolor-four is not null
@@ -2927,6 +2996,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -2949,6 +3019,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2963,6 +3034,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-five
@@ -2985,6 +3057,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -2998,6 +3071,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-six
@@ -3017,8 +3091,10 @@ margin-bottom: 12
 --- ftd.column:
 align: center
 width: fill
+
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3033,6 +3109,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-seven: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-seven
@@ -3055,6 +3132,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.text-strong
+color if $open-seven: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3069,6 +3147,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-eight: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-eight
@@ -3091,6 +3170,7 @@ width: fill
 
 --- ftd.text: $subtitle-eight
 color: $fpm.color.main.text-strong
+color if $open-eight: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3104,6 +3184,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-nine: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-nine
@@ -3126,6 +3207,7 @@ width: fill
 
 --- ftd.text: $subtitle-nine
 color: $fpm.color.main.text-strong
+color if $open-nine: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3140,6 +3222,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-ten: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-ten
@@ -3162,6 +3245,7 @@ width: fill
 
 --- ftd.text: $subtitle-ten
 color: $fpm.color.main.text-strong
+color if $open-ten: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3457,6 +3541,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -3476,6 +3561,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3490,6 +3576,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-two
@@ -3509,6 +3596,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3522,6 +3610,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-three
@@ -3541,6 +3630,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3554,6 +3644,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -3573,6 +3664,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3587,6 +3679,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-five
@@ -3606,6 +3699,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3619,6 +3713,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-six
@@ -3638,6 +3733,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3652,6 +3748,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-seven: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-seven
@@ -3671,6 +3768,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
+color if $open-seven: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3892,6 +3990,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -3911,6 +4010,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3925,6 +4025,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-two
@@ -3944,6 +4045,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3957,6 +4059,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-three
@@ -3976,6 +4079,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -3989,6 +4093,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -4008,6 +4113,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4022,6 +4128,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-five
@@ -4041,6 +4148,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4054,6 +4162,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-six
@@ -4073,6 +4182,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4087,6 +4197,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-seven: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-seven
@@ -4107,6 +4218,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
+color if $open-seven: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4331,6 +4443,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -4350,6 +4463,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.overlay
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4364,6 +4478,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-two
@@ -4383,6 +4498,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4396,6 +4512,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-three
@@ -4414,6 +4531,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4427,6 +4545,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -4446,6 +4565,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4460,6 +4580,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-five
@@ -4479,6 +4600,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.overlay
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4492,6 +4614,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-six
@@ -4511,6 +4634,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.overlay
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4525,6 +4649,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-seven: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-seven
@@ -4544,6 +4669,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
+color if $open-seven: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4781,6 +4907,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -4801,6 +4928,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4815,6 +4943,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-two: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-two
@@ -4834,6 +4963,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
+color if $open-two: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4847,6 +4977,7 @@ min-width: 112
 height: 114
 max-width: 112
 border-color: $fpm.color.main.border
+border-color if $open-three: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-three
@@ -4866,6 +4997,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
+color if $open-three: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4879,6 +5011,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-four: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-four
@@ -4898,6 +5031,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
+color if $open-four: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4912,6 +5046,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-five: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-five
@@ -4931,6 +5066,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
+color if $open-five: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4944,6 +5080,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-six: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color : $bgcolor-six
@@ -4963,6 +5100,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
+color if $open-six: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -4977,6 +5115,7 @@ max-width: 112
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-seven: $fpm.color.main.error.border
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-seven
@@ -4996,6 +5135,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.text-strong
+color if $open-seven: $fpm.color.main.error.border
 role: $fpm.type.label-big
 text-align: center
 width: fill
