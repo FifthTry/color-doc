@@ -55,6 +55,17 @@ minimize: true
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 -- ftd.row color-display:
 fpm.color-data color:
 optional boolean minimize:
@@ -64,7 +75,63 @@ width: fill
 color: $color
 minimize: $minimize
 
+
+
+
+
+
+
+
+
 -- ftd.column all-color-display:
+fpm.color-data color:
+optional boolean minimize: 
+background-color: $color.main.background.base
+width: fill
+
+--- ftd.row:
+width: fill
+
+--- cu.color-ui:
+color: $color
+minimize: $minimize
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+
+--- color-display-data:
+color: $color
+
+
+
+
+
+
+-- ftd.row color-display-one:
+fpm.color-data color:
+optional boolean minimize:
+width: fill
+
+--- all-color-display-one:
+color: $color
+minimize: $minimize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column all-color-display-one:
 fpm.color-data color:
 optional boolean minimize: 
 background-color: $color.main.background.base
@@ -75,6 +142,8 @@ width: fill
 --- cd.colordoc:
 color:$color
 minimize: $minimize
+
+
 
 
 
