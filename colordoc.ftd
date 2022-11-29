@@ -20,6 +20,11 @@ minimize: true
 
 
 
+-- ftd.column:
+width: fill
+padding-horizontal: 64
+padding-vertical: 20
+
 
 -- standalone: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
@@ -193,7 +198,7 @@ subtitle-ten: .ten
 
 -- ftd.column standalone:
 width: fill
-spacing: 32
+max-width: 1168
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -215,25 +220,47 @@ optional string subtitle-six:
 optional string subtitle-seven:
 caption title:
 string subtitle:
+border-radius: 3
+border-style: dashed
+border-left: 4
+border-bottom: 4
+padding-bottom: 36
+padding-top: 24
+border-color: $fpm.color.main.border-strong
 
 
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-
-
+width: fill
+border-style: dashed
+border-bottom: 4
+padding-left: 34
+padding-bottom: 24
+border-color: $fpm.color.main.border-strong
+margin-bottom: 32
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
+width: fill
+padding-left: 35
+margin-bottom: 32
+
 
 --- container: ftd.main
 
+--- ftd.column:
+width: fill
 
 --- ftd.row:
-width: fill
+;width: fill
 id: jjjj
 spacing: 16
+padding-left: 36
+margin-bottom: 44
+
+
 
 
 --- ftd.row:
@@ -244,13 +271,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -259,7 +287,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -273,12 +301,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -287,7 +316,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -301,13 +330,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -315,7 +345,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -328,13 +358,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -343,7 +374,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -357,13 +388,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -372,7 +404,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -385,13 +417,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -399,7 +432,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -408,6 +441,9 @@ width: fill
 
 --- ftd.column:
 if: $open-one
+padding-left: 36
+margin-bottom: 7
+
 
 --- ftd.column:
 if: $bgcolor-one is not null
@@ -535,7 +571,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -554,13 +590,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -569,7 +606,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -583,12 +620,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -597,7 +635,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -611,13 +649,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -625,7 +664,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -638,13 +677,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -653,7 +693,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -667,13 +707,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -682,7 +723,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -695,13 +736,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -709,7 +751,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -844,7 +886,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -863,13 +905,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -878,7 +921,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -892,12 +935,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -906,7 +950,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -920,13 +964,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -934,7 +979,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -947,13 +992,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -962,7 +1008,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -976,13 +1022,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -991,7 +1038,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1004,13 +1051,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -1018,7 +1066,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1153,7 +1201,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -1172,13 +1220,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1187,7 +1236,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1201,12 +1250,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -1215,7 +1265,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1229,13 +1279,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -1243,7 +1294,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1256,13 +1307,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1271,7 +1323,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1285,13 +1337,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1300,7 +1353,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1313,13 +1366,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -1327,7 +1381,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1461,7 +1515,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -1480,13 +1534,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1495,7 +1550,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1509,12 +1564,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -1523,7 +1579,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1537,13 +1593,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -1551,7 +1608,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1564,13 +1621,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1579,7 +1637,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1593,13 +1651,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1608,7 +1667,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1621,13 +1680,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -1635,7 +1695,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1769,7 +1829,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -1788,13 +1848,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1803,7 +1864,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1817,12 +1878,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -1831,7 +1893,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1845,13 +1907,14 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 --- ftd.column:
 align: center
@@ -1859,7 +1922,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1872,13 +1935,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1887,7 +1951,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -1901,13 +1965,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
 
 
 --- ftd.column:
@@ -1916,7 +1981,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -1929,13 +1994,14 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -1943,7 +2009,7 @@ align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.step-1
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2073,7 +2139,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 
 --- container: ftd.main
@@ -2093,12 +2159,13 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 
@@ -2108,7 +2175,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2122,12 +2189,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -2136,7 +2204,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2150,12 +2218,13 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
 
 
 --- ftd.column:
@@ -2164,7 +2233,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2177,12 +2246,13 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
 
 
 
@@ -2192,7 +2262,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2206,12 +2276,13 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
 
 
 
@@ -2221,7 +2292,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2364,7 +2435,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 
 --- container: ftd.main
@@ -2384,17 +2455,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2402,7 +2474,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2416,17 +2488,18 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2434,7 +2507,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2447,17 +2520,18 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2465,7 +2539,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2478,17 +2552,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2496,7 +2571,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2510,17 +2585,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2528,7 +2604,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2541,24 +2617,25 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
 width: fill
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2572,17 +2649,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2590,7 +2668,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2604,17 +2682,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-eight
-$on-click$: $open-eight= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
-$on-click$: $open-nine= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-eight= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2622,7 +2701,7 @@ width: fill
 
 --- ftd.text: $subtitle-eight
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2635,17 +2714,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-nine
-$on-click$: $open-nine= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
-$on-click$: $open-eight= false
-$on-click$: $open-seven= false
-$on-click$: $open-ten= false
+$on-mouse-enter$: $open-nine= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-seven= false
+$on-mouse-enter$: $open-ten= false
 
 --- ftd.column:
 align: center
@@ -2653,7 +2733,7 @@ width: fill
 
 --- ftd.text: $subtitle-nine
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2667,17 +2747,18 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-ten
-$on-click$: $open-ten= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
-$on-click$: $open-eight= false
-$on-click$: $open-nine= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-ten= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-eight= false
+$on-mouse-enter$: $open-nine= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -2685,7 +2766,7 @@ width: fill
 
 --- ftd.text: $subtitle-ten
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2900,7 +2981,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -2919,14 +3000,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -2935,7 +3017,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -2949,14 +3031,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -2965,7 +3048,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -2978,14 +3061,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -2993,7 +3077,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3006,14 +3090,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3021,7 +3106,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3035,14 +3120,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3050,7 +3136,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3063,14 +3149,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3078,7 +3165,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3092,14 +3179,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -3108,7 +3196,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3264,7 +3352,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -3283,14 +3371,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -3299,7 +3388,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3313,14 +3402,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -3329,7 +3419,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3342,14 +3432,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3357,7 +3448,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3370,14 +3461,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3385,7 +3477,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3399,14 +3491,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3414,7 +3507,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3427,14 +3520,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3442,7 +3536,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3456,14 +3550,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -3472,7 +3567,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3630,7 +3725,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -3649,14 +3744,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -3665,7 +3761,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3679,14 +3775,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -3695,7 +3792,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3708,14 +3805,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3723,7 +3821,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3736,14 +3834,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3751,7 +3850,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3765,14 +3864,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3780,7 +3880,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -3793,14 +3893,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -3808,7 +3909,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -3822,14 +3923,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -3838,7 +3940,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.background.overlay
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -4009,7 +4111,7 @@ role: $fpm.type.heading-large
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
-role: $fpm.type.copy-relaxed
+role: $fpm.type.copy-large
 
 --- container: ftd.main
 
@@ -4028,14 +4130,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -4044,7 +4147,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -4058,14 +4161,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.column:
@@ -4074,7 +4178,7 @@ width: fill
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -4087,14 +4191,15 @@ width: 112
 height: 114
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -4102,7 +4207,7 @@ width: fill
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -4115,14 +4220,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -4130,7 +4236,7 @@ width: fill
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -4144,14 +4250,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -4159,7 +4266,7 @@ width: fill
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 --- container: jjjj
@@ -4172,14 +4279,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color : $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.column:
 align: center
@@ -4187,7 +4295,7 @@ width: fill
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -4201,14 +4309,15 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
 
 
 --- ftd.column:
@@ -4217,7 +4326,7 @@ width: fill
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 text-align: center
 width: fill
 
@@ -4390,18 +4499,19 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-one
-$on-click$: $open-one= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-one= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- container: jjjj
 
@@ -4411,18 +4521,19 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-two is not null: $bgcolor-two
-$on-click$: $open-two= true
-$on-click$: $open-one= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-two= true
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.text: $subtitle-two
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- container: jjjj
 
@@ -4432,19 +4543,20 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-three is not null: $bgcolor-three
-$on-click$: $open-three= true
-$on-click$: $open-two= false
-$on-click$: $open-one= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-three= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.text: $subtitle-three
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- container: jjjj
 
@@ -4454,18 +4566,19 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-four
-$on-click$: $open-four= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-one= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-four= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 --- ftd.text: $subtitle-four
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 
 --- container: jjjj
@@ -4476,19 +4589,20 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-five is not null: $bgcolor-five
-$on-click$: $open-five= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-one= false
-$on-click$: $open-six= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-five= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.text: $subtitle-five
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- container: jjjj
 
@@ -4498,19 +4612,20 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color if $bgcolor-six is not null: $bgcolor-six
-$on-click$: $open-six= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-one= false
-$on-click$: $open-seven= false
+$on-mouse-enter$: $open-six= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-one= false
+$on-mouse-enter$: $open-seven= false
 
 
 --- ftd.text: $subtitle-six
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 
 --- container: jjjj
@@ -4521,18 +4636,19 @@ padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
 border-width: 1
+border-radius: 8
 background-color: $bgcolor-seven
-$on-click$: $open-seven= true
-$on-click$: $open-two= false
-$on-click$: $open-three= false
-$on-click$: $open-four= false
-$on-click$: $open-five= false
-$on-click$: $open-six= false
-$on-click$: $open-one= false
+$on-mouse-enter$: $open-seven= true
+$on-mouse-enter$: $open-two= false
+$on-mouse-enter$: $open-three= false
+$on-mouse-enter$: $open-four= false
+$on-mouse-enter$: $open-five= false
+$on-mouse-enter$: $open-six= false
+$on-mouse-enter$: $open-one= false
 
 --- ftd.text: $subtitle-seven
 color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 
 --- container: ftd.main
@@ -4656,9 +4772,10 @@ optional string subtitle:
 optional ftd.color backgroundcolor:
 border-color: $fpm.color.main.text-strong
 border-width: 1
+border-radius: 8
 padding-vertical: 24
 padding-horizontal: 24
-width: 550
+width: 650
 height: 142
 
 
@@ -4668,11 +4785,12 @@ width: fill
 
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
+role: $fpm.type.copy-large
 anchor: parent
-top: -36
+top: -38
 left: 0
 background-color: $fpm.color.main.background.base
-
+padding-horizontal: 8
 
 --- container: ftd.main
 
@@ -4692,6 +4810,7 @@ height: 92
 background-color: $backgroundcolor
 border-color: $fpm.color.main.border-strong
 border-width: 1
+border-radius: 8
 
 
 --- container:second-container
@@ -4706,11 +4825,11 @@ spacing: 8
 
 --- ftd.text: dark:
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- ftd.text: $dark
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 width: fill
 white-space: nowrap
 
@@ -4722,11 +4841,11 @@ spacing: 8
 
 --- ftd.text: light:
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 
 --- ftd.text: $light
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 width: fill
 white-space: nowrap
 
@@ -4744,12 +4863,12 @@ margin-bottom: 4
 
 --- ftd.text: we use
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 white-space: nowrap
 
 --- ftd.text: $title
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 white-space: nowrap
 
 
@@ -4760,12 +4879,12 @@ width: fill
 spacing: 4
 --- ftd.text: for 
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 white-space: nowrap
 
 
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $fpm.type.label-big
 white-space: nowrap
