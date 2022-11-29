@@ -4,29 +4,29 @@
 
 
 
--- ftd.column:
+-- colordoc:
+
+
+
+
+
+-- ftd.column colordoc:
 width: fill
 padding-horizontal: 20
 padding-vertical: 20
 padding-horizontal if $cu.is-mobile: 20
 background-color: $fpm.color.main.background.base
-id: ll
 
-
--- cu.color-ui:
+--- cu.color-ui:
 color: $fpm.color
 minimize: true
 
-
-
-
--- ftd.column:
+--- ftd.column:
 width: fill
 padding-horizontal: 64
 padding-vertical: 20
 
-
--- standalone: Stand Alone Colors
+--- standalone: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.border
 bgcolor-two: $fpm.color.main.border-strong
@@ -41,7 +41,7 @@ subtitle-four: .text strong
 subtitle-five: .shadow
 subtitle-six: .scrim
 
--- background-component: Background Colors
+--- background-component: Background Colors
 subtitle: Below are background color definitions we use.
 bgcolor-one: $fpm.color.main.background.base
 bgcolor-two: $fpm.color.main.background.step-1
@@ -54,7 +54,7 @@ subtitle-three: .step-2
 subtitle-four: .overlay
 subtitle-five: .code
 
--- primary-component: CTA Primary Colors
+--- primary-component: CTA Primary Colors
 subtitle: Below are cta primary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-primary.base
 bgcolor-two: $fpm.color.main.cta-primary.hover
@@ -72,7 +72,7 @@ subtitle-six: .border
 subtitle-seven: .text
 
 
--- secondary-component: CTA Secondary Colors
+--- secondary-component: CTA Secondary Colors
 subtitle: Below are cta secondary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-secondary.base
 bgcolor-two: $fpm.color.main.cta-secondary.hover
@@ -91,7 +91,7 @@ subtitle-seven: .text
 
 
 
--- tertiary-component: CTA Tertiary Colors
+--- tertiary-component: CTA Tertiary Colors
 subtitle: Below are cta tertiary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-tertiary.base
 bgcolor-two: $fpm.color.main.cta-tertiary.hover
@@ -108,7 +108,7 @@ subtitle-five: .focused
 subtitle-six: .border
 subtitle-seven: .text
 
--- danger-component: CTA Danger Colors
+--- danger-component: CTA Danger Colors
 subtitle: Below are cta danger color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-danger.hover
 bgcolor-two: $fpm.color.main.cta-danger.base
@@ -126,7 +126,7 @@ subtitle-six: .border
 subtitle-seven: .text
 
 
--- accent-component: Accent Colors
+--- accent-component: Accent Colors
 subtitle: Below are accent color definitions we use.
 bgcolor-one: $fpm.color.main.accent.primary
 bgcolor-two: $fpm.color.main.accent.secondary
@@ -135,7 +135,7 @@ subtitle-one: .primary
 subtitle-two: .secondary
 subtitle-three: .tertiary
 
--- error-component: Error Colors
+--- error-component: Error Colors
 subtitle: Below are error colors definitions we use.
 bgcolor-one: $fpm.color.main.error.base
 bgcolor-two: $fpm.color.main.error.text
@@ -144,7 +144,7 @@ subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
--- success-component: Success Colors
+--- success-component: Success Colors
 subtitle: Below are success colors definitions we use.
 bgcolor-one: $fpm.color.main.success.base
 bgcolor-two: $fpm.color.main.success.text
@@ -153,7 +153,7 @@ subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
--- info-component: Info Colors
+--- info-component: Info Colors
 subtitle: Below are info colors definitions we use.
 bgcolor-one: $fpm.color.main.info.base
 bgcolor-two: $fpm.color.main.info.text
@@ -162,7 +162,7 @@ subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
--- warning-component: Warning Colors
+--- warning-component: Warning Colors
 subtitle: Below are warning color definitions we use.
 bgcolor-one: $fpm.color.main.warning.base
 bgcolor-two: $fpm.color.main.warning.text
@@ -172,7 +172,7 @@ subtitle-two: .text
 subtitle-three: .border
 
 
--- custom-component: Custom Colors
+--- custom-component: Custom Colors
 subtitle:  Below are custom color definitions we use.  
 bgcolor-one: $fpm.color.main.custom.one
 bgcolor-two: $fpm.color.main.custom.two
@@ -271,6 +271,7 @@ height: 114
 padding-vertical: 12
 padding-horizontal: 12
 border-color: $fpm.color.main.border
+border-color if $open-one: $fpm.color.main.text-strong
 border-width: 1
 border-radius: 8
 background-color: $bgcolor-one
@@ -288,6 +289,7 @@ width: fill
 
 --- ftd.text: $subtitle-one
 color: $fpm.color.main.text-strong
+color if $open-one: $fpm.color.main.text-strong
 role: $fpm.type.label-big
 text-align: center
 width: fill
@@ -5310,8 +5312,6 @@ padding-horizontal: 24
 width: 650
 height: 142
 
-
-
 --- ftd.row:
 width: fill
 
@@ -5332,7 +5332,7 @@ id: second-container
 spacing: 24
 
 --- ftd.column:
-width: percent 40
+
 
 --- ftd.row:
 padding-vertical: 12
@@ -5352,8 +5352,9 @@ spacing: 24
 id: llll
 
 --- ftd.row:
-width: fill
+width: 120
 spacing: 8
+align: right
 
 --- ftd.text: dark:
 color: $fpm.color.main.text
@@ -5368,8 +5369,9 @@ white-space: nowrap
 --- container: llll
 
 --- ftd.row:
-width: fill
+width: 120
 spacing: 8
+align: right
 
 --- ftd.text: light:
 color: $fpm.color.main.text
