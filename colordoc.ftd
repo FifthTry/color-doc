@@ -21,7 +21,7 @@ minimize: true
 
 
 
--- standalone: STANDALONE
+-- standalone: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $fpm.color.main.border
 bgcolor-two: $fpm.color.main.border-strong
@@ -36,7 +36,7 @@ subtitle-four: .text strong
 subtitle-five: .shadow
 subtitle-six: .scrim
 
--- background-component: Background
+-- background-component: Background Colors
 subtitle: Below are background color definitions we use.
 bgcolor-one: $fpm.color.main.background.base
 bgcolor-two: $fpm.color.main.background.step-1
@@ -49,7 +49,7 @@ subtitle-three: .step-2
 subtitle-four: .overlay
 subtitle-five: .code
 
--- primary-component: CTA PRIMARY
+-- primary-component: CTA Primary colors
 subtitle: Below are cta primary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-primary.base
 bgcolor-two: $fpm.color.main.cta-primary.hover
@@ -67,7 +67,7 @@ subtitle-six: .border
 subtitle-seven: .text
 
 
--- secondary-component: CTA SECONDARY
+-- secondary-component: CTA Secondary Colors
 subtitle: Below are cta secondary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-secondary.hover
 bgcolor-two: $fpm.color.main.cta-secondary.base
@@ -76,17 +76,17 @@ bgcolor-four: $fpm.color.main.cta-secondary.disabled
 bgcolor-five: $fpm.color.main.cta-secondary.focused
 bgcolor-six: $fpm.color.main.cta-secondary.border
 bgcolor-seven: $fpm.color.main.cta-secondary.text
-subtitle-one: HOVER
-subtitle-two: BASE
-subtitle-three: PRESSED
-subtitle-four: disabled
-subtitle-five: focused
-subtitle-six: border
-subtitle-seven: text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
 
 
 
--- tertiary-component: CTA TERTIARY
+-- tertiary-component: CTA Tertiary Colors
 subtitle: Below are cta tertiary color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-tertiary.hover
 bgcolor-two: $fpm.color.main.cta-tertiary.base
@@ -95,15 +95,15 @@ bgcolor-four: $fpm.color.main.cta-tertiary.disabled
 bgcolor-five: $fpm.color.main.cta-tertiary.focused
 bgcolor-six: $fpm.color.main.cta-tertiary.border
 bgcolor-seven: $fpm.color.main.cta-tertiary.text
-subtitle-one: HOVER
-subtitle-two: BASE
-subtitle-three: PRESSED
-subtitle-four: disabled
-subtitle-five: focused
-subtitle-six: border
-subtitle-seven: text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
 
--- danger-component: CTA DANGER
+-- danger-component: CTA Danger Colors
 subtitle: Below are cta danger color definitions we use. 
 bgcolor-one: $fpm.color.main.cta-danger.hover
 bgcolor-two: $fpm.color.main.cta-danger.base
@@ -112,16 +112,16 @@ bgcolor-four: $fpm.color.main.cta-danger.disabled
 bgcolor-five: $fpm.color.main.cta-danger.focused
 bgcolor-six: $fpm.color.main.cta-danger.border
 bgcolor-seven: $fpm.color.main.cta-danger.text
-subtitle-one: HOVER
-subtitle-two: BASE
-subtitle-three: PRESSED
-subtitle-four: disabled
-subtitle-five: focused
-subtitle-six: border
-subtitle-seven: text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
 
--- success-component: STANDALONE
-subtitle: Below are standalone color definitions we use.
+-- success-component: Success Colors
+subtitle: Below are success colors definitions we use.
 bgcolor-one: $fpm.color.main.success.text
 bgcolor-two: $fpm.color.main.success.border
 bgcolor-three: $fpm.color.main.success.base
@@ -130,8 +130,8 @@ subtitle-two: .border strong
 subtitle-three: .text
 
 
--- error-component: STANDALONE
-subtitle: Below are standalone color definitions we use.
+-- error-component: Error Colors
+subtitle: Below are error colors definitions we use.
 bgcolor-one: $fpm.color.main.error.text
 bgcolor-two: $fpm.color.main.error.border
 bgcolor-three: $fpm.color.main.error.base
@@ -139,8 +139,8 @@ subtitle-one: .border
 subtitle-two: .border strong
 subtitle-three: .text
 
--- accent-component: STANDALONE
-subtitle: Below are standalone color definitions we use.
+-- accent-component: Accent Colors
+subtitle: Below are accent color definitions we use.
 bgcolor-one: $fpm.color.main.accent.primary
 bgcolor-two: $fpm.color.main.accent.secondary
 bgcolor-three: $fpm.color.main.accent.tertiary
@@ -148,8 +148,8 @@ subtitle-one: .primary
 subtitle-two: .secondary
 subtitle-three: .tertiary
 
--- warning-component: STANDALONE
-subtitle: Below are standalone color definitions we use.
+-- warning-component: Warning Colors
+subtitle: Below are warning color definitions we use.
 bgcolor-one: $fpm.color.main.warning.text
 bgcolor-two: $fpm.color.main.warning.border
 bgcolor-three: $fpm.color.main.warning.base
@@ -158,7 +158,7 @@ subtitle-two: .border strong
 subtitle-three: .text
 
 
--- custom-component: CTA PRIMARY
+-- custom-component: Custom Colors
 subtitle:  Below are custom color definitions we use.  
 bgcolor-one: $fpm.color.main.custom.one
 bgcolor-two: $fpm.color.main.custom.two
@@ -3315,7 +3315,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-one
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -3430,7 +3430,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-five
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -3458,7 +3458,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-six
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -3488,7 +3488,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-seven
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
