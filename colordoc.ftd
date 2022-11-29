@@ -30,8 +30,8 @@ subtitle-one: .border
 subtitle-two: .border strong
 subtitle-three: .text
 subtitle-four: .text strong
-subtitle-five: scrim
-subtitle-six: .shadow
+subtitle-five: .shadow
+subtitle-six: .scrim
 
 -- background-component: Background
 subtitle: Below are background color definitions we use.
@@ -40,11 +40,11 @@ bgcolor-two: $fpm.color.main.background.step-1
 bgcolor-three: $fpm.color.main.background.step-2
 bgcolor-four: $fpm.color.main.background.overlay
 bgcolor-five: $fpm.color.main.background.code
-subtitle-one: .step-1
-subtitle-two: .base
+subtitle-one: .base
+subtitle-two: .step-1
 subtitle-three: .step-2
 subtitle-four: .overlay
-subtitle-five: .base
+subtitle-five: .code
 
 
 
@@ -55,7 +55,7 @@ subtitle-five: .base
 
 -- ftd.column standalone:
 width: fill
-spacing: 64
+spacing: 32
 boolean open-one: true
 boolean open-two: false
 boolean open-three: false
@@ -82,13 +82,12 @@ string subtitle:
 --- ftd.text: $title
 color: $fpm.color.main.text-strong
 role: $fpm.type.heading-large
-margin-bottom: 26
+
 
 
 --- ftd.text: $subtitle
 color: $fpm.color.main.text-strong
 role: $fpm.type.copy-relaxed
-margin-bottom: 26
 
 --- container: ftd.main
 
@@ -277,7 +276,7 @@ if: $bgcolor-one is not null
 
 --- show-box: \$fpm.color.main.border
 name: step-1
-subtitle: background step-1
+subtitle: border
 dark: $bgcolor-one.dark
 light: $bgcolor-one.light
 backgroundcolor: $bgcolor-one
@@ -1582,7 +1581,8 @@ id: hh
 
 --- ftd.row:
 width: fill
-
+spacing: 8
+margin-bottom: 8
 --- ftd.text: we use
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
@@ -1597,7 +1597,7 @@ role: $fpm.type.fine-print
 
 --- ftd.row:
 width: fill
-
+spacing: 8
 --- ftd.text: for 
 color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
