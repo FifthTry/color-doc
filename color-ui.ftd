@@ -400,7 +400,6 @@ spacing: 24
 
 --- ftd.text: 
 text: $toast
-white-space: nowrap
 role: $fpm.type.label-big
 width: fill
 
