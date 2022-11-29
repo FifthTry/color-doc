@@ -262,7 +262,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-one
-color: $fpm.color.main.background.step-1
+color: $fpm.color.main.text-strong
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -2701,7 +2701,7 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.custom.one
+--- show-box: \$fpm.color.main.custom.one
 name: step-1
 subtitle: custom one
 dark: $bgcolor-one.dark
@@ -2717,7 +2717,7 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.custom.two
+--- show-box: \$fpm.color.main.custom.two
 if: $open-two
 name: base
 subtitle: custom two
@@ -2733,7 +2733,7 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.custom.three
+--- show-box: \$fpm.color.main.custom.three
 if: $open-three
 dark: $bgcolor-three.dark
 light: $bgcolor-three.light
@@ -2748,7 +2748,7 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.custom.four
+--- show-box: \$fpm.color.main.custom.four
 if: $open-four
 name: step-1
 subtitle: custom four
@@ -2764,7 +2764,7 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.custom.five
+--- show-box: \$fpm.color.main.custom.five
 if: $open-five
 name: step-1
 subtitle: custom five
@@ -2781,7 +2781,7 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.custom.six
+--- show-box: \$fpm.color.main.custom.six
 if: $open-six
 name: step-1
 subtitle: custom six
@@ -2799,7 +2799,7 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.custom.seven
+--- show-box: \$fpm.color.main.custom.seven
 if: $open-seven
 name: step-1
 subtitle: custom seven
@@ -2817,7 +2817,7 @@ if: $open-eight
 if: $bgcolor-eight is not null
 
 
---- show-box: fpm.color.main.custom.eight
+--- show-box: \$fpm.color.main.custom.eight
 if: $open-eight
 name: step-1
 subtitle: custom eight
@@ -2835,7 +2835,7 @@ if: $open-nine
 if: $bgcolor-nine is not null
 
 
---- show-box: fpm.color.main.custom.nine
+--- show-box: \$fpm.color.main.custom.nine
 if: $open-nine
 name: step-1
 subtitle: custom nine
@@ -2853,7 +2853,7 @@ if: $open-ten
 if: $bgcolor-ten is not null
 
 
---- show-box: fpm.color.main.custom.ten
+--- show-box: \$fpm.color.main.custom.ten
 if: $open-ten
 name: step-1
 subtitle: custom ten
@@ -3111,7 +3111,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-seven
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -3124,7 +3124,7 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-primary.base
+--- show-box: \$fpm.color.main.cta-primary.base
 name: base
 subtitle: cta-primary base
 dark: $bgcolor-one.dark
@@ -3140,7 +3140,7 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-primary.hover
+--- show-box: \$fpm.color.main.cta-primary.hover
 if: $open-two
 name: hover
 subtitle: cta-primary hover
@@ -3156,7 +3156,7 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-primary.pressed
+--- show-box: \$fpm.color.main.cta-primary.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
@@ -3172,7 +3172,7 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-primary.disabled
+--- show-box: \$fpm.color.main.cta-primary.disabled
 if: $open-four
 name: disabled
 subtitle: cta-primary disabled
@@ -3188,7 +3188,7 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-primary.focused
+--- show-box: \$fpm.color.main.cta-primary.focused
 if: $open-five
 name: focused
 subtitle: cta-primary focused
@@ -3205,7 +3205,7 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-primary.border
+--- show-box: \$fpm.color.main.cta-primary.border
 if: $open-six
 name: border
 subtitle: cta-primary border
@@ -3223,7 +3223,7 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-primary.text
+--- show-box: \$fpm.color.main.cta-primary.text
 if: $open-seven
 name: text
 subtitle: cta-primar text
@@ -3475,7 +3475,7 @@ align: center
 width: fill
 
 --- ftd.text: $subtitle-seven
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.background.overlay
 role: $fpm.type.fine-print
 text-align: center
 width: fill
@@ -3488,7 +3488,7 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-secondary.base
+--- show-box: \$fpm.color.main.cta-secondary.base
 name: base
 subtitle: cta-secondary base
 dark: $bgcolor-one.dark
@@ -3504,7 +3504,7 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-secondary.hover
+--- show-box: \$fpm.color.main.cta-secondary.hover
 if: $open-two
 name: hover
 subtitle: cta-secondary hover
@@ -3520,7 +3520,7 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-secondary.pressed
+--- show-box: \$fpm.color.main.cta-secondary.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
@@ -3536,7 +3536,7 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-secondary.disabled
+--- show-box: \$fpm.color.main.cta-secondary.disabled
 if: $open-four
 name: disabled
 subtitle: cta-secondary disabled
@@ -3552,7 +3552,7 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-secondary.focused
+--- show-box: \$fpm.color.main.cta-secondary.focused
 if: $open-five
 name: focused
 subtitle: cta-secondary focused
@@ -3569,7 +3569,7 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-secondary.border
+--- show-box: \$fpm.color.main.cta-secondary.border
 if: $open-six
 name: border
 subtitle: cta-secondary border
@@ -3587,7 +3587,7 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-secondary.text
+--- show-box: \$fpm.color.main.cta-secondary.text
 if: $open-seven
 name: text
 subtitle: cta-secondary text
@@ -3854,7 +3854,7 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-tertairy.base
+--- show-box: \$fpm.color.main.cta-tertairy.base
 name: base
 subtitle: cta-tertairy base
 dark: $bgcolor-one.dark
@@ -3870,7 +3870,7 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-tertairy.hover
+--- show-box: \$fpm.color.main.cta-tertairy.hover
 if: $open-two
 name: hover
 subtitle: cta-tertairy hover
@@ -3886,7 +3886,7 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-tertairy.pressed
+--- show-box: \$fpm.color.main.cta-tertairy.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
@@ -3902,7 +3902,7 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-tertairy.disabled
+--- show-box: \$fpm.color.main.cta-tertairy.disabled
 if: $open-four
 name: disabled
 subtitle: cta-tertairy disabled
@@ -3918,7 +3918,7 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-tertairy.focused
+--- show-box: \$fpm.color.main.cta-tertairy.focused
 if: $open-five
 name: focused
 subtitle: cta-tertairy focused
@@ -3935,7 +3935,7 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-tertairy.border
+--- show-box: \$fpm.color.main.cta-tertairy.border
 if: $open-six
 name: border
 subtitle: cta-tertairy border
@@ -3953,7 +3953,7 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-tertairy.text
+--- show-box: \$fpm.color.main.cta-tertairy.text
 if: $open-seven
 name: text
 subtitle: cta-tertairy text
@@ -4233,7 +4233,7 @@ if: $open-one
 --- ftd.column:
 if: $bgcolor-one is not null
 
---- show-box: fpm.color.main.cta-danger.base
+--- show-box: \$fpm.color.main.cta-danger.base
 name: base
 subtitle: cta-danger base
 dark: $bgcolor-one.dark
@@ -4249,7 +4249,7 @@ if: $open-two
 --- ftd.column:
 if: $bgcolor-two is not null
 
---- show-box: fpm.color.main.cta-danger.hover
+--- show-box: \$fpm.color.main.cta-danger.hover
 if: $open-two
 name: hover
 subtitle: cta-danger hover
@@ -4265,7 +4265,7 @@ if: $open-three
 --- ftd.column:
 if: $bgcolor-three is not null
 
---- show-box: fpm.color.main.cta-danger.pressed
+--- show-box: \$fpm.color.main.cta-danger.pressed
 if: $open-three
 name: pressed
 dark: $bgcolor-three.dark
@@ -4281,7 +4281,7 @@ if: $open-four
 --- ftd.column:
 if: $bgcolor-four is not null
 
---- show-box: fpm.color.main.cta-danger.disabled
+--- show-box: \$fpm.color.main.cta-danger.disabled
 if: $open-four
 name: disabled
 subtitle: cta-danger disabled
@@ -4297,7 +4297,7 @@ if: $open-five
 --- ftd.column:
 if: $bgcolor-five is not null
 
---- show-box: fpm.color.main.cta-danger.focused
+--- show-box: \$fpm.color.main.cta-danger.focused
 if: $open-five
 name: focused
 subtitle: cta-danger focused
@@ -4314,7 +4314,7 @@ if: $open-six
 --- ftd.column:
 if: $bgcolor-six is not null
 
---- show-box: fpm.color.main.cta-danger.border
+--- show-box: \$fpm.color.main.cta-danger.border
 if: $open-six
 name: border
 subtitle: cta-danger border
@@ -4332,7 +4332,7 @@ if: $open-seven
 if: $bgcolor-seven is not null
 
 
---- show-box: fpm.color.main.cta-danger.text
+--- show-box: \fpm.color.main.cta-danger.text
 if: $open-seven
 name: text
 subtitle: cta-danger text
