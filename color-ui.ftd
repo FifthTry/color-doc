@@ -1,131 +1,136 @@
 -- import: fpm
 
--- boolean is-mobile: false
+-- string $primary-body-text:
 
-
--- is-mobile: true
-if: $ftd.device == mobile
+Exceeding reaction chamber thermal limit. We have begun power-supply calibration.
+Force fields have been established on all turbo lifts and crawlways. Computer, 
+run a level-two diagnostic on warp-drive systems. Antimatter containment positive.
 
 
 -- color-ui:
 color: $fpm.color
 minimize: true
 
--- ftd.row color-ui:
+
+
+
+
+
+
+
+
+
+-- component color-ui:
 fpm.color-data color:
 optional boolean minimize: false
-width: fill
-margin-top: $fpm.space.space-8
 
+-- ftd.row:
+width: fill-container
+margin-top.px: 32
 
---- ftd.row:
-width: fill
-id: card-container
+-- ftd.row:
+width: fill-container
 
---- ftd.row:
-if: $minimize
-scale: 0.8
-move-left: 150
-move-up: 100
-width: fill
+-- ftd.row:
+if: { color-ui.minimize }
+;; scale: 0.8 -- TODO FTD 0.3
+margin-left.px: 150
+margin-top.px: 100
+width: fill-container
 
---- ftd.row:
-width: fill
-if: not $is-mobile
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
 
-
-
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.base
+-- header:
+color: $color-ui.color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.step-1
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.step-2
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- container: card-container
+-- end: ftd.row
 
---- ftd.row:
-if: not $minimize
-scale: 0.8
-width: fill
-move-left: 0
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-if: not $is-mobile
+-- ftd.row:
+if: { !color-ui.minimize }
+;; scale: 0.8 -- TODO FTD 0.3
+width: fill-container
 
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
 
-
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.base
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.step-1
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.step-2
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- container: ftd.main
+-- end: ftd.row
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
 
-
---- ftd.column:
-width: fill
-if: $is-mobile
-
---- header:
-color: $color
-width: fill
-bg-color: $fpm.color.main.background.base
+-- header:
+color: $color-ui.color
+width: fill-container
+bg-color: $inherited.colors.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-width: fill
-color: $color
-bg-color: $fpm.color.main.background.step-1
+-- header:
+width: fill-container
+color: $color-ui.color
+bg-color: $inherited.colors.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
---- header:
-width: fill
-color: $color
-bg-color: $fpm.color.main.background.step-2
+-- header:
+width: fill-container
+color: $color-ui.color
+bg-color: $inherited.colors.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
+-- end: ftd.column
 
--- string primary-body-text:
+-- end: ftd.row
 
-Exceeding reaction chamber thermal limit. We have begun power-supply calibration.
-Force fields have been established on all turbo lifts and crawlways. Computer, 
-run a level-two diagnostic on warp-drive systems. Antimatter containment positive.
+-- end: ftd.row
+
+-- end: color-ui
 
 
 
@@ -146,7 +151,7 @@ USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the
 Dominion.
 
 
-
+-- end: title-name
 
 
 
@@ -163,34 +168,34 @@ ftd.color cta-bg:
 -- toast-list list toast:
 
 -- toast:
-border: $fpm.color.main.error.border
-cta-text-color: $fpm.color.main.error.text
-cta-bg: $fpm.color.main.error.base
+border: $inherited.colors.error.border
+cta-text-color: $inherited.colors.error.text
+cta-bg: $inherited.colors.error.base
 cta-text: close
 toast: Beep Beep! I am an error !
 
 -- toast:
-border: $fpm.color.main.success.border
-cta-text-color: $fpm.color.main.success.text
-cta-bg: $fpm.color.main.success.base
+border: $inherited.colors.success.border
+cta-text-color: $inherited.colors.success.text
+cta-bg: $inherited.colors.success.base
 cta-text: close
 toast: Mission complete.
 
 -- toast:
-border:$fpm.color.main.warning.border
-cta-text-color:$fpm.color.main.warning.text
-cta-bg:$fpm.color.main.warning.base
+border:$inherited.colors.warning.border
+cta-text-color:$inherited.colors.warning.text
+cta-bg:$inherited.colors.warning.base
 cta-text: close
 toast: Warning: Borg ship Incoming! 
 
 -- toast:
-border:$fpm.color.main.info.border
-cta-text-color:$fpm.color.main.info.text
-cta-bg:$fpm.color.main.info.base
+border:$inherited.colors.info.border
+cta-text-color:$inherited.colors.info.text
+cta-bg:$inherited.colors.info.base
 cta-text: close
 toast: All hands on deck! Captain on bridge.
 
-
+-- end: toast
 
 
 
@@ -207,48 +212,41 @@ string primary-cta-text:
 string secondary-cta-text:
 string tertiary-cta-text:
 
-
-
-
-
-
-
-
-
 -- cta list cta-list:
 
 -- cta-list: Normal
-background-primary-cta-text: $fpm.color.main.cta-primary.base
-background-secondary-cta-text: $fpm.color.main.cta-secondary.base
-background-tertiary-cta-text: $fpm.color.main.cta-tertiary.base
+background-primary-cta-text: $inherited.colors.cta-primary.base
+background-secondary-cta-text: $inherited.colors.cta-secondary.base
+background-tertiary-cta-text: $inherited.colors.cta-tertiary.base
 primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
 -- cta-list: Hover
-background-primary-cta-text: $fpm.color.main.cta-primary.hover
-background-secondary-cta-text: $fpm.color.main.cta-secondary.hover
-background-tertiary-cta-text: $fpm.color.main.cta-tertiary.hover
+background-primary-cta-text: $inherited.colors.cta-primary.hover
+background-secondary-cta-text: $inherited.colors.cta-secondary.hover
+background-tertiary-cta-text: $inherited.colors.cta-tertiary.hover
 primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
 -- cta-list: Pressed
-background-primary-cta-text: $fpm.color.main.cta-primary.pressed
-background-secondary-cta-text: $fpm.color.main.cta-secondary.pressed
-background-tertiary-cta-text: $fpm.color.main.cta-tertiary.pressed
+background-primary-cta-text: $inherited.colors.cta-primary.pressed
+background-secondary-cta-text: $inherited.colors.cta-secondary.pressed
+background-tertiary-cta-text: $inherited.colors.cta-tertiary.pressed
 primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
 -- cta-list: Focused
-background-primary-cta-text: $fpm.color.main.cta-primary.focused
-background-secondary-cta-text: $fpm.color.main.cta-secondary.focused
-background-tertiary-cta-text: $fpm.color.main.cta-tertiary.focused
+background-primary-cta-text: $inherited.colors.cta-primary.focused
+background-secondary-cta-text: $inherited.colors.cta-secondary.focused
+background-tertiary-cta-text: $inherited.colors.cta-tertiary.focused
 primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
+-- end: cta-list
 
 
 
@@ -256,33 +254,32 @@ tertiary-cta-text: Button
 
 
 
-
--- ftd.column header:
+-- component header:
 caption page-heading: 
 body primary-body-text:
-string width:
+ftd.resizing width:
 fpm.color-data color:  
-ftd.color bg-color: $color.main.background.base
-background-color: $bg-color
+ftd.color bg-color: $color-ui.color.main.background.base
+
+-- ftd.column:
+background.solid: $bg-color
 width: $width
-padding-vertical: $fpm.space.space-4
-padding-horizontal: $fpm.space.space-4
-spacing: 14
+padding-vertical.px: 16
+padding-horizontal.px: 16
+spacing.px: 14
 
+-- ftd.text: $page-heading
+role: $inherited.types.heading-small
+color: $color-ui.color.main.text-strong
+padding-bottom.px: 20
+border-bottom-width.px: 1
+border-color: $header.color.main.border-strong
 
---- ftd.text: $page-heading
-role: $fpm.type.heading-small
-color: $color.main.text-strong
-padding-bottom: $fpm.space.space-5
-border-bottom: 1
-border-color: $color.main.border-strong
-
---- body-with-hover:
+-- body-with-hover:
 title-name: $obj.title-body
 $loop$: $title-name as $obj
 
-
---- normal-buttons:
+-- normal-buttons:
 background-primary-cta-text: $obj.background-primary-cta-text
 background-secondary-cta-text: $obj.background-secondary-cta-text
 background-tertiary-cta-text: $obj.background-tertiary-cta-text
@@ -292,22 +289,10 @@ tertiary-cta-text: $obj.tertiary-cta-text
 title: $obj.title
 $loop$: $cta-list as $obj
 
+-- ftd.column:
+spacing.px: 12
 
-
-
-
-
-
-
-
-
-
-
---- ftd.column:
-spacing: 12
-
-
---- toast-section:
+-- toast-section:
 border: $obj.border
 cta-text-color: $obj.cta-text-color
 cta-bg:  $obj.cta-bg
@@ -315,21 +300,15 @@ cta-text: $obj.cta-text
 toast: $obj.toast
 $loop$: $toast as $obj
 
---- container: ftd.main
-
---- ftd.column:
-width: fill
-padding-vertical: $fpm.space.space-2
+-- end: ftd.column
 
 
+-- shadow-box:
+color: $inherited.colors
 
+-- end: ftd.column
 
-
-
---- container: ftd.main
-
---- shadow-box:
-color: $fpm.color
+-- end: header
 
 
 
@@ -339,15 +318,20 @@ color: $fpm.color
 
 
 
--- ftd.text buttons:
+
+-- component buttons:
 string button-text: 
 ftd.color button-background:
-text: $button-text
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
-background-color: $button-background
-border-radius: 4
-role: $fpm.type.label-small
+
+-- ftd.text:
+text: $buttons.button-text
+padding-vertical.px: 8
+padding-horizontal.px: 16
+background.solid: $buttons.button-background
+border-radius.px: 4
+role: $inherited.types.label-small
+
+-- end: buttons
 
 
 
@@ -357,22 +341,31 @@ role: $fpm.type.label-small
 
 
 
--- ftd.column body-with-hover:
+
+-- component body-with-hover:
 body title-name:
-width: fill
 
---- ftd.column:
-border-color: $fpm.color.main.border
-border-color if $MOUSE-IN: $fpm.color.main.accent.primary
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+border-color: $inherited.colors.border
+border-color if $MOUSE-IN: $inherited.colors.accent.primary
 ;border-left: 4
-padding-left: $fpm.space.space-4
-padding-vertical: $fpm.space.space-2
+padding-left: 16
+padding-vertical.px: 8
 
---- ftd.text: 
-text: $title-name
-role: $fpm.type.label-small
-color: $fpm.color.main.text
-color if $MOUSE-IN: $fpm.color.main.text-strong
+-- ftd.text: 
+text: $body-with-hover.title-name
+role: $inherited.types.label-small
+color: $inherited.colors.text
+color if $MOUSE-IN: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: body-with-hover
 
 
 
@@ -382,40 +375,48 @@ color if $MOUSE-IN: $fpm.color.main.text-strong
 
 
 
--- ftd.row toast-section:
-width: fill
+
+-- component toast-section:
 string cta-text:
 string toast:
 ftd.color border:
 ftd.color cta-text-color:
 ftd.color cta-bg:
-border-radius: 4
+
+-- ftd.row:
+width: fill-container
+border-radius.px: 4
 border-left: 5
-color: $cta-text-color
-background-color: $cta-bg
-border-color: $border
-padding-vertical: $fpm.space.space-4
-padding-horizontal: $fpm.space.space-4
-spacing: 24
+color: $toast-section.cta-text-color
+background.solid: $toast-section.cta-bg
+border-color: $toast-section.border
+padding-vertical.px: 16
+padding-horizontal.px: 16
+spacing.px: 24
 
---- ftd.text: 
-text: $toast
-role: $fpm.type.label-big
-width: fill
+-- ftd.text: 
+text: $toast-section.toast
+role: $inherited.types.label-big
+width: fill-container
 
---- ftd.text: 
-text: $cta-text
-role: $fpm.type.label-big
+-- ftd.text: 
+text: $toast-section.cta-text
+role: $inherited.types.label-big
 
+-- end: ftd.row
 
-
-
-
-
+-- end: toast-section
 
 
 
--- ftd.row normal-buttons:
+
+
+
+
+
+
+
+-- component normal-buttons:
 caption title:
 string primary-cta-text:
 string secondary-cta-text:
@@ -423,70 +424,77 @@ string tertiary-cta-text:
 ftd.color background-primary-cta-text: 
 ftd.color background-secondary-cta-text: 
 ftd.color background-tertiary-cta-text: 
-padding-vertical: $fpm.space.space-0
-spacing: 8
 
+-- ftd.row:
+spacing.px: 8
 
---- ftd.text: $title
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-0
-role: $fpm.type.label-small
-color: $fpm.color.main.text
-padding-right: $fpm.space.space-2
-width: 90
+-- ftd.text: $normal-buttons.title
+padding-vertical.px: 8
+role: $inherited.types.label-small
+color: $inherited.colors.text
+padding-right.px: 8
+width.fixed.px: 90
 
---- container: ftd.main
+-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.text: 
+text: $normal-buttons.primary-cta-text
+role: $inherited.types.label-small
+padding-vertical.px: 8
+padding-horizontal.px: 12
+border-radius.px: 4
+background.solid: $normal-buttons.background-primary-cta-text
 
---- ftd.text: 
-text: $primary-cta-text
-role: $fpm.type.label-small
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-3
-border-radius: 4
-background-color: $background-primary-cta-text
+-- ftd.text: 
+text: $normal-buttons.secondary-cta-text
+role: $inherited.types.label-small
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-radius.px: 4
+background.solid: $normal-buttons.background-secondary-cta-text
 
---- ftd.text: 
-text: $secondary-cta-text
-role: $fpm.type.label-small
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
-border-radius: 4
-background-color: $background-secondary-cta-text
+-- ftd.text: 
+text: $normal-buttons.tertiary-cta-text
+role: $inherited.types.label-small
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-radius.px: 4
+background.solid: $normal-buttons.background-tertiary-cta-text
 
---- ftd.text: 
-text: $tertiary-cta-text
-role: $fpm.type.label-small
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-4
-border-radius: 4
-background-color: $background-tertiary-cta-text
+-- end: ftd.row
 
+-- end: ftd.row
 
-
-
-
-
+-- end: normal-buttons
 
 
 
--- ftd.column shadow-box:
-width: fill
-padding-vertical: $fpm.space.space-12
-border-bottom: 4
+
+
+
+
+
+
+
+-- component shadow-box:
 fpm.color-data color:
-border-color: $fpm.color.main.success.border
-shadow-offset-x: 0
-shadow-offset-y: 4
-shadow-size: 1
-shadow-blur: 2
-shadow-color: $fpm.color.main.success.border
-background-color: $fpm.color.main.background.base
 
---- ftd.column:
-	
+-- ftd.column:
+width: fill-container
+padding-vertical.px: $fpm.space.space-12
+border-bottom: 4
+border-color: $inherited.colors.success.border
+;; shadow-offset-x: 0 -- TODO FTD 0.3
+;; shadow-offset-y: 4 -- TODO FTD 0.3
+;; shadow-size: 1 -- TODO FTD 0.3
+;; shadow-blur: 2 -- TODO FTD 0.3
+;; shadow-color: $inherited.colors.success.border -- TODO FTD 0.3
+background.solid: $inherited.colors.background.base
+
+-- end: ftd.column
+
+-- end: shadow-box	
 
 
