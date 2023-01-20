@@ -61,7 +61,7 @@ minimize: true
 
 
 -- component color-display:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize:
 
 -- ftd.row:
@@ -85,11 +85,11 @@ minimize: $color-display.minimize
 
 
 -- component all-color-display:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize: 
 
 -- ftd.column:
-background.solid: $color.main.background.base
+background.solid: $all-color-display.color.background.base
 width: fill-container
 
 -- ftd.row:
@@ -123,7 +123,7 @@ color: $all-color-display.color
 
 
 -- component color-display-one:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize:
 
 -- ftd.row:
@@ -147,11 +147,11 @@ minimize: $color-display-one.minimize
 
 
 -- component all-color-display-one:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize: 
 
 -- ftd.column:
-background.solid: $all-color-display-one.color.colors.background.base
+background.solid: $all-color-display-one.color.background.base
 width: fill-container
 
 -- cd.colordoc:
@@ -173,7 +173,7 @@ minimize: $all-color-display-one.minimize
 
 
 -- component color-display-data:
-fpm.color-data color:
+ftd.color-scheme color:
 
 -- ftd.column:
 width.fixed.percent: 40
@@ -181,219 +181,219 @@ padding-left.px: 24
 
 -- colors:
 color-name: `$inherited.colors.background.base`
-bg-color: $color-display-data.color.main.background.base
+bg-color: $color-display-data.color.background.base
 
 -- colors:
 color-name: `$inherited.colors.background.step-1`
-bg-color: $color-display-data.color.main.background.step-1
+bg-color: $color-display-data.color.background.step-1
 
 -- colors:
 color-name: `$inherited.colors.background.step-2`
-bg-color: $color-display-data.color.main.background.step-2
+bg-color: $color-display-data.color.background.step-2
 
 -- colors:
 color-name: `$inherited.colors.background.overlay`
-bg-color: $color-display-data.color.main.background.overlay
+bg-color: $color-display-data.color.background.overlay
 
 -- colors:
 color-name: `$inherited.colors.background.code`
-bg-color: $color-display-data.color.main.background.code
+bg-color: $color-display-data.color.background.code
 
 -- colors:
 color-name: `$inherited.colors.border`
-bg-color: $color-display-data.color.main.border
+bg-color: $color-display-data.color.border
 
 -- colors:
 color-name: `$inherited.colors.border-strong`
-bg-color: $color-display-data.color.main.border-strong
+bg-color: $color-display-data.color.border-strong
 
 -- colors:
 color-name: `$inherited.colors.text`
-bg-color: $color-display-data.color.main.text
+bg-color: $color-display-data.color.text
 
 -- colors:
 color-name: `$inherited.colors.text-strong`
-bg-color: $color-display-data.color.main.text-strong
+bg-color: $color-display-data.color.text-strong
 
 -- colors:
 color-name: `$inherited.colors.shadow`
-bg-color: $color-display-data.color.main.shadow
+bg-color: $color-display-data.color.shadow
 
 -- colors:
 color-name: `$inherited.colors.scrim`
-bg-color: $color-display-data.color.main.scrim
+bg-color: $color-display-data.color.scrim
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.base`
-bg-color: $color-display-data.color.main.cta-primary.base
+bg-color: $color-display-data.color.cta-primary.base
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.hover`
-bg-color: $color-display-data.color.main.cta-primary.hover
+bg-color: $color-display-data.color.cta-primary.hover
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.pressed`
-bg-color: $color-display-data.color.main.cta-primary.pressed
+bg-color: $color-display-data.color.cta-primary.pressed
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.focused`
-bg-color: $color-display-data.color.main.cta-primary.focused
+bg-color: $color-display-data.color.cta-primary.focused
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.border`
-bg-color: $color-display-data.color.main.cta-primary.border
+bg-color: $color-display-data.color.cta-primary.border
 
 -- colors:
 color-name: `$inherited.colors.cta-primary.text`
-bg-color: $color-display-data.color.main.cta-primary.text
+bg-color: $color-display-data.color.cta-primary.text
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.base`
-bg-color: $color-display-data.color.main.cta-secondary.base
+bg-color: $color-display-data.color.cta-secondary.base
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.hover`
-bg-color: $color-display-data.color.main.cta-secondary.hover
+bg-color: $color-display-data.color.cta-secondary.hover
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.pressed`
-bg-color: $color-display-data.color.main.cta-secondary.pressed
+bg-color: $color-display-data.color.cta-secondary.pressed
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.focused`
-bg-color: $color-display-data.color.main.cta-secondary.focused
+bg-color: $color-display-data.color.cta-secondary.focused
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.border`
-bg-color: $color-display-data.color.main.cta-secondary.border
+bg-color: $color-display-data.color.cta-secondary.border
 
 -- colors:
 color-name: `$inherited.colors.cta-secondary.text`
-bg-color: $color-display-data.color.main.cta-secondary.text
+bg-color: $color-display-data.color.cta-secondary.text
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.base`
-bg-color: $color-display-data.color.main.cta-tertiary.base
+bg-color: $color-display-data.color.cta-tertiary.base
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.hover`
-bg-color: $color-display-data.color.main.cta-tertiary.hover
+bg-color: $color-display-data.color.cta-tertiary.hover
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.pressed`
-bg-color: $color-display-data.color.main.cta-tertiary.pressed
+bg-color: $color-display-data.color.cta-tertiary.pressed
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.focused`
-bg-color: $color-display-data.color.main.cta-tertiary.focused
+bg-color: $color-display-data.color.cta-tertiary.focused
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.border`
-bg-color: $color-display-data.color.main.cta-tertiary.border
+bg-color: $color-display-data.color.cta-tertiary.border
 
 -- colors:
 color-name: `$inherited.colors.cta-tertiary.text`
-bg-color: $color-display-data.color.main.cta-tertiary.text
+bg-color: $color-display-data.color.cta-tertiary.text
 
 -- colors:
 color-name: `$inherited.colors.accent.primary`
-bg-color: $color-display-data.color.main.accent.primary
+bg-color: $color-display-data.color.accent.primary
 
 -- colors:
 color-name: `$inherited.colors.accent.secondary`
-bg-color: $color-display-data.color.main.accent.secondary
+bg-color: $color-display-data.color.accent.secondary
 
 -- colors:
 color-name: `$inherited.colors.accent.tertiary`
-bg-color: $color-display-data.color.main.accent.tertiary
+bg-color: $color-display-data.color.accent.tertiary
 
 -- colors:
 color-name: `$inherited.colors.error.base`
-bg-color: $color-display-data.color.main.error.base
+bg-color: $color-display-data.color.error.base
 
 -- colors:
 color-name: `$inherited.colors.error.text`
-bg-color: $color-display-data.color.main.error.text
+bg-color: $color-display-data.color.error.text
 
 -- colors:
 color-name: `$inherited.colors.error.border`
-bg-color: $color-display-data.color.main.error.border
+bg-color: $color-display-data.color.error.border
 
 -- colors:
 color-name: `$inherited.colors.success.base`
-bg-color: $color-display-data.color.main.success.base
+bg-color: $color-display-data.color.success.base
 
 -- colors:
 color-name: `$inherited.colors.success.text`
-bg-color: $color-display-data.color.main.success.text
+bg-color: $color-display-data.color.success.text
 
 -- colors:
 color-name: `$inherited.colors.success.border`
-bg-color: $color-display-data.color.main.success.border
+bg-color: $color-display-data.color.success.border
 
 -- colors:
 color-name: `$inherited.colors.info.base`
-bg-color: $color-display-data.color.main.info.base
+bg-color: $color-display-data.color.info.base
 
 -- colors:
 color-name: `$inherited.colors.info.text`
-bg-color: $color-display-data.color.main.info.text
+bg-color: $color-display-data.color.info.text
 
 -- colors:
 color-name: `$inherited.colors.info.border`
-bg-color: $color-display-data.color.main.info.border
+bg-color: $color-display-data.color.info.border
 
 -- colors:
 color-name: `$inherited.colors.warning.base`
-bg-color: $color-display-data.color.main.warning.base
+bg-color: $color-display-data.color.warning.base
 
 -- colors:
 color-name: `$inherited.colors.warning.text`
-bg-color: $color-display-data.color.main.warning.text
+bg-color: $color-display-data.color.warning.text
 
 -- colors:
 color-name: `$inherited.colors.warning.border`
-bg-color: $color-display-data.color.main.warning.border
+bg-color: $color-display-data.color.warning.border
 
 -- colors:
 color-name: `$inherited.colors.custom.one`
-bg-color: $color-display-data.color.main.custom.one
+bg-color: $color-display-data.color.custom.one
 
 -- colors:
 color-name: `$inherited.colors.custom.two`
-bg-color: $color-display-data.color.main.custom.two
+bg-color: $color-display-data.color.custom.two
 
 -- colors:
 color-name: `$inherited.colors.custom.three`
-bg-color: $color-display-data.color.main.custom.three
+bg-color: $color-display-data.color.custom.three
 
 -- colors:
 color-name: `$inherited.colors.custom.four`
-bg-color: $color-display-data.color.main.custom.four
+bg-color: $color-display-data.color.custom.four
 
 -- colors:
 color-name: `$inherited.colors.custom.five`
-bg-color: $color-display-data.color.main.custom.five
+bg-color: $color-display-data.color.custom.five
 
 -- colors:
 color-name: `$inherited.colors.custom.six`
-bg-color: $color-display-data.color.main.custom.six
+bg-color: $color-display-data.color.custom.six
 
 -- colors:
 color-name: `$inherited.colors.custom.seven`
-bg-color: $color-display-data.color.main.custom.seven
+bg-color: $color-display-data.color.custom.seven
 
 -- colors:
 color-name: `$inherited.colors.custom.eight`
-bg-color: $color-display-data.color.main.custom.eight
+bg-color: $color-display-data.color.custom.eight
 
 -- colors:
 color-name: `$inherited.colors.custom.nine`
-bg-color: $color-display-data.color.main.custom.nine
+bg-color: $color-display-data.color.custom.nine
 
 -- colors:
 color-name: `$inherited.colors.custom.ten`
-bg-color: $color-display-data.color.main.custom.ten
+bg-color: $color-display-data.color.custom.ten
 
 -- end: ftd.column
 

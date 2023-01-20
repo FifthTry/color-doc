@@ -21,7 +21,7 @@ minimize: true
 
 
 -- component color-ui:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize: false
 
 -- ftd.row:
@@ -125,6 +125,8 @@ page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -258,7 +260,7 @@ tertiary-cta-text: Button
 caption page-heading: 
 body primary-body-text:
 ftd.resizing width:
-fpm.color-data color:  
+ftd.color-scheme color:  
 ftd.color bg-color: $color-ui.color.main.background.base
 
 -- ftd.column:
@@ -479,7 +481,7 @@ background.solid: $normal-buttons.background-tertiary-cta-text
 
 
 -- component shadow-box:
-fpm.color-data color:
+ftd.color-scheme color:
 
 -- ftd.column:
 width: fill-container

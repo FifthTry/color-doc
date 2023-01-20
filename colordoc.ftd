@@ -5,7 +5,7 @@
 
 
 -- component colordoc:
-fpm.color-data color:
+ftd.color-scheme color:
 optional boolean minimize: 
 
 -- ftd.column:
@@ -265,7 +265,7 @@ max-width.fixed.px: 112
 padding-vertical.px: 12
 padding-horizontal.px: 12
 border-color: $inherited.colors.border
-border-color if { standalone.open-one }: $inherited.colors.error.border
+border-color if { $standalone.open-one }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
 background.solid: $standalone.bgcolor-one
@@ -284,7 +284,7 @@ width: fill-container
 
 -- ftd.text: $standalone.subtitle-one
 color: $inherited.colors.text-strong
-color if $open-one: $inherited.colors.error.border
+color if { $standalone.open-one }: $inherited.colors.error.border
 role: $inherited.types.label-big
 text-align: center
 width: fill-container
@@ -304,7 +304,7 @@ border-color: $inherited.colors.border
 border-color if { $standalone.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $standalone.bgcolor-two
+background.solid: $standalone.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-three, v = false)
@@ -340,7 +340,7 @@ border-color: $inherited.colors.border
 border-color if { $standalone.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $standalone.bgcolor-three
+background.solid: $standalone.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-three, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-one, v = false)
@@ -412,7 +412,7 @@ border-color: $inherited.colors.border
 border-color if { $standalone.open-five }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $standalone.bgcolor-five
+background.solid: $standalone.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-five, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-four, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-three, v = false)
@@ -428,7 +428,7 @@ width: fill-container
 
 -- ftd.text: $standalone.subtitle-five
 color: $inherited.colors.background.step-1
-color if $open-five: $inherited.colors.error.border
+color if { $standalone.open-five }: $inherited.colors.error.border
 role: $inherited.types.label-big
 text-align: center
 width: fill-container
@@ -448,7 +448,7 @@ border-color: $inherited.colors.border
 border-color if { $standalone.open-six }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $standalone.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-six, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-five, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $standalone.open-four, v = false)
@@ -462,9 +462,9 @@ margin-bottom.px: 12
 align-self: center
 width: fill-container
 
--- ftd.text: $subtitle-six
+-- ftd.text: $standalone.subtitle-six
 color: $inherited.colors.background.step-1
-color if $open-six: $inherited.colors.error.border
+color if { $standalone.open-six }: $inherited.colors.error.border
 role: $inherited.types.label-big
 text-align: center
 width: fill-container
@@ -712,7 +712,7 @@ border-color: $inherited.colors.border
 border-color if { $success-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-two
+background.solid: $bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-three, v = false)
@@ -748,7 +748,7 @@ border-color: $inherited.colors.border
 border-color if { $success-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-three
+background.solid: $bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-three, v = true)
@@ -817,7 +817,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-five
+background.solid: $bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-three, v = false)
@@ -851,7 +851,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $success-component.open-three, v = false)
@@ -1111,7 +1111,7 @@ border-color: $inherited.colors.border
 border-color if { $info-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-two
+background.solid: $bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-three, v = false)
@@ -1147,7 +1147,7 @@ border-color: $inherited.colors.border
 border-color if { $info-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-three
+background.solid: $bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-three, v = true)
@@ -1216,7 +1216,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-five
+background.solid: $bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-three, v = false)
@@ -1250,7 +1250,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $info-component.open-three, v = false)
@@ -1510,7 +1510,7 @@ border-color: $inherited.colors.border
 border-color if { $warning-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-two
+background.solid: $bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-three, v = false)
@@ -1546,7 +1546,7 @@ border-color: $inherited.colors.border
 border-color if { $warning-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-three
+background.solid: $bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-three, v = true)
@@ -1615,7 +1615,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-five
+background.solid: $bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-three, v = false)
@@ -1649,7 +1649,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $warning-component.open-three, v = false)
@@ -1909,7 +1909,7 @@ border-color: $inherited.colors.border
 border-color if { $error-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-two
+background.solid: $bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-three, v = false)
@@ -1945,7 +1945,7 @@ border-color: $inherited.colors.border
 border-color if { $error-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-three
+background.solid: $bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-three, v = true)
@@ -2014,7 +2014,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-five
+background.solid: $bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-three, v = false)
@@ -2048,7 +2048,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $error-component.open-three, v = false)
@@ -2308,7 +2308,7 @@ border-color: $inherited.colors.border
 border-color if { $accent-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-two
+background.solid: $bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-three, v = false)
@@ -2344,7 +2344,7 @@ border-color: $inherited.colors.border
 border-color if { $accent-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-three
+background.solid: $bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-three, v = true)
@@ -2413,7 +2413,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-five
+background.solid: $bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-three, v = false)
@@ -2447,7 +2447,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $bgcolor-six
+background.solid: $bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $accent-component.open-three, v = false)
@@ -2707,7 +2707,7 @@ border-color: $inherited.colors.border
 border-color if { $background-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $background-component.bgcolor-two
+background.solid: $background-component.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-three, v = false)
@@ -2743,7 +2743,7 @@ border-color: $inherited.colors.border
 border-color if { $background-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $background-component.bgcolor-three
+background.solid: $background-component.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-three, v = true)
@@ -2812,7 +2812,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $background-component.bgcolor-five
+background.solid: $background-component.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-three, v = false)
@@ -2846,7 +2846,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $background-component.bgcolor-six
+background.solid: $background-component.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $background-component.open-three, v = false)
@@ -3804,7 +3804,7 @@ border-color: $inherited.colors.border
 border-color if { $primary-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $primary-component.bgcolor-two
+background.solid: $primary-component.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-three, v = false)
@@ -3841,7 +3841,7 @@ border-color: $inherited.colors.border
 border-color if { $primary-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $primary-component.bgcolor-three
+background.solid: $primary-component.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-three, v = true)
@@ -3912,7 +3912,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $primary-component.bgcolor-five
+background.solid: $primary-component.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-three, v = false)
@@ -3947,7 +3947,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $primary-component.bgcolor-six
+background.solid: $primary-component.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-three, v = false)
@@ -3982,7 +3982,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $primary-component.bgcolor-seven
+background.solid: $primary-component.bgcolor-seven
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $primary-component.open-three, v = false)
@@ -4265,7 +4265,7 @@ border-color: $inherited.colors.border
 border-color if { $secondary-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $secondary-component.bgcolor-two
+background.solid: $secondary-component.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-three, v = false)
@@ -4302,7 +4302,7 @@ border-color: $inherited.colors.border
 border-color if { $secondary-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $secondary-component.bgcolor-three
+background.solid: $secondary-component.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-three, v = true)
@@ -4373,7 +4373,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $secondary-component.bgcolor-five
+background.solid: $secondary-component.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-three, v = false)
@@ -4408,7 +4408,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $secondary-component.bgcolor-six
+background.solid: $secondary-component.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-three, v = false)
@@ -4443,7 +4443,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $secondary-component.bgcolor-seven
+background.solid: $secondary-component.bgcolor-seven
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $secondary-component.open-three, v = false)
@@ -4726,7 +4726,7 @@ border-color: $inherited.colors.border
 border-color if { $tertiary-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $tertiary-component.bgcolor-two
+background.solid: $tertiary-component.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-three, v = false)
@@ -4763,7 +4763,7 @@ border-color: $inherited.colors.border
 border-color if { $tertiary-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $tertiary-component.bgcolor-three
+background.solid: $tertiary-component.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-three, v = true)
@@ -4834,7 +4834,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $tertiary-component.bgcolor-five
+background.solid: $tertiary-component.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-three, v = false)
@@ -4869,7 +4869,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $tertiary-component.bgcolor-six
+background.solid: $tertiary-component.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-three, v = false)
@@ -4904,7 +4904,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $tertiary-component.bgcolor-seven
+background.solid: $tertiary-component.bgcolor-seven
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $tertiary-component.open-three, v = false)
@@ -5187,7 +5187,7 @@ border-color: $inherited.colors.border
 border-color if { $danger-component.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $danger-component.bgcolor-two
+background.solid: $danger-component.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-three, v = false)
@@ -5224,7 +5224,7 @@ border-color: $inherited.colors.border
 border-color if { $danger-component.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $danger-component.bgcolor-three
+background.solid: $danger-component.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-three, v = true)
@@ -5295,7 +5295,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $danger-component.bgcolor-five
+background.solid: $danger-component.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-three, v = false)
@@ -5330,7 +5330,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $danger-component.bgcolor-six
+background.solid: $danger-component.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-three, v = false)
@@ -5365,7 +5365,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $danger-component.bgcolor-seven
+background.solid: $danger-component.bgcolor-seven
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $danger-component.open-three, v = false)
@@ -5648,7 +5648,7 @@ border-color: $inherited.colors.border
 border-color if { $color-data-two.open-two }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $color-data-two.bgcolor-two
+background.solid: $color-data-two.bgcolor-two
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-two, v = true)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-three, v = false)
@@ -5685,7 +5685,7 @@ border-color: $inherited.colors.border
 border-color if { $color-data-two.open-three }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $color-data-two.bgcolor-three
+background.solid: $color-data-two.bgcolor-three
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-three, v = true)
@@ -5756,7 +5756,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $color-data-two.bgcolor-five
+background.solid: $color-data-two.bgcolor-five
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-three, v = false)
@@ -5791,7 +5791,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $color-data-two.bgcolor-six
+background.solid: $color-data-two.bgcolor-six
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-three, v = false)
@@ -5826,7 +5826,7 @@ padding-horizontal.px: 12
 border-color: $inherited.colors.border
 border-width.px: 1
 border-radius.px: 8
-background-color: $color-data-two.bgcolor-seven
+background.solid: $color-data-two.bgcolor-seven
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-one, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-two, v = false)
 $on-mouse-enter$: $ftd.set-bool($a= $color-data-two.open-three, v = false)
@@ -5999,6 +5999,46 @@ backgroundcolor: $color-data-two.bgcolor-seven
 
 
 
+-- component show-box:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
+
+-- ftd.column:
+width: fill-container
+
+-- show-box-desktop: $show-box.title
+if: { ftd.device != "mobile" }
+dark: $show-box.dark
+light: $show-box.light
+name: $show-box.name
+subtitle: $show-box.subtitle
+backgroundcolor: $show-box.backgroundcolor
+
+
+-- show-box-mobile: $show-box.title
+if: { ftd.device == "mobile" }
+dark: $show-box.dark
+light: $show-box.light
+name: $show-box.name
+subtitle: $show-box.subtitle
+backgroundcolor: $show-box.backgroundcolor
+
+-- end: ftd.column
+
+-- end: show-box
+
+
+
+
+
+
+
+
+
 -- component show-box-desktop:
 optional caption title:
 optional string dark:
@@ -6055,7 +6095,7 @@ border-radius.px: 8
 spacing.px: 24
 
 -- ftd.row:
-width: 120
+width.fixed.px: 120
 spacing.px: 8
 align-self: end
 
@@ -6089,12 +6129,12 @@ width: fill-container
 -- end: ftd.column
 
 -- ftd.row:
-width:fill
+width: fill-container
 wrap: true
 
 -- ftd.row:
 width: fill-container
-spacing: 4
+spacing.px: 4
 margin-bottom.px: 4
 
 -- ftd.text: we use
@@ -6109,7 +6149,7 @@ role: $inherited.types.label-big
 
 -- ftd.row:
 width: fill-container
-spacing: 4
+spacing.px: 4
 
 -- ftd.text: for 
 color: $inherited.colors.text
@@ -6260,7 +6300,7 @@ role: $inherited.types.label-big
 
 -- end: ftd.row
 
--- enf: ftd.row
+-- end: ftd.row
 
 -- end: ftd.column
 
