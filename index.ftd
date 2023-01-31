@@ -126,14 +126,15 @@ color: $all-color-display.color
 ftd.color-scheme color:
 optional boolean minimize:
 
--- ftd.row:
+-- ftd.column:
+background.solid: $color-display-one.color.background.base
 width: fill-container
 
--- all-color-display-one:
+-- cd.colordoc:
 color: $color-display-one.color
 minimize: $color-display-one.minimize
 
--- end: ftd.row
+-- end: ftd.column
 
 -- end: color-display-one
 
@@ -142,25 +143,6 @@ minimize: $color-display-one.minimize
 
 
 
-
-
-
-
--- component all-color-display-one:
-ftd.color-scheme color:
-optional boolean minimize: 
-
--- ftd.column:
-background.solid: $all-color-display-one.color.background.base
-width: fill-container
-
--- cd.colordoc:
-color: $all-color-display-one.color
-minimize: $all-color-display-one.minimize
-
--- end: ftd.column
-
--- end: all-color-display-one
 
 
 

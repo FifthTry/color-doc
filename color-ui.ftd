@@ -7,8 +7,17 @@ Force fields have been established on all turbo lifts and crawlways. Computer,
 run a level-two diagnostic on warp-drive systems. Antimatter containment positive.
 
 
+
+
+
+
+
+
+
+
+
 -- color-ui:
-color: $fpm.color
+color: $inherited.colors
 minimize: true
 
 
@@ -34,7 +43,7 @@ width: fill-container
 -- ftd.row:
 if: { color-ui.minimize }
 ;; scale: 0.8 -- TODO FTD 0.3
-margin-left.px: 150
+;;margin-left.px: 150
 margin-top.px: 100
 width: fill-container
 
@@ -43,7 +52,7 @@ if: { ftd.device != "mobile" }
 width: fill-container
 
 -- header:
-color: $color-ui.color-ui.color
+color: $color-ui.color
 width: fill-container
 bg-color: $inherited.colors.background.base
 page-heading: Set phasers on stun
@@ -142,18 +151,20 @@ primary-body-text: $primary-body-text
 
 
 
+
 -- record title-list:
-body title-body:
+string title-body:
 
 -- title-list list title-name:
 
--- title-name:
-
-USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the
-Dominion.
-
+-- title-list:
+title-body: USS Shenandoah - Taken by Dax and Worf to rescue a Cardassian informant from the Dominion.
 
 -- end: title-name
+
+
+
+
 
 
 
@@ -169,28 +180,28 @@ ftd.color cta-bg:
 
 -- toast-list list toast:
 
--- toast:
+-- toast-list:
 border: $inherited.colors.error.border
 cta-text-color: $inherited.colors.error.text
 cta-bg: $inherited.colors.error.base
 cta-text: close
 toast: Beep Beep! I am an error !
 
--- toast:
+-- toast-list:
 border: $inherited.colors.success.border
 cta-text-color: $inherited.colors.success.text
 cta-bg: $inherited.colors.success.base
 cta-text: close
 toast: Mission complete.
 
--- toast:
+-- toast-list:
 border:$inherited.colors.warning.border
 cta-text-color:$inherited.colors.warning.text
 cta-bg:$inherited.colors.warning.base
 cta-text: close
 toast: Warning: Borg ship Incoming! 
 
--- toast:
+-- toast-list:
 border:$inherited.colors.info.border
 cta-text-color:$inherited.colors.info.text
 cta-bg:$inherited.colors.info.base
@@ -198,6 +209,9 @@ cta-text: close
 toast: All hands on deck! Captain on bridge.
 
 -- end: toast
+
+
+
 
 
 
@@ -216,7 +230,7 @@ string tertiary-cta-text:
 
 -- cta list cta-list:
 
--- cta-list: Normal
+-- cta: Normal
 background-primary-cta-text: $inherited.colors.cta-primary.base
 background-secondary-cta-text: $inherited.colors.cta-secondary.base
 background-tertiary-cta-text: $inherited.colors.cta-tertiary.base
@@ -224,7 +238,7 @@ primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
--- cta-list: Hover
+-- cta: Hover
 background-primary-cta-text: $inherited.colors.cta-primary.hover
 background-secondary-cta-text: $inherited.colors.cta-secondary.hover
 background-tertiary-cta-text: $inherited.colors.cta-tertiary.hover
@@ -232,7 +246,7 @@ primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
--- cta-list: Pressed
+-- cta: Pressed
 background-primary-cta-text: $inherited.colors.cta-primary.pressed
 background-secondary-cta-text: $inherited.colors.cta-secondary.pressed
 background-tertiary-cta-text: $inherited.colors.cta-tertiary.pressed
@@ -240,7 +254,7 @@ primary-cta-text: Button
 secondary-cta-text: Button
 tertiary-cta-text: Button
 
--- cta-list: Focused
+-- cta: Focused
 background-primary-cta-text: $inherited.colors.cta-primary.focused
 background-secondary-cta-text: $inherited.colors.cta-secondary.focused
 background-tertiary-cta-text: $inherited.colors.cta-tertiary.focused
@@ -256,26 +270,30 @@ tertiary-cta-text: Button
 
 
 
+
+
+
+
 -- component header:
 caption page-heading: 
 body primary-body-text:
 ftd.resizing width:
 ftd.color-scheme color:  
-ftd.color bg-color: $color-ui.color.main.background.base
+ftd.color bg-color: 
 
 -- ftd.column:
-background.solid: $bg-color
-width: $width
+background.solid: $header.bg-color
+width: $header.width
 padding-vertical.px: 16
 padding-horizontal.px: 16
-spacing.px: 14
+spacing.fixed.px: 14
 
--- ftd.text: $page-heading
+-- ftd.text: $header.page-heading
 role: $inherited.types.heading-small
-color: $color-ui.color.main.text-strong
+color: $inherited.colors.text-strong
 padding-bottom.px: 20
 border-bottom-width.px: 1
-border-color: $header.color.main.border-strong
+border-color: $inherited.colors.border-strong
 
 -- body-with-hover:
 title-name: $obj.title-body
@@ -292,7 +310,7 @@ title: $obj.title
 $loop$: $cta-list as $obj
 
 -- ftd.column:
-spacing.px: 12
+spacing.fixed.px: 12
 
 -- toast-section:
 border: $obj.border
@@ -304,10 +322,8 @@ $loop$: $toast as $obj
 
 -- end: ftd.column
 
-
 -- shadow-box:
 color: $inherited.colors
-
 -- end: ftd.column
 
 -- end: header
@@ -345,25 +361,25 @@ role: $inherited.types.label-small
 
 
 -- component body-with-hover:
-body title-name:
-
--- ftd.column:
-width: fill-container
+string title-name:
+boolean $show: false
 
 -- ftd.column:
 border-color: $inherited.colors.border
-border-color if $MOUSE-IN: $inherited.colors.accent.primary
-;border-left: 4
-padding-left: 16
+$on-mouse-enter$: $ftd.set-bool($a=$body-with-hover.show, v= true)
+$on-mouse-leave$: $ftd.set-bool($a=$body-with-hover.show, v= false)
+border-color if {body-with-hover.show}: $inherited.colors.accent.primary
+;; border-left: 4
+padding-left.px: 16
 padding-vertical.px: 8
 
 -- ftd.text: 
 text: $body-with-hover.title-name
 role: $inherited.types.label-small
 color: $inherited.colors.text
-color if $MOUSE-IN: $inherited.colors.text-strong
-
--- end: ftd.column
+$on-mouse-enter$: $ftd.set-bool($a=$body-with-hover.show, v= true)
+$on-mouse-leave$: $ftd.set-bool($a=$body-with-hover.show, v= false)
+color if {body-with-hover.show}: $inherited.colors.text-strong
 
 -- end: ftd.column
 
@@ -388,22 +404,22 @@ ftd.color cta-bg:
 -- ftd.row:
 width: fill-container
 border-radius.px: 4
-border-left: 5
+border-left-width.px: 5
 color: $toast-section.cta-text-color
 background.solid: $toast-section.cta-bg
 border-color: $toast-section.border
 padding-vertical.px: 16
 padding-horizontal.px: 16
-spacing.px: 24
+spacing.fixed.px: 24
 
 -- ftd.text: 
 text: $toast-section.toast
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- ftd.text: 
 text: $toast-section.cta-text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 
 -- end: ftd.row
 
@@ -428,7 +444,7 @@ ftd.color background-secondary-cta-text:
 ftd.color background-tertiary-cta-text: 
 
 -- ftd.row:
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: $normal-buttons.title
 padding-vertical.px: 8
@@ -439,7 +455,7 @@ width.fixed.px: 90
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: 
 text: $normal-buttons.primary-cta-text
@@ -485,8 +501,8 @@ ftd.color-scheme color:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: $fpm.space.space-12
-border-bottom: 4
+padding-vertical.px: 84
+border-bottom-width.px: 4
 border-color: $inherited.colors.success.border
 ;; shadow-offset-x: 0 -- TODO FTD 0.3
 ;; shadow-offset-y: 4 -- TODO FTD 0.3
@@ -498,5 +514,3 @@ background.solid: $inherited.colors.background.base
 -- end: ftd.column
 
 -- end: shadow-box	
-
-
