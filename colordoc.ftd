@@ -5,7 +5,7 @@
 
 
 -- component colordoc:
-ftd.color-scheme color:
+ftd.color-scheme colors:
 optional boolean minimize: 
 
 -- ftd.column:
@@ -15,17 +15,17 @@ padding-vertical.px if { ftd.device != "mobile" }: 20
 background.solid: $inherited.colors.background.base
 
 -- cu.color-ui:
-color: $colordoc.color
+color: $colordoc.colors
 minimize: $colordoc.minimize
 
 -- custom-component: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
-bgcolor-one: $inherited.colors.border
-bgcolor-two: $inherited.colors.border-strong
-bgcolor-three: $inherited.colors.text
-bgcolor-four: $inherited.colors.text-strong
-bgcolor-five: $inherited.colors.scrim
-bgcolor-six: $inherited.colors.shadow
+bgcolor-one: $colordoc.colors.border
+bgcolor-two: $colordoc.colors.border-strong
+bgcolor-three: $colordoc.colors.text
+bgcolor-four: $colordoc.colors.text-strong
+bgcolor-five: $colordoc.colors.scrim
+bgcolor-six: $colordoc.colors.shadow
 subtitle-one: .border
 subtitle-two: .border strong
 subtitle-three: .text
@@ -35,11 +35,11 @@ subtitle-six: .scrim
 
 -- custom-component: Background Colors
 subtitle: Below are background color definitions we use.
-bgcolor-one: $inherited.colors.background.base
-bgcolor-two: $inherited.colors.background.step-1
-bgcolor-three: $inherited.colors.background.step-2
-bgcolor-four: $inherited.colors.background.overlay
-bgcolor-five: $inherited.colors.background.code
+bgcolor-one: $colordoc.colors.background.base
+bgcolor-two: $colordoc.colors.background.step-1
+bgcolor-three: $colordoc.colors.background.step-2
+bgcolor-four: $colordoc.colors.background.overlay
+bgcolor-five: $colordoc.colors.background.code
 subtitle-one: .base
 subtitle-two: .step-1
 subtitle-three: .step-2
@@ -48,13 +48,13 @@ subtitle-five: .code
 
 -- custom-component: CTA Primary Colors
 subtitle: Below are cta primary color definitions we use. 
-bgcolor-one: $inherited.colors.cta-primary.base
-bgcolor-two: $inherited.colors.cta-primary.hover
-bgcolor-three: $inherited.colors.cta-primary.pressed
-bgcolor-four: $inherited.colors.cta-primary.disabled
-bgcolor-five: $inherited.colors.cta-primary.focused
-bgcolor-six: $inherited.colors.cta-primary.border
-bgcolor-seven: $inherited.colors.cta-primary.text
+bgcolor-one: $colordoc.colors.cta-primary.base
+bgcolor-two: $colordoc.colors.cta-primary.hover
+bgcolor-three: $colordoc.colors.cta-primary.pressed
+bgcolor-four: $colordoc.colors.cta-primary.disabled
+bgcolor-five: $colordoc.colors.cta-primary.focused
+bgcolor-six: $colordoc.colors.cta-primary.border
+bgcolor-seven: $colordoc.colors.cta-primary.text
 subtitle-one: .base
 subtitle-two: .hover
 subtitle-three: .pressed
@@ -65,13 +65,13 @@ subtitle-seven: .text
 
 -- custom-component: CTA Secondary Colors
 subtitle: Below are cta secondary color definitions we use. 
-bgcolor-one: $inherited.colors.cta-secondary.base
-bgcolor-two: $inherited.colors.cta-secondary.hover
-bgcolor-three: $inherited.colors.cta-secondary.pressed
-bgcolor-four: $inherited.colors.cta-secondary.disabled
-bgcolor-five: $inherited.colors.cta-secondary.focused
-bgcolor-six: $inherited.colors.cta-secondary.border
-bgcolor-seven: $inherited.colors.cta-secondary.text
+bgcolor-one: $colordoc.colors.cta-secondary.base
+bgcolor-two: $colordoc.colors.cta-secondary.hover
+bgcolor-three: $colordoc.colors.cta-secondary.pressed
+bgcolor-four: $colordoc.colors.cta-secondary.disabled
+bgcolor-five: $colordoc.colors.cta-secondary.focused
+bgcolor-six: $colordoc.colors.cta-secondary.border
+bgcolor-seven: $colordoc.colors.cta-secondary.text
 subtitle-one: .base
 subtitle-two: .hover
 subtitle-three: .pressed
@@ -82,13 +82,13 @@ subtitle-seven: .text
 
 -- custom-component: CTA Tertiary Colors
 subtitle: Below are cta tertiary color definitions we use. 
-bgcolor-one: $inherited.colors.cta-tertiary.base
-bgcolor-two: $inherited.colors.cta-tertiary.hover
-bgcolor-three: $inherited.colors.cta-tertiary.pressed
-bgcolor-four: $inherited.colors.cta-tertiary.disabled
-bgcolor-five: $inherited.colors.cta-tertiary.focused
-bgcolor-six: $inherited.colors.cta-tertiary.border
-bgcolor-seven: $inherited.colors.cta-tertiary.text
+bgcolor-one: $colordoc.colors.cta-tertiary.base
+bgcolor-two: $colordoc.colors.cta-tertiary.hover
+bgcolor-three: $colordoc.colors.cta-tertiary.pressed
+bgcolor-four: $colordoc.colors.cta-tertiary.disabled
+bgcolor-five: $colordoc.colors.cta-tertiary.focused
+bgcolor-six: $colordoc.colors.cta-tertiary.border
+bgcolor-seven: $colordoc.colors.cta-tertiary.text
 subtitle-one: .base
 subtitle-two: .hover
 subtitle-three: .pressed
@@ -99,13 +99,13 @@ subtitle-seven: .text
 
 -- custom-component: CTA Danger Colors
 subtitle: Below are cta danger color definitions we use. 
-bgcolor-one: $inherited.colors.cta-danger.hover
-bgcolor-two: $inherited.colors.cta-danger.base
-bgcolor-three: $inherited.colors.cta-danger.pressed
-bgcolor-four: $inherited.colors.cta-danger.disabled
-bgcolor-five: $inherited.colors.cta-danger.focused
-bgcolor-six: $inherited.colors.cta-danger.border
-bgcolor-seven: $inherited.colors.cta-danger.text
+bgcolor-one: $colordoc.colors.cta-danger.hover
+bgcolor-two: $colordoc.colors.cta-danger.base
+bgcolor-three: $colordoc.colors.cta-danger.pressed
+bgcolor-four: $colordoc.colors.cta-danger.disabled
+bgcolor-five: $colordoc.colors.cta-danger.focused
+bgcolor-six: $colordoc.colors.cta-danger.border
+bgcolor-seven: $colordoc.colors.cta-danger.text
 subtitle-one: .base
 subtitle-two: .hover
 subtitle-three: .pressed
@@ -116,61 +116,61 @@ subtitle-seven: .text
 
 -- custom-component: Accent Colors
 subtitle: Below are accent color definitions we use.
-bgcolor-one: $inherited.colors.accent.primary
-bgcolor-two: $inherited.colors.accent.secondary
-bgcolor-three: $inherited.colors.accent.tertiary
+bgcolor-one: $colordoc.colors.accent.primary
+bgcolor-two: $colordoc.colors.accent.secondary
+bgcolor-three: $colordoc.colors.accent.tertiary
 subtitle-one: .primary
 subtitle-two: .secondary
 subtitle-three: .tertiary
 
 -- custom-component: Error Colors
 subtitle: Below are error colors definitions we use.
-bgcolor-one: $inherited.colors.error.base
-bgcolor-two: $inherited.colors.error.text
-bgcolor-three: $inherited.colors.error.border
+bgcolor-one: $colordoc.colors.error.base
+bgcolor-two: $colordoc.colors.error.text
+bgcolor-three: $colordoc.colors.error.border
 subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
 -- custom-component: Success Colors
 subtitle: Below are success colors definitions we use.
-bgcolor-one: $inherited.colors.success.base
-bgcolor-two: $inherited.colors.success.text
-bgcolor-three: $inherited.colors.success.border
+bgcolor-one: $colordoc.colors.success.base
+bgcolor-two: $colordoc.colors.success.text
+bgcolor-three: $colordoc.colors.success.border
 subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
 -- custom-component: Info Colors
 subtitle: Below are info colors definitions we use.
-bgcolor-one: $inherited.colors.info.base
-bgcolor-two: $inherited.colors.info.text
-bgcolor-three: $inherited.colors.info.border
+bgcolor-one: $colordoc.colors.info.base
+bgcolor-two: $colordoc.colors.info.text
+bgcolor-three: $colordoc.colors.info.border
 subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
 -- custom-component: Warning Colors
 subtitle: Below are warning color definitions we use.
-bgcolor-one: $inherited.colors.warning.base
-bgcolor-two: $inherited.colors.warning.text
-bgcolor-three: $inherited.colors.warning.border
+bgcolor-one: $colordoc.colors.warning.base
+bgcolor-two: $colordoc.colors.warning.text
+bgcolor-three: $colordoc.colors.warning.border
 subtitle-one: .base
 subtitle-two: .text
 subtitle-three: .border
 
 -- custom-component: Custom Colors
 subtitle:  Below are custom color definitions we use.  
-bgcolor-one: $inherited.colors.custom.one
-bgcolor-two: $inherited.colors.custom.two
-bgcolor-three: $inherited.colors.custom.three
-bgcolor-four: $inherited.colors.custom.four
-bgcolor-five: $inherited.colors.custom.five
-bgcolor-six: $inherited.colors.custom.six
-bgcolor-seven: $inherited.colors.custom.seven
-bgcolor-eight: $inherited.colors.custom.eight
-bgcolor-nine: $inherited.colors.custom.nine
-bgcolor-ten: $inherited.colors.custom.ten
+bgcolor-one: $colordoc.colors.custom.one
+bgcolor-two: $colordoc.colors.custom.two
+bgcolor-three: $colordoc.colors.custom.three
+bgcolor-four: $colordoc.colors.custom.four
+bgcolor-five: $colordoc.colors.custom.five
+bgcolor-six: $colordoc.colors.custom.six
+bgcolor-seven: $colordoc.colors.custom.seven
+bgcolor-eight: $colordoc.colors.custom.eight
+bgcolor-nine: $colordoc.colors.custom.nine
+bgcolor-ten: $colordoc.colors.custom.ten
 subtitle-one: .one
 subtitle-two: .two
 subtitle-three: .three
