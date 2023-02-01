@@ -1,0 +1,16 @@
+-- import: fastn
+
+-- fastn.package: fifthtry.github.io/color-doc
+zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
+download-base-url: https://raw.githubusercontent.com/fifthtry/color-doc/main
+
+-- fastn.dependency: fifthtry.github.io/package-doc as pd
+
+-- fastn.auto-import: pd
+-- fastn.auto-import: fastn
+-- fastn.auto-import: pd/typography as tf
+-- fastn.auto-import: pd/code-block as cb
+-- fastn.auto-import: pd/forest-theme as ft
+-- fastn.auto-import: fifthtry.github.io/color-doc/FASTN/config
+
+

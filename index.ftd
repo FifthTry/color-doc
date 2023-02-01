@@ -1,4 +1,4 @@
--- import: fpm
+-- import: fastn
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
 -- import: fifthtry.github.io/color-doc/colordoc as cd
@@ -21,18 +21,18 @@ name: fifthtry.github.io/color-doc
 Color Doc is a color schemes which can be used to change color scheme of web 
 packages via using `FTD` lang.
 
-To use `color-doc` color scheme on your web package, add below into `FPM.ftd` file:
+To use `color-doc` color scheme on your web package, add below into `FASTN.ftd` file:
 
 -- cb.code:
 lang: ftd
 
 
-\-- fpm.dependency: fifthtry.github.io/color-doc as colors
+\-- fastn.dependency: fifthtry.github.io/color-doc as colors
 
 
 -- tf.markdown:
 
-Import `colors` into `FPM/config.ftd` file.
+Import `colors` into `FASTN/config.ftd` file.
 
 -- cb.code:
 lang: ftd

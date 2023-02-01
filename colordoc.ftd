@@ -1,4 +1,4 @@
--- import: fpm
+-- import: fastn
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
 
