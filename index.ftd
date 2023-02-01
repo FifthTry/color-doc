@@ -21,7 +21,7 @@ name: fifthtry.github.io/color-doc
 Color Doc is a color schemes which can be used to change color scheme of web 
 packages via using `FTD` lang.
 
-To use `color-doc` color scheme on your web package, add below into `FPM.ftd` file:
+To use `color-doc` color scheme on your web package, add below into `FASTN.ftd` file:
 
 -- cb.code:
 lang: ftd
@@ -32,7 +32,7 @@ lang: ftd
 
 -- tf.markdown:
 
-Import `colors` into `FPM/config.ftd` file.
+Import `colors` into `FASTN/config.ftd` file.
 
 -- cb.code:
 lang: ftd
@@ -41,7 +41,7 @@ lang: ftd
 
 
 -- color-display-one:
-color: $inherited.colors
+colors: $inherited.colors
 minimize: true
 
 

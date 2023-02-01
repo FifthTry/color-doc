@@ -7,7 +7,6 @@ on:
     - '**.ftd'
     - '**.md'
   workflow_dispatch:
-  workflow_call:
 env:
   CARGO_TERM_COLOR: always
 
@@ -26,9 +25,7 @@ jobs:
         continue-on-error: false
         run: |
           echo "Using '$CI_REPOSITORY_NAME_SLUG/' as the base while building"
-          fastn build --base=/$CI_REPOSITORY_NAME/ 
-      - name: copy CNAME
-        run: '(test -f CNAME && cp CNAME .build) || echo "CNAME does not exist, skipping step"'
+          fastn build --base=/$CI_REPOSITORY_NAME/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
