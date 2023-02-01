@@ -1,4 +1,4 @@
--- import: fpm
+-- import: fastn
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
 -- import: fifthtry.github.io/color-doc/colordoc as cd
@@ -27,7 +27,7 @@ To use `color-doc` color scheme on your web package, add below into `FPM.ftd` fi
 lang: ftd
 
 
-\-- fpm.dependency: fifthtry.github.io/color-doc as colors
+\-- fastn.dependency: fifthtry.github.io/color-doc as colors
 
 
 -- tf.markdown:
