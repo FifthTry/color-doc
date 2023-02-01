@@ -54,21 +54,21 @@ width: fill-container
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.base
+bg-color: $color-ui.color.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.step-1
+bg-color: $color-ui.color.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.step-2
+bg-color: $color-ui.color.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
@@ -88,21 +88,21 @@ width: fill-container
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.base
+bg-color: $color-ui.color.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.step-1
+bg-color: $color-ui.color.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.step-2
+bg-color: $color-ui.color.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
@@ -115,21 +115,21 @@ width: fill-container
 -- header:
 color: $color-ui.color
 width: fill-container
-bg-color: $inherited.colors.background.base
+bg-color: $color-ui.color.background.base
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 width: fill-container
 color: $color-ui.color
-bg-color: $inherited.colors.background.step-1
+bg-color: $color-ui.color.background.step-1
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
 -- header:
 width: fill-container
 color: $color-ui.color
-bg-color: $inherited.colors.background.step-2
+bg-color: $color-ui.color.background.step-2
 page-heading: Set phasers on stun
 primary-body-text: $primary-body-text
 
