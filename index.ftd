@@ -41,7 +41,7 @@ lang: ftd
 
 
 -- color-display-one:
-color: $inherited.colors
+colors: $inherited.colors
 minimize: true
 
 
@@ -123,15 +123,15 @@ color: $all-color-display.color
 
 
 -- component color-display-one:
-ftd.color-scheme color:
+ftd.color-scheme colors:
 optional boolean minimize:
 
 -- ftd.column:
-background.solid: $color-display-one.color.background.base
+background.solid: $color-display-one.colors.background.base
 width: fill-container
 
 -- cd.colordoc:
-color: $color-display-one.color
+colors: $color-display-one.colors
 minimize: $color-display-one.minimize
 
 -- end: ftd.column
