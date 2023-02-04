@@ -43,7 +43,7 @@ width: fill-container
 -- ftd.row:
 if: { color-ui.minimize }
 ;; scale: 0.8 -- TODO FTD 0.3
-;;margin-left.px: 150
+;; margin-left.px: 150
 margin-top.px: 100
 width: fill-container
 
@@ -324,6 +324,7 @@ $loop$: $toast as $obj
 
 -- shadow-box:
 color: $inherited.colors
+
 -- end: ftd.column
 
 -- end: header

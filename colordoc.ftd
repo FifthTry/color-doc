@@ -418,7 +418,8 @@ border-color if { custom-component.active == 7 }: $inherited.colors.error.border
 border-width.px: 1
 border-radius.px: 8
 background.solid: $custom-component.bgcolor-seven
-$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 7)margin-right.px: 12
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 7)
+margin-right.px: 12
 margin-bottom.px: 12
 
 -- ftd.text: $custom-component.subtitle-seven
