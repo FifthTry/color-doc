@@ -5,8 +5,10 @@ zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 download-base-url: https://raw.githubusercontent.com/fifthtry/color-doc/main
 
 -- fastn.dependency: fifthtry.github.io/package-doc as pd
+-- fastn.dependency: fifthtry.github.io/doc-site as ds
 
 -- fastn.auto-import: pd
+-- fastn.auto-import: ds
 -- fastn.auto-import: fastn
 -- fastn.auto-import: pd/typography as tf
 -- fastn.auto-import: pd/code-block as cb
