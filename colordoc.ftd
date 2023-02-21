@@ -1,4 +1,5 @@
 -- import: fastn
+-- import: fifthtry.github.io/color-doc/utils as utils
 -- import: fifthtry.github.io/color-doc/color-ui as cu
 
 
@@ -6,7 +7,9 @@
 
 -- component colordoc:
 ftd.color-scheme colors:
-optional boolean minimize: 
+optional boolean minimize:
+optional string old-json:
+optional string new-json:
 
 -- ftd.column:
 width: fill-container
@@ -17,6 +20,20 @@ background.solid: $inherited.colors.background.base
 -- cu.color-ui:
 color: $colordoc.colors
 minimize: $colordoc.minimize
+
+-- utils.show-hide-code:
+if: { colordoc.old-json != NULL }
+lang: json
+display-text: `Figma tokens json (old format)`
+code: $colordoc.old-json
+code-title: Color scheme json
+
+-- utils.show-hide-code:
+if: { colordoc.new-json != NULL }
+lang: json
+display-text: `Figma tokens json (new)`
+code: $colordoc.new-json
+code-title: Figma tokens json (new format)
 
 -- custom-component: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
