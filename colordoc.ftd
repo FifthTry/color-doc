@@ -8,8 +8,7 @@
 -- component colordoc:
 ftd.color-scheme colors:
 optional boolean minimize:
-optional string old-json:
-optional string new-json:
+optional string figma-json:
 
 -- ftd.column:
 width: fill-container
@@ -21,19 +20,11 @@ background.solid: $inherited.colors.background.base
 color: $colordoc.colors
 minimize: $colordoc.minimize
 
--- utils.show-hide-code:
-if: { colordoc.old-json != NULL }
+-- cb.code: Figma tokens json
 lang: json
-display-text: `Figma tokens json (old format)`
-code: $colordoc.old-json
-code-title: Color scheme json
+max-height: 300
 
--- utils.show-hide-code:
-if: { colordoc.new-json != NULL }
-lang: json
-display-text: `Figma tokens json (new)`
-code: $colordoc.new-json
-code-title: Figma tokens json (new format)
+$colordoc.figma-json
 
 -- custom-component: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
