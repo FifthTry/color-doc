@@ -26,6 +26,13 @@ max-height: 300
 
 $colordoc.figma-json
 
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+To learn more about how to use this json with Figma, visit
+[here](https://fastn.io/figma/)
+
 -- custom-component: Stand Alone Colors
 subtitle: Below are standalone color definitions we use.
 bgcolor-one: $colordoc.colors.border
