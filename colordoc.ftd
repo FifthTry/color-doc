@@ -20,6 +20,8 @@ background.solid: $inherited.colors.background.base
 color: $colordoc.colors
 minimize: $colordoc.minimize
 
+-- tf.h1: How to use Figma tokens JSON 
+
 -- cb.code: Figma tokens json
 lang: json
 max-height: 300
