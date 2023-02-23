@@ -6,8 +6,6 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/color-doc/main
 
 -- fastn.dependency: fifthtry.github.io/package-doc as pd
 
--- fastn.auto-import: pd
--- fastn.auto-import: ds
 -- fastn.auto-import: fastn
 -- fastn.auto-import: pd/typography as tf
 -- fastn.auto-import: pd/code-block as cb
