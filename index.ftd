@@ -6,12 +6,7 @@
 
 -- import: fifthtry.github.io/package-doc/doc as pd
 
--- string old-figma-json:
-$processor$: pr.figma-cs-token-old
-variable: $ftd.default-colors
-name: default-colors
-
--- string new-figma-json:
+-- string figma-json:
 $processor$: pr.figma-cs-token
 variable: $ftd.default-colors
 name: default-colors
@@ -54,8 +49,7 @@ lang: ftd
 -- color-display-one:
 colors: $inherited.colors
 minimize: true
-old-json: $old-figma-json
-new-json: $new-figma-json
+figma-json: $figma-json
 
 
 -- end: ftd.column
@@ -138,8 +132,7 @@ color: $all-color-display.color
 -- component color-display-one:
 ftd.color-scheme colors:
 optional boolean minimize:
-optional string new-json:
-optional string old-json:
+optional string figma-json:
 
 -- ftd.column:
 background.solid: $color-display-one.colors.background.base
@@ -148,8 +141,7 @@ width: fill-container
 -- cd.colordoc:
 colors: $color-display-one.colors
 minimize: $color-display-one.minimize
-new-json: $color-display-one.new-json
-old-json: $color-display-one.old-json
+figma-json: $color-display-one.figma-json
 
 -- end: ftd.column
 
