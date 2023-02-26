@@ -1,10 +1,10 @@
 -- import: fastn
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/color-doc/color-ui as cu
-
 -- import: fifthtry.github.io/color-doc/colordoc as cd
-
 -- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/dark-mode-switcher as dms
+
 
 -- string figma-json:
 $processor$: pr.figma-cs-token
@@ -142,6 +142,8 @@ width: fill-container
 colors: $color-display-one.colors
 minimize: $color-display-one.minimize
 figma-json: $color-display-one.figma-json
+
+-- dms.dark-mode-switcher-float:
 
 -- end: ftd.column
 
