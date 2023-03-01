@@ -4,11 +4,8 @@
 zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 download-base-url: https://raw.githubusercontent.com/fifthtry/color-doc/main
 
--- fastn.dependency: fifthtry.github.io/package-doc as pd
--- fastn.dependency: fifthtry.github.io/dark-mode-switcher
+-- fastn.dependency: fifthtry.github.io/code-block
 
 -- fastn.auto-import: fastn
--- fastn.auto-import: pd/typography as tf
--- fastn.auto-import: pd/code-block as cb
--- fastn.auto-import: pd/forest-theme as ft
 -- fastn.auto-import: fifthtry.github.io/color-doc/FASTN/config
+-- fastn.auto-import: fifthtry.github.io/code-block as cb
