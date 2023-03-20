@@ -1,0 +1,1040 @@
+-- import: fastn
+-- import: fifthtry.github.io/color-doc/utils as utils
+-- import: fifthtry.github.io/color-doc/color-ui as cu
+
+
+
+
+-- component colordoc:
+ftd.color-scheme colors:
+optional boolean minimize:
+optional string figma-json:
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px if { ftd.device != "mobile" }: 20
+padding-vertical.px if { ftd.device != "mobile" }: 20
+background.solid: $inherited.colors.background.base
+
+-- cu.color-ui:
+color: $colordoc.colors
+minimize: $colordoc.minimize
+
+-- tf.h1: How to use Figma tokens JSON 
+
+-- cb.code: Figma tokens json
+lang: json
+max-height.fixed.px: 300
+
+$colordoc.figma-json
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+To learn more about how to use this json with Figma, visit
+[here](https://fastn.io/figma/)
+
+-- custom-component: Stand Alone Colors
+subtitle: Below are standalone color definitions we use.
+bgcolor-one: $colordoc.colors.border
+bgcolor-two: $colordoc.colors.border-strong
+bgcolor-three: $colordoc.colors.text
+bgcolor-four: $colordoc.colors.text-strong
+bgcolor-five: $colordoc.colors.scrim
+bgcolor-six: $colordoc.colors.shadow
+subtitle-one: .border
+subtitle-two: .border strong
+subtitle-three: .text
+subtitle-four: .text strong
+subtitle-five: .shadow
+subtitle-six: .scrim
+
+-- custom-component: Background Colors
+subtitle: Below are background color definitions we use.
+bgcolor-one: $colordoc.colors.background.base
+bgcolor-two: $colordoc.colors.background.step-1
+bgcolor-three: $colordoc.colors.background.step-2
+bgcolor-four: $colordoc.colors.background.overlay
+bgcolor-five: $colordoc.colors.background.code
+subtitle-one: .base
+subtitle-two: .step-1
+subtitle-three: .step-2
+subtitle-four: .overlay
+subtitle-five: .code
+
+-- custom-component: CTA Primary Colors
+subtitle: Below are cta primary color definitions we use. 
+bgcolor-one: $colordoc.colors.cta-primary.base
+bgcolor-two: $colordoc.colors.cta-primary.hover
+bgcolor-three: $colordoc.colors.cta-primary.pressed
+bgcolor-four: $colordoc.colors.cta-primary.disabled
+bgcolor-five: $colordoc.colors.cta-primary.focused
+bgcolor-six: $colordoc.colors.cta-primary.border
+bgcolor-seven: $colordoc.colors.cta-primary.text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
+
+-- custom-component: CTA Secondary Colors
+subtitle: Below are cta secondary color definitions we use. 
+bgcolor-one: $colordoc.colors.cta-secondary.base
+bgcolor-two: $colordoc.colors.cta-secondary.hover
+bgcolor-three: $colordoc.colors.cta-secondary.pressed
+bgcolor-four: $colordoc.colors.cta-secondary.disabled
+bgcolor-five: $colordoc.colors.cta-secondary.focused
+bgcolor-six: $colordoc.colors.cta-secondary.border
+bgcolor-seven: $colordoc.colors.cta-secondary.text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
+
+-- custom-component: CTA Tertiary Colors
+subtitle: Below are cta tertiary color definitions we use. 
+bgcolor-one: $colordoc.colors.cta-tertiary.base
+bgcolor-two: $colordoc.colors.cta-tertiary.hover
+bgcolor-three: $colordoc.colors.cta-tertiary.pressed
+bgcolor-four: $colordoc.colors.cta-tertiary.disabled
+bgcolor-five: $colordoc.colors.cta-tertiary.focused
+bgcolor-six: $colordoc.colors.cta-tertiary.border
+bgcolor-seven: $colordoc.colors.cta-tertiary.text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
+
+-- custom-component: CTA Danger Colors
+subtitle: Below are cta danger color definitions we use. 
+bgcolor-one: $colordoc.colors.cta-danger.hover
+bgcolor-two: $colordoc.colors.cta-danger.base
+bgcolor-three: $colordoc.colors.cta-danger.pressed
+bgcolor-four: $colordoc.colors.cta-danger.disabled
+bgcolor-five: $colordoc.colors.cta-danger.focused
+bgcolor-six: $colordoc.colors.cta-danger.border
+bgcolor-seven: $colordoc.colors.cta-danger.text
+subtitle-one: .base
+subtitle-two: .hover
+subtitle-three: .pressed
+subtitle-four: .disabled
+subtitle-five: .focused
+subtitle-six: .border
+subtitle-seven: .text
+
+-- custom-component: Accent Colors
+subtitle: Below are accent color definitions we use.
+bgcolor-one: $colordoc.colors.accent.primary
+bgcolor-two: $colordoc.colors.accent.secondary
+bgcolor-three: $colordoc.colors.accent.tertiary
+subtitle-one: .primary
+subtitle-two: .secondary
+subtitle-three: .tertiary
+
+-- custom-component: Error Colors
+subtitle: Below are error colors definitions we use.
+bgcolor-one: $colordoc.colors.error.base
+bgcolor-two: $colordoc.colors.error.text
+bgcolor-three: $colordoc.colors.error.border
+subtitle-one: .base
+subtitle-two: .text
+subtitle-three: .border
+
+-- custom-component: Success Colors
+subtitle: Below are success colors definitions we use.
+bgcolor-one: $colordoc.colors.success.base
+bgcolor-two: $colordoc.colors.success.text
+bgcolor-three: $colordoc.colors.success.border
+subtitle-one: .base
+subtitle-two: .text
+subtitle-three: .border
+
+-- custom-component: Info Colors
+subtitle: Below are info colors definitions we use.
+bgcolor-one: $colordoc.colors.info.base
+bgcolor-two: $colordoc.colors.info.text
+bgcolor-three: $colordoc.colors.info.border
+subtitle-one: .base
+subtitle-two: .text
+subtitle-three: .border
+
+-- custom-component: Warning Colors
+subtitle: Below are warning color definitions we use.
+bgcolor-one: $colordoc.colors.warning.base
+bgcolor-two: $colordoc.colors.warning.text
+bgcolor-three: $colordoc.colors.warning.border
+subtitle-one: .base
+subtitle-two: .text
+subtitle-three: .border
+
+-- custom-component: Custom Colors
+subtitle:  Below are custom color definitions we use.  
+bgcolor-one: $colordoc.colors.custom.one
+bgcolor-two: $colordoc.colors.custom.two
+bgcolor-three: $colordoc.colors.custom.three
+bgcolor-four: $colordoc.colors.custom.four
+bgcolor-five: $colordoc.colors.custom.five
+bgcolor-six: $colordoc.colors.custom.six
+bgcolor-seven: $colordoc.colors.custom.seven
+bgcolor-eight: $colordoc.colors.custom.eight
+bgcolor-nine: $colordoc.colors.custom.nine
+bgcolor-ten: $colordoc.colors.custom.ten
+subtitle-one: .one
+subtitle-two: .two
+subtitle-three: .three
+subtitle-four: .four
+subtitle-five: .five
+subtitle-six: .six
+subtitle-seven: .seven
+subtitle-eight: .eight
+subtitle-nine: .nine
+subtitle-ten: .ten
+
+-- end: ftd.column
+
+-- end: colordoc
+
+
+
+
+
+
+
+
+
+
+-- component custom-component:
+integer $active: 1
+optional ftd.color bgcolor-one: 
+optional ftd.color bgcolor-two: 
+optional ftd.color bgcolor-three: 
+optional ftd.color bgcolor-four: 
+optional ftd.color bgcolor-five: 
+optional ftd.color bgcolor-six: 
+optional ftd.color bgcolor-eight: 
+optional ftd.color bgcolor-nine: 
+optional ftd.color bgcolor-ten: 
+optional ftd.color bgcolor-seven: 
+optional string subtitle-one: 
+optional string subtitle-two: 
+optional string subtitle-three: 
+optional string subtitle-four: 
+optional string subtitle-five: 
+optional string subtitle-six:
+optional string subtitle-seven:
+optional string subtitle-eight: 
+optional string subtitle-nine: 
+optional string subtitle-ten: 
+caption title:
+string subtitle:
+
+-- ftd.column:
+width: fill-container
+border-radius.px: 3
+border-style: dashed 
+border-left-width.px: 4
+border-bottom-width.px: 4
+padding-bottom.px: 36
+padding-top.px: 24
+border-color: $inherited.colors.border-strong
+margin-top.px: 75
+margin-bottom.px: 28
+
+-- ftd.text: $custom-component.title
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-large
+width: fill-container
+;; border-style: dashed -- TODO FTD 0.3
+border-bottom-width.px: 4
+padding-left.px: 34
+padding-bottom.px: 24
+border-color: $inherited.colors.border-strong
+margin-bottom.px: 32
+
+-- ftd.text: $custom-component.subtitle
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
+width: fill-container
+padding-left.px: 35
+margin-bottom.px: 32
+
+-- ftd.row:
+width: fill-container
+padding-left.px: 36
+margin-bottom.px: 44
+wrap: true
+
+-- ftd.row:
+if: { custom-component.bgcolor-one != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 1 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-one
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 1)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-one
+color: $inherited.colors.text-strong
+color if {custom-component.active == 1}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-two != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 2 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-two
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 2)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-two
+color: $inherited.colors.text-strong
+color if {custom-component.active == 2}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-three != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 3 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-three
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 3)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-three
+color: $inherited.colors.text-strong
+color if {custom-component.active == 3}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-four != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 4 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-four
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 4)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-four
+color: $inherited.colors.text-strong
+color if {custom-component.active == 4}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-five != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 5 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-five
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 5)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-five
+color: $inherited.colors.text-strong
+color if {custom-component.active == 5}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-six != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 6 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-six
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 6)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-six
+color: $inherited.colors.text-strong
+color if {custom-component.active == 6}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-seven != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 7 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-seven
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 7)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-seven
+color: $inherited.colors.text-strong
+color if {custom-component.active == 7}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-eight != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 8 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-eight
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 8)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-eight
+color: $inherited.colors.text-strong
+color if {custom-component.active == 8}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-nine != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 9 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-nine
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 9)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-nine
+color: $inherited.colors.text-strong
+color if {custom-component.active == 9}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { custom-component.bgcolor-ten != NULL }
+min-width.fixed.px: 112
+height.fixed.px: 114
+max-width.fixed.px: 112
+padding-vertical.px: 12
+padding-horizontal.px: 12
+border-color: $inherited.colors.border
+border-color if { custom-component.active == 10 }: $inherited.colors.error.border
+border-width.px: 1
+border-radius.px: 8
+background.solid: $custom-component.bgcolor-ten
+$on-mouse-enter$: $ftd.set-integer($a= $custom-component.active, v = 10)
+margin-right.px: 12
+margin-bottom.px: 12
+
+-- ftd.text: $custom-component.subtitle-ten
+color: $inherited.colors.text-strong
+color if {custom-component.active == 10}: $inherited.colors.error.border
+role: $inherited.types.label-large
+text-align: center
+width: fill-container
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.column:
+if:{ custom-component.active == 1}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-one != NULL }
+
+-- show-box: \$inherited.colors.custom.one
+name: custom-one
+subtitle: custom one
+dark: $custom-component.bgcolor-one.dark
+light: $custom-component.bgcolor-one.light
+backgroundcolor: $custom-component.bgcolor-one
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 2}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-two != NULL }
+
+-- show-box: \$inherited.colors.custom.two
+name: custom-two
+subtitle: custom two
+dark: $custom-component.bgcolor-two.dark
+light: $custom-component.bgcolor-two.light
+backgroundcolor: $custom-component.bgcolor-two
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 3}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-three != NULL }
+
+-- show-box: \$inherited.colors.custom.three
+name: custom-three
+subtitle: custom three
+dark: $custom-component.bgcolor-three.dark
+light: $custom-component.bgcolor-three.light
+backgroundcolor: $custom-component.bgcolor-three
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 4}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-four != NULL }
+
+-- show-box: \$inherited.colors.custom.four
+name: custom-four
+subtitle: custom four
+dark: $custom-component.bgcolor-four.dark
+light: $custom-component.bgcolor-four.light
+backgroundcolor: $custom-component.bgcolor-four
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 5}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-five != NULL }
+
+-- show-box: \$inherited.colors.custom.five
+name: custom-five
+subtitle: custom five
+dark: $custom-component.bgcolor-five.dark
+light: $custom-component.bgcolor-five.light
+backgroundcolor: $custom-component.bgcolor-five
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 6}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-six != NULL }
+
+-- show-box: \$inherited.colors.custom.six
+name: custom-six
+subtitle: custom six
+dark: $custom-component.bgcolor-six.dark
+light: $custom-component.bgcolor-six.light
+backgroundcolor: $custom-component.bgcolor-six
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 7}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-seven != NULL }
+
+-- show-box: \$inherited.colors.custom.seven
+name: custom-seven
+subtitle: custom seven
+dark: $custom-component.bgcolor-seven.dark
+light: $custom-component.bgcolor-seven.light
+backgroundcolor: $custom-component.bgcolor-seven
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 8}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-eight != NULL }
+
+-- show-box: \$inherited.colors.custom.eight
+name: custom-eight
+subtitle: custom eight
+dark: $custom-component.bgcolor-eight.dark
+light: $custom-component.bgcolor-eight.light
+backgroundcolor: $custom-component.bgcolor-eight
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 9}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-nine != NULL }
+
+-- show-box: \$inherited.colors.custom.nine
+name: custom-nine
+subtitle: custom nine
+dark: $custom-component.bgcolor-nine.dark
+light: $custom-component.bgcolor-nine.light
+backgroundcolor: $custom-component.bgcolor-nine
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if:{ custom-component.active == 10}
+padding-left.px: 36
+margin-bottom.px: 7
+width: fill-container
+wrap: true
+
+-- ftd.column:
+if: { custom-component.bgcolor-ten != NULL }
+
+-- show-box: \$inherited.colors.custom.ten
+name: custom-ten
+subtitle: custom ten
+dark: $custom-component.bgcolor-ten.dark
+light: $custom-component.bgcolor-ten.light
+backgroundcolor: $custom-component.bgcolor-ten
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: custom-component
+
+
+
+
+
+
+
+
+
+
+-- component show-box:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
+
+-- ftd.column:
+width: fill-container
+
+-- show-box-desktop: $show-box.title
+if: { ftd.device != "mobile" }
+dark: $show-box.dark
+light: $show-box.light
+name: $show-box.name
+subtitle: $show-box.subtitle
+backgroundcolor: $show-box.backgroundcolor
+
+-- show-box-mobile: $show-box.title
+if: { ftd.device == "mobile" }
+dark: $show-box.dark
+light: $show-box.light
+name: $show-box.name
+subtitle: $show-box.subtitle
+backgroundcolor: $show-box.backgroundcolor
+
+-- end: ftd.column
+
+-- end: show-box
+
+
+
+
+
+
+
+
+
+
+-- component show-box-desktop:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
+
+-- ftd.column:
+border-color: $inherited.colors.text-strong
+border-width.px: 1
+border-radius.px: 8
+padding-vertical.px: 24
+padding-horizontal.px: 24
+width.fixed.px: 650
+width.fixed.px if { ftd.device == "mobile" }: 180
+height.fixed.px: 142
+
+-- ftd.text: $show-box-desktop.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
+anchor: parent
+top.px: -19
+left.px: 16
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 8
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.row:
+padding-vertical.px: 12
+padding-horizontal.px: 12
+min-width.fixed.px: 92
+min-height.fixed.px: 92
+background.solid: $show-box-desktop.backgroundcolor
+border-color: $inherited.colors.border-strong
+border-width.px: 1
+border-radius.px: 8
+
+-- end: ftd.row
+
+-- ftd.column:
+spacing.fixed.px: 24
+
+-- ftd.row:
+width.fixed.px: 180
+spacing.fixed.px: 8
+align-self: end
+
+-- ftd.text: dark:
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-desktop.dark
+color: $inherited.colors.text
+role: $inherited.types.label-large
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+width.fixed.px: 180
+spacing.fixed.px: 8
+align-self: end
+
+-- ftd.text: light:
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-desktop.light
+color: $inherited.colors.text
+role: $inherited.types.label-large
+width: fill-container
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.row:
+width: fill-container
+wrap: true
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 4
+margin-bottom.px: 4
+
+-- ftd.text: we use
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-desktop.title
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 4
+
+-- ftd.text: for 
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-desktop.subtitle
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: show-box-desktop
+
+
+
+
+
+
+
+
+
+
+-- component show-box-mobile:
+optional caption title:
+optional string dark:
+optional string light:
+optional string name:
+optional string subtitle:
+optional ftd.color backgroundcolor:
+
+-- ftd.column:
+border-color: $inherited.colors.text-strong
+border-width.px: 1
+border-radius.px: 8
+padding-vertical.px: 24
+padding-horizontal.px: 24
+width: fill-container
+height.fixed.px: 220
+
+-- ftd.text: $show-box-mobile.title
+color: $inherited.colors.text-strong
+role: $inherited.types.label-large
+anchor: parent
+top.px: -12
+left.px: 19
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 8
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.row:
+padding-vertical.px: 12
+padding-horizontal.px: 12
+min-width.fixed.px: 92
+min-height.fixed.px: 92
+background.solid: $show-box-mobile.backgroundcolor
+border-color: $inherited.colors.border-strong
+border-width.px: 1
+border-radius.px: 8
+
+-- end: ftd.row
+
+-- ftd.column:
+spacing.fixed.px: 24
+
+-- ftd.row:
+width.fixed.px: 120
+spacing.fixed.px: 8
+align-self: end
+
+-- ftd.text: dark:
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-mobile.dark
+color: $inherited.colors.text
+role: $inherited.types.label-large
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+width.fixed.px: 120
+spacing.fixed.px: 8
+align-self: end
+
+-- ftd.text: light:
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-mobile.light
+color: $inherited.colors.text
+role: $inherited.types.label-large
+width: fill-container
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+wrap: true
+margin-top.px: 24
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 4
+margin-bottom.px: 4
+
+-- ftd.text: we use
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-mobile.title
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- end: ftd.column
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 4
+
+-- ftd.text: for 
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- ftd.text: $show-box-mobile.subtitle
+color: $inherited.colors.text
+role: $inherited.types.label-large
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: show-box-mobile
