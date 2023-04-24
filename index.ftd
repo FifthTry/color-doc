@@ -1,6 +1,7 @@
 -- import: fastn
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/color-doc/assets
+-- import: fifthtry.github.io/color-doc/colors
 
 
 -- string figma-json:
@@ -79,9 +80,6 @@ We use this color for scrim.
 
 
 
--- ftd.column:
-width: fill-container
-
 -- package: THEME
 name: Saturated Sunset CS
 logo: $assets.files.static.ftd-logo.svg
@@ -122,27 +120,45 @@ icon: $assets.files.static.link-icon.svg
 link-text: fastn.io/how-to/use-color-package/
 link: https://fastn.io/how-to/use-color-package/
 
--- title-with-link: How to modify this colour palette
+-- title-with-link: How to modify a colour palette
 icon: $assets.files.static.link-icon.svg
-link-text: fastn.io/how-to/modify-cs/
-link: https://fastn.io/how-to/modify-cs/
+link-text: fastn.com/modify-cs
+link: https://fastn.com/modify-cs/
 
--- title-with-link: How to create this colour palette
+-- title-with-link: How to create a colour palette
 icon: $assets.files.static.link-icon.svg
-link-text: fastn.io/how-to/create-cs/
-link: https://fastn.io/how-to/create-cs/
+link-text: fastn.com/figma-to-fastn-cs
+link: https://fastn.com/figma-to-fastn-cs/
 
 -- end: color-scheme.rightbar
 
 -- color-scheme.body:
 
-The colours we use in our designs can have a significant impact on the mood and feelings they inspire. The perfect colour palette may take your design to the next level, whether you're creating a website, app, or anything else. The saturated sunset colour scheme is ideal for designs that aim to portray strength, warmth, and growth.
+The colours we use in our designs can have a significant impact on the mood and
+feelings they inspire. The perfect colour palette may take your design to the
+next level, whether you're creating a website, app, or anything else. The
+saturated sunset colour scheme is ideal for designs that aim to portray
+strength, warmth, and growth.
 
-A warm, inviting, and energising feeling is produced by the saturated sunset colour scheme, which is inspired by the colours of the sun as it sets over the horizon. This colour palette gives your creations a sense of enthusiasm and passion by combining warm reds, oranges, and greens. It is the ideal option for designs that wish to capture the spirit of exploration or for tasks that want to generate a warm and energetic, welcome feeling.
+A warm, inviting, and energising feeling is produced by the saturated sunset
+colour scheme, which is inspired by the colours of the sun as it sets over the
+horizon. This colour palette gives your creations a sense of enthusiasm and
+passion by combining warm reds, oranges, and greens. It is the ideal option for
+designs that wish to capture the spirit of exploration or for tasks that want
+to generate a warm and energetic, welcome feeling.
 
-The colours we use in our designs can have a significant impact on the mood and feelings they inspire. The perfect colour palette may take your design to the next level, whether you're creating a website, app, or anything else. The saturated sunset colour scheme is ideal for designs that aim to portray strength, warmth, and growth.
+The colours we use in our designs can have a significant impact on the mood and
+feelings they inspire. The perfect colour palette may take your design to the
+next level, whether you're creating a website, app, or anything else. The
+saturated sunset colour scheme is ideal for designs that aim to portray
+strength, warmth, and growth.
 
-A warm, inviting, and energising feeling is produced by the saturated sunset colour scheme, which is inspired by the colours of the sun as it sets over the horizon. This colour palette gives your creations a sense of enthusiasm and passion by combining warm reds, oranges, and greens. It is the ideal option for designs that wish to capture the spirit of exploration or for tasks that want to generate a warm and energetic, welcome feeling.
+A warm, inviting, and energising feeling is produced by the saturated sunset
+colour scheme, which is inspired by the colours of the sun as it sets over the
+horizon. This colour palette gives your creations a sense of enthusiasm and
+passion by combining warm reds, oranges, and greens. It is the ideal option for
+designs that wish to capture the spirit of exploration or for tasks that want
+to generate a warm and energetic, welcome feeling.
 
 -- end: color-scheme
 
@@ -168,20 +184,18 @@ colors: $saturated-sunset-cs.main
 
 -- markdown:
 
-After creating my-ds.page component, use this in rest of the module of your package instead of ds.page.
-Once you have imported the colour scheme package and created a new component my-ds.page, you can use it throughout your website instead of the ds.page component.
-With just a few lines of code, you can dramatically change the look and feel of your website using the ftd colour scheme framework.
+After creating my-ds.page component, use this in rest of the module of your
+package instead of ds.page. Once you have imported the colour scheme package
+and created a new component my-ds.page, you can use it throughout your website
+instead of the ds.page component. With just a few lines of code, you can
+dramatically change the look and feel of your website using the ftd colour
+scheme framework.
 
 
 -- color-pallete: Standalone colors
 pallete: $standalone
 
-
-
 -- end: package
-
-
--- end: ftd.column
 
 
 
@@ -203,7 +217,6 @@ optional body body:
 children cs-wrap:
 ftd.ui list rightbar:
 
-
 -- ftd.column:
 width: fill-container
 align-content: center
@@ -220,14 +233,16 @@ spacing.fixed.px: 34
 width.fixed.percent: 70
 spacing.fixed.px: 24
 
-
 -- ftd.text: $color-scheme.tagline
 if: { color-scheme.tagline != NULL }
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
+role: $inherited.types.heading-tiny
+color: #212738
+style: bold
 
--- markdown: 
+-- ftd.text: 
 if: { color-scheme.body != NULL}
+role: $inherited.types.copy-regular
+color: #212738
 
 $color-scheme.body
 
@@ -257,11 +272,9 @@ children: $color-scheme.cs-wrap
 
 -- end: ftd.column
 
-
 -- end: ftd.column
 
 -- end: ftd.column
-
 
 -- end: color-scheme
 
@@ -308,8 +321,9 @@ width: fill-container
 spacing.fixed.px: 6
 
 -- ftd.text: $title-with-link.title
-color: $inherited.colors.text
-role: $inherited.types.copy-small
+color: #212738
+role: $inherited.types.button-small
+style: bold
 
 -- ftd.row:
 align-content: center
@@ -325,10 +339,9 @@ src: $title-with-link.icon
 
 -- ftd.text: $title-with-link.link-text
 if: { title-with-link.link-text != NULL }
-role: $inherited.types.copy-small
-border-bottom-width.px: 1
-border-color if { title-with-link.mouseover }: $inherited.colors.info.text
-border-color if { !title-with-link.mouseover }: $inherited.colors.background.base
+role: $inherited.types.button-small
+color: #006EB3
+style: bold
 
 -- end: ftd.row
 
@@ -354,7 +367,7 @@ optional boolean two_columns:
 -- ftd.text: 
 text: $markdown.body
 role: $inherited.types.copy-regular
-color: $inherited.colors.text
+color: #212738
 
 -- ftd.text.classes:
 
@@ -380,6 +393,7 @@ optional string name:
 optional ftd.image-src logo: $assets.files.static.ftd-logo.svg
 children package-wrap:
 optional string subtitle:
+ftd.color-scheme colors: $main
 
 -- ftd.column:
 width: fill-container
@@ -412,13 +426,15 @@ height.fixed.px: 76
 spacing.fixed.px: 15
 
 -- ftd.text: $package.title
-color: $inherited.colors.text
+color: #212738
 role: $inherited.types.heading-small
+style: bold
 
 -- ftd.text: $package.name
-color: $inherited.colors.text
+color: #212738
 role: $inherited.types.button-large
 white-space: nowrap
+style: bold
 
 -- end: ftd.column
 
@@ -433,11 +449,12 @@ width: fill-container
 max-width.fixed.px: 1440
 padding-horizontal.px: 70
 padding-vertical.px: 60
+background.solid: #FFFFFF
 
 -- ftd.text: $package.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-
+role: $inherited.types.heading-small
+color: #212738
+style: bold
 
 -- ftd.column:
 width: fill-container
@@ -471,10 +488,9 @@ margin-top.px: 40
 
 -- ftd.text: $color-pallete.title
 role: $inherited.types.heading-tiny
-color: $inherited.colors.text
+color: #212738
 margin-bottom.px: 26
-border-bottom-width.px: 1
-border-color: $inherited.colors.text
+style: bold
 
 -- ftd.row:
 width: fill-container
@@ -519,7 +535,7 @@ width: fill-container
 padding-horizontal.px: 12
 padding-vertical.px: 15
 border-width.px: 1
-border-color: $inherited.colors.border
+border-color: #EEEEEE
 border-radius.px: 6
 
 -- ftd.row:
@@ -533,8 +549,11 @@ height.fixed.px: 100
 width: fill-container
 height: fill-container
 border-radius.px: 6
-margin-top.px: -46
+margin-top.px: -44
 background.solid: $color-block.bgcolor
+border-width.percent: 0.5
+border-color: $inherited.colors.border
+
 
 -- end: ftd.column
 
@@ -544,51 +563,14 @@ background.solid: $color-block.bgcolor
 width: fill-container
 spacing.fixed.px: 5
 
-
 -- ftd.text: $color-block.title
 role: $inherited.types.button-medium
-color: $inherited.colors.text
+color: #212738
 
 -- ftd.text:
 role: $inherited.types.copy-small
-color: $inherited.colors.text
+color: #707070
 text: $color-block.body
-
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 26
-
--- ftd.row:
-align-content: center
-spacing.fixed.px: 10
-
--- ftd.text: Dark:
-role: $inherited.types.copy-small
-color: $inherited.colors.text
-
--- ftd.text: $color-block.dark
-role: $inherited.types.copy-small
-color: $inherited.colors.text
-text-transform: uppercase
-
--- end: ftd.row
-
--- ftd.row:
-align-content: center
-spacing.fixed.px: 10
-
--- ftd.text: Light:
-role: $inherited.types.copy-small
-color: $inherited.colors.text
-
--- ftd.text: $color-block.light
-role: $inherited.types.copy-small
-color: $inherited.colors.text
-text-transform: uppercase
-
--- end: ftd.row
-
--- end: ftd.row
 
 -- end: ftd.column
 
@@ -600,3 +582,30 @@ text-transform: uppercase
 
 -- end: color-block
 
+
+
+
+
+
+
+
+
+
+-- ftd.color-scheme main:
+background: $colors.background-
+border: $colors.border-
+border-strong: $colors.border-strong-
+text: $colors.text-
+text-strong: $colors.text-strong-
+shadow: $colors.shadow-
+scrim: $colors.scrim-
+cta-primary: $colors.cta-primary-
+cta-secondary: $colors.cta-secondary-
+cta-tertiary: $colors.cta-tertiary-
+cta-danger: $colors.cta-danger-
+accent: $colors.accent-
+error: $colors.error-btb-
+success: $colors.success-btb-
+info: $colors.info-btb-
+warning: $colors.warning-btb-
+custom: $colors.custom-
