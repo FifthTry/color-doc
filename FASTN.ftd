@@ -5,7 +5,10 @@ zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 download-base-url: https://raw.githubusercontent.com/fifthtry/color-doc/main
 
 -- fastn.dependency: fifthtry.github.io/code-block
+-- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 
 -- fastn.auto-import: fastn
 -- fastn.auto-import: fifthtry.github.io/color-doc/FASTN/config
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
+-- fastn.auto-import: fifthtry.github.io/dark-mode-switcher as dms
+
