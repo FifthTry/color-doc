@@ -24,7 +24,7 @@ minimize: $colordoc.minimize
 
 -- cb.code: Figma tokens json
 lang: json
-max-height: 300
+max-height.fixed.px: 300
 
 $colordoc.figma-json
 
