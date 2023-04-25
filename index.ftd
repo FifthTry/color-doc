@@ -2,18 +2,16 @@
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/color-doc/assets
 -- import: fifthtry.github.io/color-doc/colors
--- import: fifthtry.github.io/color-doc/color-records as cr
 
 -- string figma-json:
 $processor$: pr.figma-cs-token
-;; *********** replace below $ftd.default-colors with $main
+;; **** replace below $ftd.default-colors with $main and remove this line ****
 variable: $ftd.default-colors
 name: default-colors
 
 -- end: figma-json
 
-;; *********** replace below $ftd.default-colors with $main
-
+;; **** replace below $ftd.default-colors with $main and remove this line ****
 -- ftd.color-scheme colors-data: $ftd.default-colors
 
 
@@ -287,21 +285,13 @@ style: bold
 
 -- component markdown:
 body body:
-optional boolean collapsed:
-optional caption title:
-optional boolean two_columns:
 
 -- ftd.text: 
-text: $markdown.body
 role: $inherited.types.copy-regular
 color: #212738
+classes: markdown
 
--- ftd.text.classes:
-
--- string: markdown
-
--- end: ftd.text.classes
-
+$markdown.body
 
 -- end: markdown
 
@@ -726,7 +716,7 @@ dark: $colors-data.text.dark
 light: $colors-data.text.light
 bgcolor: $colors-data.text
 
-We use this color for strong border color.
+We use this color for text.
 
 -- colors: \$inherited.colors.text-strong
 dark: $colors-data.text-strong.dark
