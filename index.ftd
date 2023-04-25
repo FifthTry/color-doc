@@ -125,6 +125,18 @@ pallete: $accent-colors
 -- color-pallete: Custom Colors
 pallete: $custom-colors
 
+-- body-with-links:
+github-text: github.com/fastn-stack/fastn
+github-url: https://github.com/fastn-stack/fastn
+discord-text: discord.gg/bucrdvptYd
+discord-url: https://discord.gg/bucrdvptYd
+tutorials-text: fastn.com/expander/hello-world/-/build/
+tutorials-url: https://fastn.com/expander/hello-world/-/build/
+
+We are trying to create the language for human beings and we do not believe it
+would be possible without your support. We would love to hear from you.
+
+
 -- end: package
 
 
@@ -643,6 +655,83 @@ $color-block.body
 -- end: ftd.row
 
 -- end: color-block
+
+
+
+
+
+
+
+
+
+
+-- component body-with-links:
+string github-text:
+string discord-text:
+string tutorials-text:
+string github-url:
+string discord-url:
+string tutorials-url:
+body body: 
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 60
+
+-- ftd.text: Get in touch!
+role: $inherited.types.heading-small
+style: bold
+color: #212738
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: #212738
+
+$body-with-links.body
+
+-- ftd.row:
+width: fill-container
+role: $inherited.types.copy-regular
+color: #212738
+spacing.fixed.px: 8
+
+-- ftd.text: GitHub:
+
+-- ftd.text: $body-with-links.github-text
+link: $body-with-links.github-url
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+role: $inherited.types.copy-regular
+color: #212738
+spacing.fixed.px: 8
+
+-- ftd.text: Discord:
+
+-- ftd.text: $body-with-links.discord-text
+link: $body-with-links.discord-url
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+role: $inherited.types.copy-regular
+color: #212738
+spacing.fixed.px: 8
+
+-- ftd.text: Tutorials:
+
+-- ftd.text: $body-with-links.tutorials-text
+link: $body-with-links.tutorials-url
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: body-with-links
 
 
 
