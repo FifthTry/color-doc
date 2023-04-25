@@ -2,6 +2,7 @@
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/color-doc/assets
 -- import: fifthtry.github.io/color-doc/colors
+-- import: fifthtry.github.io/footer
 
 -- string figma-json:
 $processor$: pr.figma-cs-token
@@ -394,6 +395,12 @@ children: $package.package-wrap
 -- end: ftd.column
 
 -- dms.dark-mode-switcher-float:
+
+-- footer.fastn-footer:
+copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
+site-logo: https://fastn.com/-/fastn.io/images/fastn-dark.svg
+powered-by-text: Powered by
+powered-by-link: https://fastn.io/
 
 -- end: ftd.column
 
