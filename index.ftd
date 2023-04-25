@@ -6,23 +6,30 @@
 
 -- string figma-json:
 $processor$: pr.figma-cs-token
+;; *********** replace below $ftd.default-colors with $main
 variable: $ftd.default-colors
 name: default-colors
 
 -- end: figma-json
+
+;; *********** replace below $ftd.default-colors with $main
 
 -- ftd.color-scheme colors-data: $ftd.default-colors
 
 
 
 -- package: THEME
-name: Saturated Sunset CS
+name: `<add color scheme name here>`
 logo: $assets.files.static.ftd-logo.svg
-subtitle: Adding warmth and energy to your designs with the Saturated Sunset Color Scheme
+subtitle: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
 colors: $colors-data
 
+-- package.subtitle:
+
+
+
 -- color-scheme: 
-tagline: Adding warmth and energy to your designs with the Saturated Sunset Color Scheme
+tagline: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
 
 -- color-scheme.rightbar:
 
@@ -72,8 +79,8 @@ link: https://fastn.com/figma-to-fastn-cs/
 
 The colours we use in our designs can have a significant impact on the mood and
 feelings they inspire. The perfect colour palette may take your design to the
-next level, whether you're creating a website, app, or anything else. The
-saturated sunset colour scheme is ideal for designs that aim to portray
+next level, whether you're creating a website, app, or anything else. The `<add
+color scheme name here>` colour scheme is ideal for designs that aim to portray
 strength, warmth, and growth.
 
 -- cb.code: Figma tokens json
