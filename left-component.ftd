@@ -1,0 +1,682 @@
+-- import: fastn
+-- import: fastn/processors as pr
+-- import: fifthtry.github.io/color-doc/assets
+-- import: fifthtry.github.io/color-doc/colors
+-- import: fifthtry.github.io/footer
+
+-- ftd.column:
+spacing.fixed.px: 48
+padding-top.px: 24
+padding-left.px: 24
+
+-- ftd.row:
+spacing.fixed.px: 48
+
+-- plus-button:
+
+-- avatar:
+
+-- label: Label
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 40
+
+-- button-base-dark: Button
+
+-- button-base-light: Button
+
+-- end: ftd.row
+
+-- app-bar: Page Title
+img1: $assets.files.static.menu.svg
+img2: $assets.files.static.share.svg
+img3: $assets.files.static.search.svg
+img4: $assets.files.static.more.svg
+
+-- pagination:
+num1: 1
+num2: 1
+num3: 1
+numN: 1
+
+-- text-input:
+
+-- label-input:
+
+-- warning-button: Restricted
+
+-- ftd.row:
+spacing.fixed.px: 26
+
+-- primary-button: Accepted
+
+-- secondary-button: In-progress
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- card:
+image: $assets.files.static.img.svg
+likes: 2,729 Like
+comments: 273 Comment
+avatar: $assets.files.static.image.svg
+name: Patrica AVA
+post: UI Designer
+
+Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+
+
+
+
+
+
+
+
+
+-- component plus-button:
+
+-- ftd.column:
+width.fixed.px: 32
+height.fixed.px: 32
+border-radius.px: 400
+background.solid: $inherited.colors.accent.primary
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $assets.files.static.plus.svg
+width: auto
+
+-- end: ftd.column
+
+-- end: plus-button
+
+
+
+
+
+
+
+
+
+
+-- component avatar:
+
+-- ftd.column:
+width.fixed.px: 48
+height.fixed.px: 48
+border-radius.px: 6
+background.solid: $inherited.colors.accent.primary
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $assets.files.static.avatar.svg
+width: auto
+
+-- end: ftd.column
+
+-- end: avatar
+
+
+
+
+
+
+
+
+
+
+-- component label:
+caption title:
+
+-- ftd.row:
+width.fixed.px: 105
+height.fixed.px: 56
+border-radius.px: 4
+padding.px: 16
+spacing.fixed.px: 12
+background.solid: $inherited.colors.accent.primary
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $assets.files.static.plus.svg
+width: auto
+
+-- ftd.text: $label.title
+role: $inherited.types.label-large
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: label
+
+
+
+
+
+
+
+
+
+
+-- component button-base-dark:
+caption title:
+
+-- ftd.column:
+width.fixed.px: 120
+height.fixed.px: 44
+border-radius.px: 4
+padding-horizontal.px: 20
+padding-vertical.px: 10
+background.solid: $inherited.colors.accent.primary
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.text: $button-base-dark.title
+role: $inherited.types.button-medium
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: button-base-dark
+
+
+
+
+
+
+
+
+
+
+-- component button-base-light:
+caption title:
+
+-- ftd.column:
+width.fixed.px: 120
+height.fixed.px: 44
+border-radius.px: 4
+padding-horizontal.px: 20
+padding-vertical.px: 10
+background.solid: $inherited.colors.cta-primary.disabled
+border-color: $inherited.colors.cta-primary.hover
+border-width.px: 1
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.text: $button-base-light.title
+role: $inherited.types.button-medium
+color: $inherited.colors.cta-primary.hover
+
+-- end: ftd.column
+
+-- end: button-base-light
+
+
+
+
+
+
+
+
+
+
+-- component app-bar:
+caption title:
+ftd.image-src img1:
+ftd.image-src img2:
+ftd.image-src img3:
+ftd.image-src img4:
+
+-- ftd.row:
+width.fixed.px: 267
+height.fixed.px: 48
+border-radius.px: 4
+padding.px: 16
+spacing.fixed.px: 16
+background.solid: $inherited.colors.accent.primary
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.row:
+spacing.fixed.px: 15
+align-content: center
+
+-- ftd.image:
+src: $app-bar.img1
+width: auto
+
+-- ftd.text: $app-bar.title
+role: $inherited.types.button-medium
+color: $inherited.colors.cta-primary.hover
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 30
+align-content: center
+
+-- ftd.image:
+src: $app-bar.img2
+width: auto
+
+-- ftd.image:
+src: $app-bar.img3
+width: auto
+
+-- ftd.image:
+src: $app-bar.img4
+width: auto
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: app-bar
+
+
+
+
+
+
+
+
+
+
+-- component pagination:
+string num1:
+string num2:
+string num3:
+string numN:
+
+-- ftd.row:
+width.fixed.px: 265
+height.fixed.px: 33
+spacing.fixed.px: 6
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $assets.files.static.left.svg
+width: auto
+
+-- ftd.row:
+width.fixed.px: 33
+height.fixed.px: 33
+border-radius.px: 4
+background.solid: $inherited.colors.accent.primary
+align-content: center
+
+-- ftd.text: $pagination.num1
+role: $inherited.types.label-large
+style: bold
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+width.fixed.px: 33
+height.fixed.px: 33
+border-radius.px: 4
+border-width.px: 2
+border-color: $inherited.colors.border-strong
+align-content: center
+
+-- ftd.text: $pagination.num2
+role: $inherited.types.label-large
+style: bold
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+width.fixed.px: 33
+height.fixed.px: 33
+border-radius.px: 4
+border-width.px: 2
+border-color: $inherited.colors.border-strong
+align-content: center
+
+-- ftd.text: $pagination.num3
+role: $inherited.types.label-large
+style: bold
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $assets.files.static.dot.svg
+width: auto
+
+-- ftd.row:
+width.fixed.px: 33
+height.fixed.px: 33
+border-radius.px: 4
+border-width.px: 2
+border-color: $inherited.colors.border-strong
+align-content: center
+
+-- ftd.text: $pagination.numN
+role: $inherited.types.label-large
+style: bold
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $assets.files.static.right.svg
+width: auto
+
+-- end: ftd.row
+
+-- end: pagination
+
+
+
+
+
+
+
+
+
+
+-- component text-input:
+
+-- ftd.row:
+width.fixed.px: 264
+height.fixed.px: 56
+border-radius.px: 4
+border-width.px: 1
+border-color: $inherited.colors.cta-primary.border
+align-content: left
+padding-left.px: 18
+spacing.fixed.px: 6
+margin-bottom.px: 20
+
+-- ftd.row:
+width.fixed.px: 39
+height.fixed.px: 16
+padding-horizontal.px: 4
+anchor: parent
+top.px: -9
+left.px: 9
+background.solid: $inherited.colors.text-strong
+align-content: center
+
+-- ftd.text: Label
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $assets.files.static.heart.svg
+width: auto
+
+-- ftd.text-input: 
+placeholder: Input Text
+type: text
+
+-- end: ftd.row
+
+-- end: text-input
+
+
+
+
+
+
+
+
+
+
+-- component label-input:
+
+-- ftd.row:
+width.fixed.px: 264
+height.fixed.px: 56
+border-radius.px: 4
+border-width.px: 1
+border-color: $inherited.colors.cta-primary.border
+align-content: left
+padding-left.px: 18
+spacing.fixed.px: 45
+margin-bottom.px: 20
+
+-- ftd.row:
+width.fixed.px: 39
+height.fixed.px: 16
+padding-horizontal.px: 4
+anchor: parent
+top.px: -9
+left.px: 9
+background.solid: $inherited.colors.text-strong
+align-content: center
+
+-- ftd.text: Label
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text-input: 
+placeholder: Input Text
+type: text
+
+-- ftd.image:
+src: $assets.files.static.calender.svg
+width: auto
+
+-- end: ftd.row
+
+-- end: label-input
+
+
+
+
+
+
+
+
+
+
+-- component warning-button:
+caption title:
+
+-- ftd.column:
+width.fixed.px: 266
+height.fixed.px: 35
+border-radius.px: 30
+background.solid: $inherited.colors.warning.base
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.text: $warning-button.title
+role: $inherited.types.label-large
+color: $inherited.colors.warning.text
+style: medium
+
+-- end: ftd.column
+
+-- end: warning-button
+
+
+
+
+
+
+
+
+
+
+-- component primary-button:
+caption title:
+
+-- ftd.column:
+width.fixed.px: 120
+height.fixed.px: 36
+border-radius.px: 4
+background.solid: $inherited.colors.success.base
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.row:
+spacing.fixed.px: 5
+padding-horizontal.px: 10
+padding-vertical.px: 8
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.point.svg
+width: fill-container
+
+-- ftd.text: $primary-button.title
+role: $inherited.types.label-large
+color: $inherited.colors.success.text
+style: medium
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: primary-button
+
+
+
+
+
+
+
+
+
+
+-- component secondary-button:
+caption title:
+
+-- ftd.column:
+width.fixed.px: 120
+height.fixed.px: 36
+border-radius.px: 4
+background.solid: $inherited.colors.info.base
+align-content: center
+margin-bottom.px: 20
+
+-- ftd.text: $secondary-button.title
+role: $inherited.types.label-large
+color: $inherited.colors.info.text
+style: medium
+
+-- end: ftd.column
+
+-- end: secondary-button
+
+
+
+
+
+
+
+
+
+
+-- component card:
+ftd.image-src image:
+string likes:
+string comments:
+body body:
+ftd.image-src avatar:
+string name:
+string post:
+
+-- ftd.column:
+width.fixed.px: 266
+spacing.fixed.px: 16
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 10
+align-self: center
+
+-- ftd.image:
+src: $card.image
+width: auto
+
+-- ftd.column:
+padding-left.px: 16
+padding-bottom.px: 16
+spacing.fixed.px: 6
+width.fixed.px: 244
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 12
+align-content: center
+
+-- ftd.row:
+spacing.fixed.px: 6
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.like.svg
+width: auto
+
+-- ftd.text: $card.likes
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 6
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.comment.svg
+width: auto
+
+-- ftd.text: $card.comments
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$card.body
+
+-- ftd.row:
+padding-top.px: 21
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.image:
+src: $card.avatar
+width: auto
+
+-- ftd.column:
+
+-- ftd.text: $card.name
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $card.post
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card
