@@ -59,8 +59,8 @@ link: https://discord.gg/bucrdvptYd
 
 -- title-with-link: How to use this colour palette
 icon: $assets.files.static.link-icon.svg
-link-text: fastn.io/how-to/use-color-package/
-link: https://fastn.io/how-to/use-color-package/
+link-text: How to use?
+link: #how-to-use-cs
 
 -- title-with-link: How to modify a colour palette
 icon: $assets.files.static.link-icon.svg
@@ -89,6 +89,66 @@ max-height.fixed.px: 300
 $figma-json
 
 -- end: color-scheme
+
+-- how-to-use-cs: How to use this colour scheme 
+link: #how-to-use-cs
+
+The importance of colour in a website’s overall look and feel is well known. The
+right colour scheme can evoke emotions, create visual interest, and direct a
+user’s attention to specific elements on a page. That’s why the ftd colour
+scheme framework provides an easy and powerful way to define colour schemes and
+apply them to your website. 
+
+To start, you can choose from existing colour scheme packages or create your own
+custom colour scheme. To apply a colour scheme package on top of your package,
+you’ll need to import it into one of the module. 
+
+For example, let’s say you’re using the page component from `doc-site` package
+and want to apply the <add color scheme name here> scheme package on top of it.
+You first create a new module, let’s say my-ds.ftd. Then you import <add color
+scheme name here> package module and then create a new component called page
+there. 
+
+Here’s what your my-ds.ftd module and FASTN.ftd import would look like:
+
+-- cb.code: Add `<add color scheme name here>` as dependency into FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: `<add color scheme name here>`
+
+-- cb.code: my-ds.ftd module
+lang: ftd
+download: my-ds.ftd
+
+\-- import: `<add color scheme name here>` as my-cs
+\-- import: fifthtry.github.io/doc-site as ds
+
+\-- component page: 
+children wrapper:
+optional body body:
+
+\-- ds.page:
+title: $page.title
+body: $page.body
+wrapper: $page.wrapper
+colors: $my-cs.main
+
+\-- end: page
+
+
+-- markdown:
+
+After creating my-ds.page component, use this in rest of the module of your
+package instead of ds.page. 
+
+Once you have imported the colour scheme package and created a new component
+my-ds.page, you can use it throughout your website instead of the ds.page
+component. 
+
+With just a few lines of code, you can dramatically change the look and feel of
+your website using the ftd colour scheme.
+
+-- end: how-to-use-cs
 
 -- color-pallete: Standalone colors
 pallete: $standalone
@@ -740,6 +800,59 @@ link: $body-with-links.tutorials-url
 -- end: ftd.column
 
 -- end: body-with-links
+
+
+
+
+
+
+
+
+
+
+-- component how-to-use-cs:
+caption title:
+string link:
+body body:
+children childs:
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 60
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.text: $how-to-use-cs.title
+role: $inherited.types.heading-tiny
+color: #212738
+style: bold
+region: h3
+id: how-to-use-cs
+
+-- ftd.image:
+src: $assets.files.static.link-icon.svg
+link: $how-to-use-cs.link
+
+-- end: ftd.row
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: #212738
+margin-bottom.px: 20
+
+$how-to-use-cs.body
+
+-- ftd.column:
+width: fill-container
+children: $how-to-use-cs.childs
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: how-to-use-cs
 
 
 
