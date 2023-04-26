@@ -19,7 +19,7 @@ name: default-colors
 
 -- package: THEME
 name: `<add color scheme name here>`
-logo: $assets.files.static.ftd-logo.svg
+logo: $assets.files.static.fastn-logo.svg
 subtitle: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
 colors: $colors-data
 
@@ -380,7 +380,7 @@ $markdown.body
 -- component package:
 caption title:
 optional string name:
-optional ftd.image-src logo: $assets.files.static.ftd-logo.svg
+optional ftd.image-src logo:
 children package-wrap:
 optional string subtitle:
 ftd.color-scheme colors: $ftd.default-colors
@@ -406,6 +406,7 @@ align-content: center
 width: fill-container
 
 -- ftd.image:
+if: { package.logo != NULL }
 src: $package.logo
 width.fixed.px: 76
 height.fixed.px: 76
