@@ -365,6 +365,7 @@ color: #212738
 role: $inherited.types.button-large
 white-space: nowrap
 style: bold
+text-transform: capitalize
 
 -- end: ftd.column
 
