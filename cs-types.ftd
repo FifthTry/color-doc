@@ -14,16 +14,14 @@ font-family: $inter-assets.fonts.Inter
 
 
 -- ftd.type heading-large-mobile:
-line-height.px: 48
-size.px: 40
-letter-spacing.px: 0
+size.px: 36
+line-height.px: 54
 weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type heading-large-desktop:
-line-height.px: 54
-size.px: 36
-letter-spacing.px: 0
+size.px: 50
+line-height.px: 65
 weight: 700
 font-family: $inter-assets.fonts.Inter
 
@@ -36,18 +34,16 @@ mobile: $heading-large-mobile
 
 
 -- ftd.type heading-medium-mobile:
-line-height.px: 44
-size.px: 32
-letter-spacing.px: 0
-weight: 600
+size.px: 26
+line-height.px: 40
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type heading-medium-desktop:
-line-height.px: 44
-size.px: 32
-letter-spacing.px: 0
+size.px: 38
+line-height.px: 57
+weight: 700
 font-family: $inter-assets.fonts.Inter
-weight: 600
 
 -- ftd.responsive-type heading-medium:
 desktop: $heading-medium-desktop
@@ -58,17 +54,15 @@ mobile: $heading-medium-mobile
 
 
 -- ftd.type heading-small-mobile:
-line-height.px: 36
-size.px: 24
-letter-spacing.px: 0
-weight: 500
+size.px: 22
+line-height.px: 29
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type heading-small-desktop:
-line-height.px: 36
+line-height.px: 31
 size.px: 24
-letter-spacing.px: 0
-weight: 500
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.responsive-type heading-small:
@@ -81,17 +75,15 @@ mobile: $heading-small-mobile
 
 
 -- ftd.type heading-tiny-mobile:
-line-height.px: 26
 size.px: 18
-letter-spacing.px: 0
-weight: 500
+line-height.px: 24
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type heading-tiny-desktop:
+size.px: 20
 line-height.px: 26
-size.px: 18
-letter-spacing.px: 0
-weight: 500
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.responsive-type heading-tiny:
@@ -103,18 +95,16 @@ mobile: $heading-tiny-mobile
 
 
 -- ftd.type copy-large-mobile:
+size.px: 18
 line-height.px: 28
-size.px: 20
-letter-spacing.px: 0
 weight: 400
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type copy-large-desktop:
-line-height.px: 28
-size.px: 20
-letter-spacing.px: 0
-font-family: $inter-assets.fonts.Inter
+size.px: 22
+line-height.px: 34
 weight: 400
+font-family: $inter-assets.fonts.Inter
 
 -- ftd.responsive-type copy-large:
 desktop: $copy-large-desktop
@@ -161,16 +151,14 @@ mobile: $copy-small-mobile
 
 
 -- ftd.type fine-print-mobile:
-line-height.px: 18
-size.px: 14
-letter-spacing.px: 0
+size.px: 12
+line-height.px: 16
 weight: 400
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type fine-print-desktop:
-line-height.px: 18
-size.px: 14
-letter-spacing.px: 0
+size.px: 12
+line-height.px: 16
 weight: 400
 font-family: $inter-assets.fonts.Inter
 
@@ -183,16 +171,14 @@ mobile: $fine-print-mobile
 
 
 -- ftd.type blockquote-mobile:
-line-height.px: 16
-size.px: 14
-letter-spacing.px: 0
+size.px: 16
+line-height.px: 21
 weight: 400
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type blockquote-desktop:
-line-height.px: 16
-size.px: 14
-letter-spacing.px: 0
+size.px: 16
+line-height.px: 21
 weight: 400
 font-family: $inter-assets.fonts.Inter
 
@@ -205,17 +191,15 @@ mobile: $blockquote-mobile
 
 
 -- ftd.type source-code-mobile:
-line-height.px: 16
-size.px: 14
-letter-spacing.px: 0
-weight: 400
+size.px: 16
+line-height.px: 21
+weight: 600
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type source-code-desktop:
-line-height.px: 16
-size.px: 14
-letter-spacing.px: 0
-weight: 400
+size.px: 18
+line-height.px: 30
+weight: 600
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.responsive-type source-code:
@@ -297,17 +281,15 @@ font-family: $inter-assets.fonts.Inter
 
 
 -- ftd.type button-small-mobile:
-line-height.px: 10
-size.px: 5
-letter-spacing.px: 0
-weight: 400
+size.px: 14
+line-height.px: 19
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type button-small-desktop:
-line-height.px: 18
 size.px: 14
-letter-spacing.px: 0
-weight: 400
+line-height.px: 19
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.responsive-type button-small:
@@ -319,16 +301,14 @@ mobile: $button-small-mobile
 
 
 -- ftd.type link-mobile:
-line-height.px: 19
 size.px: 14
-letter-spacing.px: 0
-weight: 400
+line-height.px: 19
+weight: 700
 font-family: $inter-assets.fonts.Inter
 
 -- ftd.type link-desktop:
-line-height.px: 19
 size.px: 14
-letter-spacing.px: 0
+line-height.px: 19
 weight: 700
 font-family: $inter-assets.fonts.Inter
 

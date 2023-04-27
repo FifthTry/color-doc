@@ -20,7 +20,7 @@ name: default-colors
 
 
 -- package: THEME
-name: `<add color scheme name here>`
+name: `<color scheme name>`
 logo: $assets.files.static.fastn-logo.svg
 subtitle: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
 colors: $colors-data
@@ -549,12 +549,14 @@ width: fill-container
 -- ftd.column:
 width: fill-container
 background.solid: rgba(250,235,215,1)
-padding-vertical.px: 34
+padding-vertical.px if { ftd.device == "desktop" }: 34
+padding-vertical.px if { ftd.device == "mobile" }: 18
 
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: 1440
-padding-horizontal.px: 70
+padding-horizontal.px if { ftd.device == "desktop" }: 70
+padding-horizontal.px if { ftd.device == "mobile" }: 18
 
 -- ftd.row:
 width: fill-container

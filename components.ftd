@@ -68,7 +68,6 @@ width if { ftd.device == "mobile" }: fill-container
 
 
 
-
 -- component components-pallete:
 children components:
 ftd.type-data types: $cs-types.types
@@ -111,6 +110,8 @@ child: $components-pallete.components.2
 -- end: ftd.column
 
 -- end: components-pallete
+
+
 
 
 
