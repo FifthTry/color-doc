@@ -120,6 +120,8 @@ Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
 
 -- end: news-block
 
+;; add footer here:
+
 -- end: component-wrap-middle
 
 -- component-wrap-right:
