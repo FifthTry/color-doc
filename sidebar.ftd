@@ -4,7 +4,6 @@
 -- import: fifthtry.github.io/color-doc/colors
 -- import: fifthtry.github.io/footer
 
--- page-title: Fastn
 
 -- sidenav:
 
@@ -24,6 +23,11 @@ sidebar list links: $subtitle
 padding-horizontal.px: 21
 padding-vertical.px: 41
 spacing.fixed.px: 37
+background.solid: $inherited.colors.background.base
+border-radius.px: 16
+width: fill-container
+
+-- page-title: Fastn
 
 -- navbar-list: $obj.title
 $loop$: $sidenav.links as $obj
@@ -125,7 +129,6 @@ caption title:
 
 -- ftd.column:
 width: fill-container
-padding-left.px: 21
 padding-top.px: 41
 
 -- ftd.text: $page-title.title
