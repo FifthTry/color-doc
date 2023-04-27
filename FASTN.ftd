@@ -11,4 +11,3 @@ zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 -- fastn.auto-import: fifthtry.github.io/color-doc/FASTN/config
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/dark-mode-switcher as dms
-
