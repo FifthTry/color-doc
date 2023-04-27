@@ -37,9 +37,9 @@ img4: $assets.files.static.more.svg
 
 -- pagination:
 num1: 1
-num2: 1
-num3: 1
-numN: 1
+num2: 2
+num3: 3
+numN: 9
 
 -- text-input:
 
@@ -89,7 +89,6 @@ margin-bottom.px: 20
 
 -- ftd.image:
 src: $assets.files.static.plus.svg
-width: auto
 
 -- end: ftd.column
 
@@ -116,7 +115,6 @@ margin-bottom.px: 20
 
 -- ftd.image:
 src: $assets.files.static.avatar.svg
-width: auto
 
 -- end: ftd.column
 
@@ -135,7 +133,6 @@ width: auto
 caption title:
 
 -- ftd.row:
-width.fixed.px: 105
 height.fixed.px: 56
 border-radius.px: 4
 padding.px: 16
@@ -146,7 +143,6 @@ margin-bottom.px: 20
 
 -- ftd.image:
 src: $assets.files.static.plus.svg
-width: auto
 
 -- ftd.text: $label.title
 role: $inherited.types.label-large
@@ -169,7 +165,6 @@ color: $inherited.colors.text
 caption title:
 
 -- ftd.column:
-width.fixed.px: 120
 height.fixed.px: 44
 border-radius.px: 4
 padding-horizontal.px: 20
@@ -199,7 +194,6 @@ color: $inherited.colors.text
 caption title:
 
 -- ftd.column:
-width.fixed.px: 120
 height.fixed.px: 44
 border-radius.px: 4
 padding-horizontal.px: 20
@@ -235,7 +229,6 @@ ftd.image-src img3:
 ftd.image-src img4:
 
 -- ftd.row:
-width.fixed.px: 267
 height.fixed.px: 48
 border-radius.px: 4
 padding.px: 16
@@ -296,7 +289,6 @@ string num3:
 string numN:
 
 -- ftd.row:
-width.fixed.px: 265
 height.fixed.px: 33
 spacing.fixed.px: 6
 align-content: center
@@ -307,7 +299,7 @@ src: $assets.files.static.left.svg
 width: auto
 
 -- ftd.row:
-width.fixed.px: 33
+min-width.fixed.px: 33
 height.fixed.px: 33
 border-radius.px: 4
 background.solid: $inherited.colors.accent.primary
@@ -321,7 +313,7 @@ color: $inherited.colors.text
 -- end: ftd.row
 
 -- ftd.row:
-width.fixed.px: 33
+min-width.fixed.px: 33
 height.fixed.px: 33
 border-radius.px: 4
 border-width.px: 2
@@ -336,7 +328,7 @@ color: $inherited.colors.text
 -- end: ftd.row
 
 -- ftd.row:
-width.fixed.px: 33
+min-width.fixed.px: 33
 height.fixed.px: 33
 border-radius.px: 4
 border-width.px: 2
@@ -355,7 +347,7 @@ src: $assets.files.static.dot.svg
 width: auto
 
 -- ftd.row:
-width.fixed.px: 33
+min-width.fixed.px: 33
 height.fixed.px: 33
 border-radius.px: 4
 border-width.px: 2
@@ -389,7 +381,6 @@ width: auto
 -- component text-input:
 
 -- ftd.row:
-width.fixed.px: 264
 height.fixed.px: 56
 border-radius.px: 4
 border-width.px: 1
@@ -400,7 +391,6 @@ spacing.fixed.px: 6
 margin-bottom.px: 20
 
 -- ftd.row:
-width.fixed.px: 39
 height.fixed.px: 16
 padding-horizontal.px: 4
 anchor: parent
@@ -439,18 +429,16 @@ type: text
 -- component label-input:
 
 -- ftd.row:
-width.fixed.px: 264
 height.fixed.px: 56
 border-radius.px: 4
 border-width.px: 1
 border-color: $inherited.colors.cta-primary.border
 align-content: left
-padding-left.px: 18
+padding-horizontal.px: 18
 spacing.fixed.px: 45
 margin-bottom.px: 20
 
 -- ftd.row:
-width.fixed.px: 39
 height.fixed.px: 16
 padding-horizontal.px: 4
 anchor: parent
@@ -490,10 +478,11 @@ width: auto
 caption title:
 
 -- ftd.column:
-width.fixed.px: 266
 height.fixed.px: 35
 border-radius.px: 30
 background.solid: $inherited.colors.warning.base
+padding-horizontal.px: 10
+padding-vertical.px: 8
 align-content: center
 margin-bottom.px: 20
 
@@ -519,7 +508,6 @@ style: medium
 caption title:
 
 -- ftd.column:
-width.fixed.px: 120
 height.fixed.px: 36
 border-radius.px: 4
 background.solid: $inherited.colors.success.base
@@ -534,7 +522,6 @@ align-content: center
 
 -- ftd.image:
 src: $assets.files.static.point.svg
-width: fill-container
 
 -- ftd.text: $primary-button.title
 role: $inherited.types.label-large
@@ -560,11 +547,12 @@ style: medium
 caption title:
 
 -- ftd.column:
-width.fixed.px: 120
 height.fixed.px: 36
 border-radius.px: 4
 background.solid: $inherited.colors.info.base
 align-content: center
+padding-horizontal.px: 10
+padding-vertical.px: 8
 margin-bottom.px: 20
 
 -- ftd.text: $secondary-button.title
@@ -595,7 +583,6 @@ string name:
 string post:
 
 -- ftd.column:
-width.fixed.px: 266
 spacing.fixed.px: 16
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 10
@@ -603,16 +590,14 @@ align-self: center
 
 -- ftd.image:
 src: $card.image
-width: auto
+width: fill-container
 
 -- ftd.column:
-padding-left.px: 16
+padding-horizontal.px: 17
 padding-bottom.px: 16
 spacing.fixed.px: 6
-width.fixed.px: 244
 
 -- ftd.row:
-width: fill-container
 spacing.fixed.px: 12
 align-content: center
 
@@ -622,7 +607,6 @@ align-content: center
 
 -- ftd.image:
 src: $assets.files.static.like.svg
-width: auto
 
 -- ftd.text: $card.likes
 role: $inherited.types.copy-small
@@ -636,7 +620,6 @@ align-content: center
 
 -- ftd.image:
 src: $assets.files.static.comment.svg
-width: auto
 
 -- ftd.text: $card.comments
 role: $inherited.types.copy-small
@@ -659,7 +642,6 @@ align-content: center
 
 -- ftd.image:
 src: $card.avatar
-width: auto
 
 -- ftd.column:
 
