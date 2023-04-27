@@ -570,8 +570,7 @@ caption title:
 height.fixed.px: 35
 border-radius.px: 30
 background.solid: $inherited.colors.warning.base
-padding-horizontal.px: 10
-padding-vertical.px: 8
+padding-vertical.px: 10
 align-content: center
 margin-bottom.px: 20
 width: fill-container
@@ -579,7 +578,7 @@ width: fill-container
 -- ftd.text: $warning-button.title
 role: $inherited.types.label-large
 color: $inherited.colors.warning.text
-style: medium
+style: bold
 
 -- end: ftd.column
 
@@ -617,7 +616,7 @@ src: $assets.files.static.point.svg
 -- ftd.text: $primary-button.title
 role: $inherited.types.label-large
 color: $inherited.colors.success.text
-style: medium
+style: bold
 
 -- end: ftd.row
 
@@ -650,7 +649,7 @@ width: fill-container
 -- ftd.text: $secondary-button.title
 role: $inherited.types.label-large
 color: $inherited.colors.info.text
-style: medium
+style: bold
 
 -- end: ftd.column
 
