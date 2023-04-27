@@ -2,7 +2,9 @@
 -- import: fastn/processors as pr
 -- import: fifthtry.github.io/color-doc/assets
 -- import: fifthtry.github.io/color-doc/colors
+-- import: fifthtry.github.io/color-doc/components as cp
 -- import: fifthtry.github.io/footer
+-- import: fastn-community.github.io/inter-typography as typo
 
 -- string figma-json:
 $processor$: pr.figma-cs-token
@@ -13,7 +15,7 @@ name: default-colors
 -- end: figma-json
 
 ;; **** replace below $ftd.default-colors with $main and remove this line ****
--- ftd.color-scheme colors-data: $ftd.default-colors
+-- ftd.color-scheme colors-data: $main
 
 
 
@@ -23,9 +25,123 @@ logo: $assets.files.static.fastn-logo.svg
 subtitle: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
 colors: $colors-data
 
--- package.subtitle:
+
+-- cp.components-pallete:
+
+-- cp.component-wrap-left:
+
+-- cp.row-spacing-48:
+
+-- cp.plus-button:
+
+-- cp.avatar:
+
+-- cp.label: Label
+
+-- end: cp.row-spacing-48
+
+-- cp.row-spacing-40:
+
+-- cp.button-base-dark: Button
+
+-- cp.button-base-light: Button
+
+-- end: cp.row-spacing-40
+
+-- cp.app-bar: Page Title
+img1: $assets.files.static.menu.svg
+img2: $assets.files.static.share.svg
+img3: $assets.files.static.search.svg
+img4: $assets.files.static.more.svg
+
+-- cp.pagination:
+num1: 1
+num2: 2
+num3: 3
+numN: 9
+
+-- cp.text-input:
+
+-- cp.label-input:
+
+-- cp.warning-button: Restricted
+
+-- cp.row-spacing-26:
+
+-- cp.primary-button: Accepted
+
+-- cp.secondary-button: In-progress
+
+-- end: cp.row-spacing-26
+
+-- cp.card:
+image: $assets.files.static.img.svg
+likes: 2,729 Like
+comments: 273 Comment
+avatar: $assets.files.static.image.svg
+name: Patrica AVA
+post: UI Designer
+
+Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+-- end: cp.component-wrap-left
+
+-- cp.component-wrap-middle:
+
+-- cp.hero: We transform ideas into digital outcomes.
+
+We are an award-winning strategic design company that provides consultancy
+services and help you create outstanding digital products.
 
 
+-- cp.news-block:
+
+-- cp.card:
+image: $assets.files.static.img.svg
+likes: 2,729 Like
+comments: 273 Comment
+avatar: $assets.files.static.image.svg
+name: Patrica AVA
+post: UI Designer
+
+Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+
+-- cp.card:
+image: $assets.files.static.img.svg
+likes: 2,729 Like
+comments: 273 Comment
+avatar: $assets.files.static.image.svg
+name: Patrica AVA
+post: UI Designer
+
+Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+
+-- cp.card:
+image: $assets.files.static.img.svg
+likes: 2,729 Like
+comments: 273 Comment
+avatar: $assets.files.static.image.svg
+name: Patrica AVA
+post: UI Designer
+
+Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+-- end: cp.news-block
+
+-- cp.sitemap-footer:
+copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
+
+-- end: cp.component-wrap-middle
+
+-- cp.component-wrap-right:
+
+-- cp.sidenav:
+
+-- end: cp.component-wrap-right
+
+-- end: cp.components-pallete
 
 -- color-scheme: 
 tagline: Adding warmth and energy to your designs with the `<add color scheme name here>` Color Scheme
@@ -229,6 +345,7 @@ padding-top.px: 60
 width: fill-container
 
 -- ftd.row:
+if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.px: 34
 
@@ -269,6 +386,46 @@ childrens: $color-scheme.rightbar
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.px: 34
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.text: $color-scheme.tagline
+if: { color-scheme.tagline != NULL }
+role: $inherited.types.heading-tiny
+color: #212738
+style: bold
+
+-- ftd.text: 
+if: { color-scheme.body != NULL}
+role: $inherited.types.copy-regular
+color: #212738
+
+$color-scheme.body
+
+-- ftd.column:
+width: fill-container
+children: $color-scheme.cs-wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+
+-- column-right:
+childrens: $color-scheme.rightbar
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -384,13 +541,14 @@ optional ftd.image-src logo:
 children package-wrap:
 optional string subtitle:
 ftd.color-scheme colors: $ftd.default-colors
+ftd.type-data types: $typo.types
 
 -- ftd.column:
 width: fill-container
 
 -- ftd.column:
 width: fill-container
-background.solid: #EB4135
+background.solid: rgba(250,235,215,1)
 padding-vertical.px: 34
 
 -- ftd.column:
@@ -439,8 +597,9 @@ text-transform: uppercase
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: 1440
-padding-horizontal.px: 70
-padding-vertical.px: 60
+padding-horizontal.px if { ftd.device == "desktop" }: 70
+padding-vertical.px if { ftd.device == "desktop" }: 60
+padding.px if { ftd.device == "mobile" }: 18
 background.solid: #FFFFFF
 
 -- ftd.text: $package.subtitle
@@ -456,7 +615,7 @@ children: $package.package-wrap
 
 -- end: ftd.column
 
--- dms.dark-mode-switcher-float:
+-- cp.dms:
 
 -- footer.fastn-footer:
 copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
@@ -538,8 +697,9 @@ optional string text-light:
 optional ftd.color text: 
 
 -- ftd.row:
-min-width.fixed.px: 400
-max-width.fixed.px: 400
+min-width.fixed.px if { ftd.device == "desktop" }: 400
+max-width.fixed.px if { ftd.device == "desktop" }: 400
+width if { ftd.device == "mobile" }: fill-container
 margin-top.px: 40
 
 -- ftd.column:
@@ -747,6 +907,7 @@ body body:
 width: fill-container
 spacing.fixed.px: 24
 margin-top.px: 60
+margin-bottom.px if { ftd.device == "mobile" }: 40
 
 -- ftd.text: Get in touch!
 role: $inherited.types.heading-small

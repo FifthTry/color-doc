@@ -3,7 +3,6 @@
 -- import: fifthtry.github.io/color-doc/assets
 -- import: fifthtry.github.io/color-doc/colors
 -- import: fifthtry.github.io/color-doc/cs-types
--- import: fifthtry.github.io/color-doc/toc
 -- import: fifthtry.github.io/footer
 
 -- pr.toc-item list empty-toc: 
@@ -16,124 +15,6 @@ $processor$: pr.toc
 - Label: index.html
 - Label: index.html
 - Label: index.html
-
--- components-pallete:
-
--- component-wrap-left:
-
--- row-spacing-48:
-
--- plus-button:
-
--- avatar:
-
--- label: Label
-
--- end: row-spacing-48
-
--- row-spacing-40:
-
--- button-base-dark: Button
-
--- button-base-light: Button
-
--- end: row-spacing-40
-
--- app-bar: Page Title
-img1: $assets.files.static.menu.svg
-img2: $assets.files.static.share.svg
-img3: $assets.files.static.search.svg
-img4: $assets.files.static.more.svg
-
--- pagination:
-num1: 1
-num2: 2
-num3: 3
-numN: 9
-
--- text-input:
-
--- label-input:
-
--- warning-button: Restricted
-
--- row-spacing-26:
-
--- primary-button: Accepted
-
--- secondary-button: In-progress
-
--- end: row-spacing-26
-
--- card:
-image: $assets.files.static.img.svg
-likes: 2,729 Like
-comments: 273 Comment
-avatar: $assets.files.static.image.svg
-name: Patrica AVA
-post: UI Designer
-
-Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
-
--- end: component-wrap-left
-
--- component-wrap-middle:
-
--- hero: We transform ideas into digital outcomes.
-
-We are an award-winning strategic design company that provides consultancy
-services and help you create outstanding digital products.
-
-
--- news-block:
-
--- card:
-image: $assets.files.static.img.svg
-likes: 2,729 Like
-comments: 273 Comment
-avatar: $assets.files.static.image.svg
-name: Patrica AVA
-post: UI Designer
-
-Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
-
-
--- card:
-image: $assets.files.static.img.svg
-likes: 2,729 Like
-comments: 273 Comment
-avatar: $assets.files.static.image.svg
-name: Patrica AVA
-post: UI Designer
-
-Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
-
-
--- card:
-image: $assets.files.static.img.svg
-likes: 2,729 Like
-comments: 273 Comment
-avatar: $assets.files.static.image.svg
-name: Patrica AVA
-post: UI Designer
-
-Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
-
--- end: news-block
-
--- sitemap-footer:
-footer-list: $toc.items
-copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
-
--- end: component-wrap-middle
-
--- component-wrap-right:
-
--- sidenav:
-
--- end: component-wrap-right
-
--- end: components-pallete
 
 
 
@@ -148,7 +29,8 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 ftd.ui child:
 
 -- ftd.column:
-width.fixed.percent: 50
+width.fixed.percent if { ftd.device == "desktop" }: 50
+width if { ftd.device == "mobile" }: fill-container
 
 -- pallete.child:
 
@@ -168,7 +50,8 @@ width.fixed.percent: 50
 ftd.ui child:
 
 -- ftd.column:
-width.fixed.percent: 20
+width.fixed.percent if { ftd.device == "desktop" }: 20
+width if { ftd.device == "mobile" }: fill-container
 
 -- pallete-small.child:
 
@@ -190,7 +73,12 @@ width.fixed.percent: 20
 children components:
 ftd.type-data types: $cs-types.types
 
+-- ftd.column:
+width: fill-container
+min-width.fixed.px if { ftd.device == "desktop" }: 1300
+
 -- ftd.row:
+if: { ftd.device == "desktop" }
 width: fill-container
 spacing: space-between
 
@@ -204,6 +92,23 @@ child: $components-pallete.components.1
 child: $components-pallete.components.2
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+
+-- pallete-small:
+child: $components-pallete.components.0
+
+-- pallete:
+child: $components-pallete.components.1
+
+-- pallete-small:
+child: $components-pallete.components.2
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: components-pallete
 
@@ -238,7 +143,7 @@ border-top-right-radius.px: 10
 width: fill-container
 align-self: start
 spacing.fixed.px: 18
-padding-top.px: 12
+padding-top.px: 4
 
 -- ftd.text: $hero.site-name
 role: $inherited.types.copy-small
@@ -270,7 +175,8 @@ padding.px: 15
 spacing: space-between
 
 -- ftd.column:
-width.fixed.percent: 40
+width.fixed.percent: 28
+align-self: center
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
@@ -281,6 +187,7 @@ style: bold
 role: $inherited.types.copy-small
 color: $inherited.colors.text
 margin-bottom.px: 15
+margin-top.px: 8
 
 $hero.body
 
@@ -294,6 +201,11 @@ width.fixed.percent: 50
 height: fill-container
 background.solid: $inherited.colors.background.step-2
 min-height.fixed.px: 245
+
+-- ftd.image:
+src: $assets.files.static.image-placeholder.png
+max-width: fill-container
+height.fixed.px: 245
 
 -- end: ftd.column
 
@@ -373,19 +285,71 @@ src: $assets.files.static.tick.svg
 
 
 
+-- component button-tick-small:
+caption title:
+string link:
+
+-- ftd.row:
+height.fixed.px: 18
+border-radius.px: 4
+padding-horizontal.px: 10
+padding-vertical.px: 2
+spacing.fixed.px: 4
+background.solid: $inherited.colors.accent.primary
+align-content: center
+link: $button-tick-small.link
+
+-- ftd.text: $button-tick-small.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+style: bold
+
+-- ftd.image:
+src: $assets.files.static.tick.svg
+
+-- end: ftd.row
+
+-- end: button-tick-small
+
+
+
+
+
+
+
+
+
+
 -- component news-block:
 children wrap:
 
+-- ftd.column:
+width: fill-container
+
 -- ftd.row:
+if: { ftd.device == "desktop" }
 width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 26
-padding-vertical.px: 45
+padding-vertical.px: 26
 children: $news-block.wrap
 border-radius.px: 10
 spacing.fixed.px: 9
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding.px: 26
+children: $news-block.wrap
+border-radius.px: 10
+spacing.fixed.px: 9
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: news-block
 
@@ -403,7 +367,6 @@ children components:
 
 -- ftd.column:
 padding-vertical.px: 24
-padding-left.px: 24
 spacing.fixed.px: 24
 children: $component-wrap-left.components
 width: fill-container
@@ -426,7 +389,7 @@ children components:
 
 -- ftd.column:
 padding-vertical.px: 24
-padding-left.px: 24
+padding-left.px if { ftd.device == "desktop" }: 24
 spacing.fixed.px: 24
 children: $component-wrap-middle.components
 width: fill-container
@@ -451,8 +414,9 @@ children components:
 spacing.fixed.px: 24
 children: $component-wrap-right.components
 width: fill-container
-padding-right.px: 24
+padding-right.px if { ftd.device == "desktop" }: 24
 padding-vertical.px: 24
+padding-right.px if { ftd.device == "desktop" }: 24
 
 -- end: ftd.column
 
@@ -760,8 +724,6 @@ spacing: space-between
 background.solid: $inherited.colors.accent.primary
 align-content: center
 width: fill-container
-margin-top.px: 20
-margin-bottom.px: 7
 
 -- ftd.row:
 spacing.fixed.px: 15
@@ -774,6 +736,7 @@ width: auto
 -- ftd.text: $app-bar.title
 role: $inherited.types.label-large
 color: $inherited.colors.text-strong
+white-space: nowrap
 
 -- end: ftd.row
 
@@ -929,7 +892,7 @@ align-content: center
 
 -- ftd.text: Label
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: #000000
 
 -- end: ftd.row
 
@@ -977,7 +940,7 @@ align-content: center
 
 -- ftd.text: Label
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: #000000
 
 -- end: ftd.row
 
@@ -1213,14 +1176,12 @@ background.solid: $inherited.colors.background.base
 border-radius.px: 16
 width: fill-container
 height.fixed.px: 887
+padding-right.px: 41
 
 -- page-title: Fastn
 
--- navbar-list: $obj.title
+-- navbar-list: $obj
 $loop$: $sidenav.links as $obj
-icon: $obj.icon
-stats: $obj.stats
-arrow: $obj.arrow
 
 -- end: ftd.column
 
@@ -1236,30 +1197,35 @@ arrow: $obj.arrow
 
 
 -- component navbar-list:
-caption title:
-ftd.image-src icon:
-boolean stats: false
-boolean arrow: false
+caption sidebar item:
+boolean $show-sub-nav: true
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 12
 
 -- ftd.row:
-spacing.fixed.px: 55
-align-content: center
+width: fill-container
 
 -- ftd.row:
 spacing.fixed.px: 16
+width: fill-container
+align-content: center
 
 -- ftd.image:
-src: $navbar-list.icon
+if: { navbar-list.item.icon != NULL }
+src: $navbar-list.item.icon
 
--- ftd.text: $navbar-list.title
+-- ftd.text: $navbar-list.item.title
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
 -- ftd.row:
-if: { navbar-list.stats }
+if: { navbar-list.item.stats }
 spacing.fixed.px: 6
+align-self: end
 
 -- ftd.row:
 background.solid: $inherited.colors.accent.secondary
@@ -1270,7 +1236,7 @@ align-content: center
 
 -- ftd.text: New
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
@@ -1283,24 +1249,88 @@ align-content: center
 
 -- ftd.text: 6
 role: $inherited.types.label-small
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
 -- end: ftd.row
 
 -- ftd.row:
-padding-left.px: 50
+margin-top.px: 4
+$on-click$: $ftd.toggle($a= $navbar-list.show-sub-nav)
 
 -- ftd.image:
-if: { navbar-list.arrow }
+if: { navbar-list.item.arrow && !navbar-list.show-sub-nav }
 src: $assets.files.static.down.svg
 
+-- ftd.image:
+if: { navbar-list.item.arrow && navbar-list.show-sub-nav }
+src: $assets.files.static.up.svg
+
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- sub-nav: $obj
+$loop$: $navbar-list.item.sub-nav as $obj
+if: { navbar-list.show-sub-nav }
+
+-- end: ftd.column
 
 -- end: navbar-list
+
+
+
+
+
+
+
+
+
+
+-- component sub-nav:
+caption sidebar item:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+if: { !sub-nav.item.stats }
+width: fill-container
+padding-left.px: 45
+margin-top.px: 24
+
+-- ftd.text: $sub-nav.item.title
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { sub-nav.item.stats }
+width: fill-container
+padding-left.px: 45
+margin-top.px: 24
+
+-- ftd.text: $sub-nav.item.title
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+width: fill-container
+
+-- ftd.text: 2
+role: $inherited.types.label-small
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.accent.tertiary
+padding-horizontal.px: 5 
+padding-vertical.px: 2
+border-radius.px: 4
+align-self: end
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: sub-nav
 
 
 
@@ -1316,11 +1346,11 @@ caption title:
 
 -- ftd.column:
 width: fill-container
-padding-top.px: 41
 
 -- ftd.text: $page-title.title
 role: $inherited.types.heading-tiny
-color: $inherited.colors.text
+color: $inherited.colors.text-strong
+style: bold
 
 -- end: ftd.column
 
@@ -1337,9 +1367,10 @@ color: $inherited.colors.text
 
 -- record sidebar:
 caption title:
-ftd.image-src icon:
+optional ftd.image-src icon:
 boolean stats: false
 boolean arrow: false
+sidebar list sub-nav:
 
 -- sidebar list subtitle:
 
@@ -1358,6 +1389,19 @@ stats: true
 icon: $assets.files.static.service.svg
 arrow: true
 
+-- sidebar.sub-nav: 
+
+-- sidebar: Credit
+
+-- sidebar: Transfer
+
+-- sidebar: Cash
+
+-- sidebar: My Bills
+stats: true
+
+-- end: sidebar.sub-nav
+
 -- sidebar: Saved
 icon: $assets.files.static.saved.svg
 
@@ -1374,7 +1418,7 @@ icon: $assets.files.static.saved.svg
 
 -- component sitemap-footer:
 optional ftd.color background-color: $inherited.colors.background.base
-pr.toc-item list footer-list: $toc.items
+pr.toc-item list footer-list: $items
 optional ftd.image-src facebook-logo: $assets.files.static.facebook.svg
 optional ftd.image-src figma-logo: $assets.files.static.figma.svg
 optional ftd.image-src google-logo: $assets.files.static.google.svg
@@ -1389,15 +1433,14 @@ optional string ball-url:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: 40
-spacing.fixed.px: 32
-padding-horizontal.px: 40
+padding-vertical.px: 12
+spacing.fixed.px: 5
 background.solid: $sitemap-footer.background-color
 border-radius.px: 10
 
 -- ftd.row:
 width: fill-container
-wrap if { ftd.device =="mobile" }: true
+align-content: center
 
 -- footer-loop: 
 title: $obj.title
@@ -1411,11 +1454,12 @@ $loop$: $sitemap-footer.footer-list as $obj
 
 -- ftd.row:
 width: fill-container
-spacing: space-between
 align-content: center
+spacing: space-between
+padding-horizontal.px if { ftd.device == "desktop" }: 60
+padding-horizontal.px if { ftd.device == "mobile" }: 30
 
 -- ftd.column:
-spacing.fixed.px: 16
 
 -- ftd.text: Fastn
 role: $inherited.types.copy-regular
@@ -1441,10 +1485,13 @@ ball-url: $sitemap-footer.ball-url
 -- ftd.text: 
 text: $sitemap-footer.copyright
 color: $inherited.colors.text
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 text-align if { ftd.device == "mobile" }: center
 
 -- end: ftd.column
+
+-- ftd.row:
+spacing.fixed.px: 3
 
 -- ftd.row:
 height.fixed.px: 17
@@ -1455,7 +1502,6 @@ border-color: $inherited.colors.cta-primary.border
 align-content: left
 padding-horizontal.px: 5
 spacing: space-between
-margin-bottom.px: 20
 
 -- ftd.text: Label
 role: $inherited.types.copy-small
@@ -1465,6 +1511,11 @@ color: $inherited.colors.text-strong
 src: $assets.files.static.search.svg
 width.fixed.px: 6
 height.fixed.px: 6
+
+-- end: ftd.row
+
+-- button-tick-small: Button
+link: index.html
 
 -- end: ftd.row
 
@@ -1499,10 +1550,8 @@ width: fill-container
 spacing: space-between
 align-self: center
 wrap: true
-width: fill-container
 
 -- footer-list-section: $footer-loop.title
-if: { ftd.device != "mobile" } 
 url: $footer-loop.url
 sub-sections: $footer-loop.sub-sections 
 show-toc: $footer-loop.show-toc
@@ -1533,30 +1582,30 @@ boolean show-subsections: false
 
 -- ftd.column:
 width.fixed.percent if { ftd.device == "mobile" && footer-list-section.show-subsections }: 50
-margin-bottom.px if { ftd.device == "mobile" }: 24
+margin-bottom.px if { ftd.device == "mobile" }: 3
 
 -- ftd.text: $footer-list-section.title
 if: { footer-list-section.show-toc }
-color: $inherited.colors.text
-role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-small
 link: $footer-list-section.url
 width: fill-container
 white-space: nowrap
-margin-bottom.px: 12
+margin-bottom.px: 3
 
 -- ftd.text: $footer-list-section.title
 if: { footer-list-section.show-subsections && !footer-list-section.show-toc }
-color: $inherited.colors.text
-role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-small
 link: $footer-list-section.url
 width: fill-container
 white-space: nowrap
-margin-bottom.px: 12
+margin-bottom.px: 3
 
 -- ftd.text: $footer-list-section.title
 if: { !footer-list-section.show-toc && ! footer-list-section.show-subsections }
-color: $inherited.colors.text
-role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-small
 link: $footer-list-section.url
 width: fill-container
 white-space: nowrap
@@ -1606,24 +1655,24 @@ boolean show-subsections: false
 -- ftd.text: $footer-list-toc.title
 if: { footer-list-toc.show-subsections }
 color: $inherited.colors.text
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
 link: $footer-list-toc.url
 width: fill-container
 white-space: nowrap
-margin-bottom.px: 12
+margin-bottom.px: 2
 
 -- ftd.text: $footer-list-toc.title
 if: { !footer-list-toc.show-subsections }
 color: $inherited.colors.text
-role: $inherited.types.button-medium
+role: $inherited.types.copy-small
 link: $footer-list-toc.url
 width: fill-container
 white-space: nowrap
-margin-bottom.px: 12
+margin-bottom.px: 2
 
 -- ftd.column:
 if: { !ftd.is_empty(footer-list-toc.toc) }
-spacing.fixed.px: 12
+spacing.fixed.px: 2
 
 -- footer-list-toc-children: 
 title: $obj.title
@@ -1759,3 +1808,79 @@ height.fixed.px if { ftd.device == "mobile" }: 9
 -- end: ftd.row
 
 -- end: images-list
+
+
+
+
+
+
+
+
+
+
+-- component dms:
+
+-- ftd.row:
+anchor: window
+right.px: 50
+right.px if { ftd.device == "mobile" }: 25
+bottom.px: 90
+bottom.px if { ftd.device == "mobile" }: 55
+z-index: 99999999999999
+
+-- ftd.image:
+src: $assets.files.static.dms-system.svg
+if: { ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-light-mode()
+
+-- ftd.image:
+src: $assets.files.static.dms-night.svg
+if: { !ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-dark-mode()
+
+-- ftd.image:
+src: $assets.files.static.dms-day.svg
+if: { ftd.dark-mode && !ftd.follow-system-dark-mode }
+$on-click$: $ftd.enable-system-mode()
+
+-- end: ftd.row
+
+-- end: dms
+
+
+
+
+
+
+
+
+
+
+-- pr.toc-item list items: 
+$processor$: pr.toc
+
+- Heading: basic-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: social-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: social-sideline-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: basic-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+

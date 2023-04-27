@@ -7,6 +7,7 @@ zip: github.com/fifthtry/color-doc/archive/refs/heads/main.zip
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
 -- fastn.dependency: fifthtry.github.io/footer
 -- fastn.dependency: fastn-community.github.io/inter-font
+-- fastn.dependency: fastn-community.github.io/inter-typography
 
 -- fastn.auto-import: fastn
 -- fastn.auto-import: fifthtry.github.io/color-doc/FASTN/config
