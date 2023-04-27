@@ -1,0 +1,177 @@
+-- import: fastn
+-- import: fastn/processors as pr
+-- import: fifthtry.github.io/color-doc/assets
+-- import: fifthtry.github.io/color-doc/colors
+-- import: fifthtry.github.io/footer
+
+
+-- sidenav:
+
+
+
+
+
+
+
+
+
+
+-- component sidenav:
+sidebar list links: $subtitle
+
+-- ftd.column:
+padding-horizontal.px: 21
+padding-vertical.px: 41
+spacing.fixed.px: 37
+background.solid: $inherited.colors.background.base
+border-radius.px: 16
+width: fill-container
+
+-- page-title: Fastn
+
+-- navbar-list: $obj.title
+$loop$: $sidenav.links as $obj
+icon: $obj.icon
+stats: $obj.stats
+arrow: $obj.arrow
+
+-- end: ftd.column
+
+-- end: sidenav
+
+
+
+
+
+
+
+
+
+
+-- component navbar-list:
+caption title:
+ftd.image-src icon:
+boolean stats: false
+boolean arrow: false
+
+-- ftd.row:
+spacing.fixed.px: 55
+align-content: center
+
+-- ftd.row:
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $navbar-list.icon
+
+-- ftd.text: $navbar-list.title
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { navbar-list.stats }
+spacing.fixed.px: 6
+
+-- ftd.row:
+background.solid: $inherited.colors.accent.secondary
+height.fixed.px: 20
+width.fixed.px: 37
+border-radius.px: 4
+align-content: center
+
+-- ftd.text: New
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+background.solid: $inherited.colors.accent.tertiary
+height.fixed.px: 19
+width.fixed.px: 19
+border-radius.px: 4
+align-content: center
+
+-- ftd.text: 6
+role: $inherited.types.label-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.row:
+padding-left.px: 50
+
+-- ftd.image:
+if: { navbar-list.arrow }
+src: $assets.files.static.down.svg
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar-list
+
+
+
+
+
+
+
+
+
+
+-- component page-title:
+caption title:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 41
+
+-- ftd.text: $page-title.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: page-title
+
+
+
+
+
+
+
+
+
+
+-- record sidebar:
+caption title:
+ftd.image-src icon:
+boolean stats: false
+boolean arrow: false
+
+-- sidebar list subtitle:
+
+-- sidebar: Home
+icon: $assets.files.static.home.svg
+arrow: true
+
+-- sidebar: Pocket
+icon: $assets.files.static.pocket.svg
+
+-- sidebar: History
+icon: $assets.files.static.history.svg
+stats: true
+
+-- sidebar: Service
+icon: $assets.files.static.service.svg
+arrow: true
+
+-- sidebar: Saved
+icon: $assets.files.static.saved.svg
+
+-- end: subtitle
