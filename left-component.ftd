@@ -6,25 +6,7 @@
 
 -- component-wrap:
 
-
-
-
-
-
-
-
-
-
--- component component-wrap:
-
--- ftd.column:
-spacing.fixed.px: 24
-padding-vertical.px: 24
-padding-left.px: 24
-
--- ftd.row:
-spacing.fixed.px: 48
-align-content: center
+-- row-spacing-48:
 
 -- plus-button:
 
@@ -32,16 +14,15 @@ align-content: center
 
 -- label: Label
 
--- end: ftd.row
+-- end: row-spacing-48
 
--- ftd.row:
-spacing.fixed.px: 40
+-- row-spacing-40:
 
 -- button-base-dark: Button
 
 -- button-base-light: Button
 
--- end: ftd.row
+-- end: row-spacing-40
 
 -- app-bar: Page Title
 img1: $assets.files.static.menu.svg
@@ -61,14 +42,13 @@ numN: 9
 
 -- warning-button: Restricted
 
--- ftd.row:
-spacing.fixed.px: 26
+-- row-spacing-26:
 
 -- primary-button: Accepted
 
 -- secondary-button: In-progress
 
--- end: ftd.row
+-- end: row-spacing-26
 
 -- card:
 image: $assets.files.static.img.svg
@@ -80,9 +60,92 @@ post: UI Designer
 
 Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
 
+-- end: component-wrap
+
+
+
+
+
+
+
+
+
+
+-- component component-wrap:
+children components:
+
+-- ftd.column:
+padding-vertical.px: 24
+padding-left.px: 24
+spacing.fixed.px: 24
+children: $component-wrap.components
+
 -- end: ftd.column
 
 -- end: component-wrap
+
+
+
+
+
+
+
+
+
+
+-- component row-spacing-48:
+children wrap:
+
+-- ftd.row:
+spacing.fixed.px: 48
+align-content: center
+children: $row-spacing-48.wrap
+
+-- end: ftd.row
+
+-- end: row-spacing-48
+
+
+
+
+
+
+
+
+
+
+-- component row-spacing-40:
+children wrap:
+
+-- ftd.row:
+spacing.fixed.px: 40
+align-content: center
+children: $row-spacing-40.wrap
+
+-- end: ftd.row
+
+-- end: row-spacing-40
+
+
+
+
+
+
+
+
+
+
+-- component row-spacing-26:
+children wrap:
+
+-- ftd.row:
+spacing.fixed.px: 26
+align-content: center
+children: $row-spacing-26.wrap
+
+-- end: ftd.row
+
+-- end: row-spacing-26
 
 
 
@@ -603,6 +666,7 @@ spacing.fixed.px: 16
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 10
 align-self: center
+width: fill-container
 
 -- ftd.image:
 src: $card.image
@@ -648,6 +712,7 @@ color: $inherited.colors.text
 -- ftd.text:
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
+width: fill-container
 
 $card.body
 
