@@ -1,0 +1,29 @@
+-- import: fastn/processors as pr
+
+-- pr.toc-item list items: 
+$processor$: pr.toc
+
+- Heading: basic-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: social-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: social-sideline-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+- Heading: basic-footer/
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html
+  - Footer Link 01: index.html

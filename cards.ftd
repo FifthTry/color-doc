@@ -3,7 +3,10 @@
 -- import: fifthtry.github.io/color-doc/assets
 -- import: fifthtry.github.io/color-doc/colors
 -- import: fifthtry.github.io/color-doc/cs-types
+-- import: fifthtry.github.io/color-doc/toc
 -- import: fifthtry.github.io/footer
+
+-- pr.toc-item list empty-toc: 
 
 -- pr.toc-item list header-list:
 $processor$: pr.toc
@@ -13,8 +16,6 @@ $processor$: pr.toc
 - Label: index.html
 - Label: index.html
 - Label: index.html
-
-
 
 -- components-pallete:
 
@@ -120,7 +121,9 @@ Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
 
 -- end: news-block
 
-;; add footer here:
+-- sitemap-footer:
+footer-list: $toc.items
+copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: component-wrap-middle
 
@@ -1360,3 +1363,399 @@ icon: $assets.files.static.saved.svg
 
 -- end: subtitle
 
+
+
+
+
+
+
+
+
+
+-- component sitemap-footer:
+optional ftd.color background-color: $inherited.colors.background.base
+pr.toc-item list footer-list: $toc.items
+optional ftd.image-src facebook-logo: $assets.files.static.facebook.svg
+optional ftd.image-src figma-logo: $assets.files.static.figma.svg
+optional ftd.image-src google-logo: $assets.files.static.google.svg
+optional ftd.image-src msg-logo: $assets.files.static.msg.svg
+optional ftd.image-src ball-logo: $assets.files.static.ball.svg
+optional string facebook-url: 
+optional string figma-url: 
+optional string google-url: 
+optional string copyright:
+optional string msg-url: 
+optional string ball-url:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 40
+spacing.fixed.px: 32
+padding-horizontal.px: 40
+background.solid: $sitemap-footer.background-color
+border-radius.px: 10
+
+-- ftd.row:
+width: fill-container
+wrap if { ftd.device =="mobile" }: true
+
+-- footer-loop: 
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+sub-sections: $obj.children
+show-toc: true
+$loop$: $sitemap-footer.footer-list as $obj
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+align-content: center
+
+-- ftd.column:
+spacing.fixed.px: 16
+
+-- ftd.text: Fastn
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+spacing.fixed.px: 8
+
+-- images-list:
+facebook-logo: $sitemap-footer.facebook-logo
+facebook-url: $sitemap-footer.facebook-url
+figma-logo: $sitemap-footer.figma-logo
+figma-url: $sitemap-footer.figma-url
+google-logo: $sitemap-footer.google-logo
+google-url: $sitemap-footer.google-url
+msg-logo: $sitemap-footer.msg-logo
+msg-url: $sitemap-footer.msg-url
+ball-logo: $sitemap-footer.ball-logo
+ball-url: $sitemap-footer.ball-url
+
+-- end: ftd.row
+
+-- ftd.text: 
+text: $sitemap-footer.copyright
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+text-align if { ftd.device == "mobile" }: center
+
+-- end: ftd.column
+
+-- ftd.row:
+height.fixed.px: 17
+width.fixed.px: 87
+border-radius.px: 2
+border-width.px: 1
+border-color: $inherited.colors.cta-primary.border
+align-content: left
+padding-horizontal.px: 5
+spacing: space-between
+margin-bottom.px: 20
+
+-- ftd.text: Label
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+
+-- ftd.image:
+src: $assets.files.static.search.svg
+width.fixed.px: 6
+height.fixed.px: 6
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: sitemap-footer
+
+
+
+
+
+
+
+
+
+
+-- component footer-loop:
+caption title:
+string url:
+boolean $shows-data: false
+boolean is-active: false
+pr.toc-item list sub-sections: $empty-toc
+boolean show-toc: false
+boolean show-subsections: false
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+spacing: space-between
+align-self: center
+wrap: true
+width: fill-container
+
+-- footer-list-section: $footer-loop.title
+if: { ftd.device != "mobile" } 
+url: $footer-loop.url
+sub-sections: $footer-loop.sub-sections 
+show-toc: $footer-loop.show-toc
+show-subsections: $footer-loop.show-subsections
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer-loop
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-section:
+caption title:
+optional string url: /
+boolean is-active: false
+pr.toc-item list sub-sections: $empty-toc
+boolean show-toc: false
+boolean show-subsections: false
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "mobile" && footer-list-section.show-subsections }: 50
+margin-bottom.px if { ftd.device == "mobile" }: 24
+
+-- ftd.text: $footer-list-section.title
+if: { footer-list-section.show-toc }
+color: $inherited.colors.text
+role: $inherited.types.button-large
+link: $footer-list-section.url
+width: fill-container
+white-space: nowrap
+margin-bottom.px: 12
+
+-- ftd.text: $footer-list-section.title
+if: { footer-list-section.show-subsections && !footer-list-section.show-toc }
+color: $inherited.colors.text
+role: $inherited.types.button-medium
+link: $footer-list-section.url
+width: fill-container
+white-space: nowrap
+margin-bottom.px: 12
+
+-- ftd.text: $footer-list-section.title
+if: { !footer-list-section.show-toc && ! footer-list-section.show-subsections }
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+link: $footer-list-section.url
+width: fill-container
+white-space: nowrap
+
+-- footer-list-toc: 
+if: { !footer-list-section.show-toc }
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+toc: $empty-toc
+show-subsections: $footer-list-section.show-subsections 
+$loop$: $footer-list-section.sub-sections as $obj
+
+-- footer-list-toc: 
+if: { footer-list-section.show-toc }
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+toc: $obj.children
+$loop$: $footer-list-section.sub-sections as $obj
+
+-- end: ftd.column
+
+-- end: footer-list-section
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-toc:
+caption title:
+optional string url: /
+boolean is-active: false
+ftd.color text-color: $inherited.colors.text-strong
+ftd.color active-text-color: $inherited.colors.text-strong 
+pr.toc-item list toc: $empty-toc
+children wrap:
+boolean show-subsections: false
+
+-- ftd.column:
+
+-- ftd.text: $footer-list-toc.title
+if: { footer-list-toc.show-subsections }
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+link: $footer-list-toc.url
+width: fill-container
+white-space: nowrap
+margin-bottom.px: 12
+
+-- ftd.text: $footer-list-toc.title
+if: { !footer-list-toc.show-subsections }
+color: $inherited.colors.text
+role: $inherited.types.button-medium
+link: $footer-list-toc.url
+width: fill-container
+white-space: nowrap
+margin-bottom.px: 12
+
+-- ftd.column:
+if: { !ftd.is_empty(footer-list-toc.toc) }
+spacing.fixed.px: 12
+
+-- footer-list-toc-children: 
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+toc: $obj.children
+$loop$: $footer-list-toc.toc as $obj
+
+-- ftd.column:
+children: $footer-list-toc.wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-list-toc
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-toc-children:
+caption title:
+optional string url: /
+boolean is-active: false
+ftd.color text-color: $inherited.colors.text-strong
+ftd.color active-text-color: $inherited.colors.text-strong 
+pr.toc-item list toc: $empty-toc
+children wrap:
+
+-- ftd.column:
+spacing.fixed.px: 16
+
+-- ftd.text: $footer-list-toc-children.title
+color: $inherited.colors.text
+role: $inherited.types.copy-small
+link: $footer-list-toc-children.url
+width: fill-container
+white-space: nowrap
+
+-- ftd.column:
+if: { !ftd.is_empty(footer-list-toc-children.toc) }
+spacing.fixed.px: 16
+
+-- footer-list-toc-children: 
+title: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+$loop$: $footer-list-toc-children.toc as $obj
+
+-- ftd.column:
+children: $footer-list-toc-children.wrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-list-toc-children
+
+
+
+
+
+
+
+
+
+
+-- component images-list:
+optional ftd.image-src facebook-logo:
+optional ftd.image-src figma-logo:
+optional ftd.image-src google-logo:
+optional ftd.image-src msg-logo:
+optional ftd.image-src ball-logo:
+optional string facebook-url: 
+optional string figma-url: 
+optional string google-url: 
+optional string msg-url: 
+optional string ball-url: 
+
+-- ftd.row:
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $images-list.facebook-logo
+link: $images-list.facebook-url
+width.fixed.px: 9
+height.fixed.px: 9
+width.fixed.px if { ftd.device == "mobile" }: 24
+height.fixed.px if { ftd.device == "mobile" }: 24
+
+-- ftd.image:
+src: $images-list.figma-logo
+link: $images-list.figma-url
+width.fixed.px: 9
+height.fixed.px: 9
+width.fixed.px if { ftd.device == "mobile" }: 9
+height.fixed.px if { ftd.device == "mobile" }: 9
+
+-- ftd.image:
+src: $images-list.google-logo
+link: $images-list.google-url
+width.fixed.px: 9
+height.fixed.px: 9
+width.fixed.px if { ftd.device == "mobile" }: 9
+height.fixed.px if { ftd.device == "mobile" }: 9
+
+-- ftd.image:
+src: $images-list.msg-logo
+link: $images-list.msg-url
+width.fixed.px: 9
+height.fixed.px: 9
+width.fixed.px if { ftd.device == "mobile" }: 9
+height.fixed.px if { ftd.device == "mobile" }: 9
+
+-- ftd.image:
+src: $images-list.ball-logo
+link: $images-list.ball-url
+width.fixed.px: 9
+height.fixed.px: 9
+width.fixed.px if { ftd.device == "mobile" }: 9
+height.fixed.px if { ftd.device == "mobile" }: 9
+
+-- end: ftd.row
+
+-- end: images-list
