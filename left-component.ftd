@@ -4,13 +4,27 @@
 -- import: fifthtry.github.io/color-doc/colors
 -- import: fifthtry.github.io/footer
 
+-- component-wrap:
+
+
+
+
+
+
+
+
+
+
+-- component component-wrap:
+
 -- ftd.column:
-spacing.fixed.px: 48
-padding-top.px: 24
+spacing.fixed.px: 24
+padding-vertical.px: 24
 padding-left.px: 24
 
 -- ftd.row:
 spacing.fixed.px: 48
+align-content: center
 
 -- plus-button:
 
@@ -56,8 +70,6 @@ spacing.fixed.px: 26
 
 -- end: ftd.row
 
--- end: ftd.column
-
 -- card:
 image: $assets.files.static.img.svg
 likes: 2,729 Like
@@ -67,6 +79,10 @@ name: Patrica AVA
 post: UI Designer
 
 Mauris ullamcorper tortor sed purus interdum, fermentum efficitur est dictu.
+
+-- end: ftd.column
+
+-- end: component-wrap
 
 
 
