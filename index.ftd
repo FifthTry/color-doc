@@ -601,7 +601,7 @@ width: fill-container
 max-width.fixed.px: 1440
 padding-horizontal.px if { ftd.device == "desktop" }: 70
 padding-vertical.px if { ftd.device == "desktop" }: 60
-padding.px if { ftd.device == "mobile" }: 18
+padding.px: 18
 background.solid: #FFFFFF
 
 -- ftd.text: $package.subtitle
